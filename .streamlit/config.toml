@@ -1,0 +1,29 @@
+# 화면 테마: 정밀 핀테크 라이트(오프화이트 바탕 · 잉크 네이비 본문 · 인디고 강조 1색 · 1px 헤어라인)
+# 글꼴: Pretendard (본문·제목, 라틴 글자는 Inter 기반, jsDelivr, SIL OFL 1.1) / IBM Plex Mono (라벨·코드, Google Fonts, SIL OFL 1.1)
+[theme]
+base = "light"
+primaryColor = "#4f46e5"
+backgroundColor = "#f6f5f3"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1a2233"
+linkColor = "#4f46e5"
+borderColor = "#e4e2dd"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "10px"
+buttonRadius = "8px"
+# 안내 상자(st.info)는 강조색 대신 차분한 네이비 계열로
+blueColor = "#3b4a6b"
+blueBackgroundColor = "#eef0f5"
+blueTextColor = "#1a2233"
+codeBackgroundColor = "#ffffff"
+codeTextColor = "#1a2233"
+font = "Pretendard:https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+headingFont = "Pretendard:https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+headingFontWeights = 500
+codeFont = "'IBM Plex Mono':https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+
+[theme.sidebar]
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f6f5f3"
+borderColor = "#e4e2dd"

@@ -15,7 +15,7 @@ SNS·메신저로 받은 구인 공고나 DM을 붙여넣으면 다음 순서로
 5. **2회차** — 구인자에게 받은 답변을 붙여넣으면 앞의 내용과 합쳐 다시 판정합니다.
 
 ## 바로 써 보기
-- 배포 주소: 〔배포 후〕 — 로그인 없이 실행됩니다.
+- 배포 주소: https://gonggo-dotbogi.streamlit.app/ — 로그인 없이 실행됩니다.
 - 화면의 **샘플 불러오기**로 가상 공고 5종을 바로 판독해 볼 수 있습니다.
 - Streamlit Community Cloud 앱은 12시간 동안 방문이 없으면 잠듭니다. 잠든 화면이 나오면 **'Yes, get this app back up!'** 버튼을 누르고 잠시 기다려 주세요(누구나 깨울 수 있습니다).
 - 비용 보호를 위해 세션당·하루 호출 상한이 있습니다(기본 세션당 15회, 하루 150회). 상한을 넘으면 미리 판독해 둔 샘플 결과를 안내합니다.
@@ -68,7 +68,7 @@ SNS·메신저로 받은 구인 공고나 DM을 붙여넣으면 다음 순서로
 - 실제 개인정보를 넣지 마세요. 시연은 가상 데이터로 합니다.
 
 ## 직접 실행하기
-로컬 Python 3.14에서 테스트했습니다(배포 환경 버전은 〔배포 후〕).
+로컬 Python 3.14에서 테스트했고, Streamlit Community Cloud에 배포했습니다.
 
 ```bash
 python -m venv .venv
@@ -172,6 +172,9 @@ tests/                  자동 테스트
 
 **이미지·폰트** (자료명 / 제작자·출처 / 라이선스)
 - Noto Sans KR / Google Fonts(Noto 프로젝트) / SIL Open Font License 1.1 — 데모 캡처 이미지 글자 렌더링(`data/samples/demo_image_team_mission.png`, 글꼴 파일은 저장소에 없음)
+- [Pretendard](https://github.com/orioncactus/pretendard) v1.3.9 / Kil Hyung-jin, jsDelivr CDN / SIL Open Font License 1.1 — 화면 본문·제목 글꼴(`.streamlit/config.toml`에서 CDN으로 불러옴, 글꼴 파일은 저장소에 없음)
+- [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) / IBM, Google Fonts / SIL Open Font License 1.1 — 화면 라벨·메시지 패널 글꼴(CDN으로 불러옴)
+- 화면 디자인 방향: [design-diversity](https://github.com/jmjmoon02-prog/design-diversity) `web-precision-fintech` 팩 / MIT — 색·글꼴·간격 규칙 참고(코드 복사 없음)
 
 **데이터** (데이터명 / 제공기관 / 라이선스 / 기준일)
 | 데이터명 | 제공기관 | 라이선스 | 기준일 |
