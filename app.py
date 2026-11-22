@@ -248,6 +248,9 @@ html { scroll-behavior: smooth; }
                  letter-spacing: 0.04em; margin-bottom: 0.35rem; color: var(--ink); }
 
 @media (max-width: 1024px) {
+  /* 좁은 화면: 샘플 고르기와 불러오기 버튼을 위아래로 */
+  .st-key-card_samples [data-testid="stHorizontalBlock"] { flex-wrap: wrap; }
+  .st-key-card_samples [data-testid="stColumn"] { flex: 1 1 100% !important; min-width: 100% !important; }
   .site-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec:nth-child(3) { border-left: none; }
