@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")  # 라이브러리 경고(로컬 경로가 찍
 os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 IN_COLAB = "google.colab" in sys.modules
 if IN_COLAB:
-    APP_REPO_URL = "https://github.com/<계정>/<배포용 저장소>.git"  # 제출 시 공개되는 저장소 주소로 바꾼다
+    APP_REPO_URL = "https://github.com/jmjmoon02-prog/gonggo-dotbogi.git"  # 배포용 저장소(app/ 만, 제출 시 공개)
     if not pathlib.Path("app").exists():
         !git clone -q $APP_REPO_URL app
     !pip install -q -r app/requirements.txt
