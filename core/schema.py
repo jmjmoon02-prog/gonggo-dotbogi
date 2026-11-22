@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class _Strict(BaseModel):
@@ -58,6 +58,17 @@ class QuotedItem(_Strict):
 class Company(_Strict):
     name: str | None = Field(description="공고에 적힌 업체명(상호). 없으면 null")
     name_quote: str | None
+    name_missing: bool = Field(
+        description="공고에 업체명·상호·구인자 이름이 전혀 없으면 true. 처음 보는 이름이어도 상호로 적혀 있으면 false",
+    )
+
+    @model_validator(mode="before")
+    @classmethod
+    def _fill_name_missing(cls, data):
+        # v2.1.0 이전에 저장된 추출값(캐시·저장 사례)에는 이 항목이 없다 → false 로 채운다(스키마에는 기본값을 넣지 않음)
+        if isinstance(data, dict) and "name_missing" not in data:
+            data = {**data, "name_missing": False}
+        return data
     region: str | None = Field(description="업체·근무지 지역(시도·시군구), 원문 표기 그대로")
     claims_known_brand: bool = Field(description="유명 브랜드·대기업·유명 쇼핑몰 이름을 내세우는지")
     brand_name: str | None
@@ -160,15 +171,17 @@ class NtsResult(BaseModel):
 
 class NpsCandidate(BaseModel):
     name: str
+    seq: str | None = None
     biz_prefix6: str | None = None
     members: int | None = None
-    industry: str | None = None
+    industry: str | None = None  # 상세 조회의 사업장업종코드명
     address: str | None = None
-    status: str | None = None
+    status: str | None = None  # 등록 / 탈퇴
+    registered_at: str | None = None
 
 
 class NpsResult(BaseModel):
-    """국민연금 가입 사업장 (E52). 0건은 '확인 불가'(위험 아님)."""
+    """국민연금 가입 사업장 (E52). 0건은 '확인 불가'(위험 아님). 3인 이상 법인 등 일부만 공개된다."""
 
     match: Literal["single", "multiple", "none", "error", "not_checked"] = "not_checked"
     candidates: list[NpsCandidate] = Field(default_factory=list)
@@ -176,17 +189,33 @@ class NpsResult(BaseModel):
     message: str | None = None
 
 
+class WorknetPosting(BaseModel):
+    """고용24(워크넷) 채용정보 한 건. 공공누리 제4유형 → 값을 바꾸지 않고 출처와 함께 표시한다."""
+
+    company: str | None = None
+    title: str | None = None
+    region: str | None = None
+    industry: str | None = None
+    sal: str | None = None
+    reg_dt: str | None = None
+    close_dt: str | None = None
+    url: str | None = None
+
+
 class WorknetResult(BaseModel):
-    """워크넷 공식 공고 대조 (E53). API 가 죽으면 disabled/error 로 두고 판정은 계속."""
+    """워크넷 공식 공고 대조 (E53). API 가 죽거나 키가 없으면 disabled/error 로 두고 판정은 계속."""
 
     match: Literal["match", "mismatch", "none", "error", "disabled", "not_checked"] = "not_checked"
     detail: str | None = None
     url: str | None = None
     checked_at: str | None = None
+    postings: list[WorknetPosting] = Field(default_factory=list)
+    total: int | None = None
 
 
 class Facts(BaseModel):
     nts: NtsResult = Field(default_factory=NtsResult)
     nps: NpsResult = Field(default_factory=NpsResult)
     worknet: WorknetResult = Field(default_factory=WorknetResult)
-    industry_mismatch: bool | None = None  # M4, 4단계에서 계산 방식 확정
+    industry_mismatch: bool | None = None  # M4: 등록 업종이 고위험 업종인데 공고 직무와 다를 때
+    industry_mismatch_detail: str | None = None

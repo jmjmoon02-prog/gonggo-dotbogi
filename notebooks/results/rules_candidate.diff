@@ -1,0 +1,32 @@
+--- rules/rules.yaml
++++ rules/rules.yaml (변경안)
+@@ -490,6 +490,29 @@
+     evidence_ids: [E66, MW2026]
+     version: "2.0.0"
+     status: active
++
++  # ---- 규칙 검토 노트북에서 사람이 승인한 후보 (변경안) ----
++  - id: H9
++    tier: H
++    axis: D
++    detection: ai
++    name: 근무 조건으로 여권 원본 보관 요구
++    description: 구인자나 고용주가 근무 또는 현지 체류 조건으로 여권 원본을 맡기도록 하여 근로자의 직접 소지를 제한한다. 본인 확인을 위한 일시 제시 후 즉시 반환하는 절차는 제외한다.
++    examples:
++    - 출국 후 여권은 회사에서 보관합니다.
++    check_question: 회사가 여권을 확인하고 즉시 돌려주는 것이 아니라, 근무 또는 체류 조건으로 맡겨 두라고 하는가?
++    guidance: null
++    legal_note: null
++    report_to: []
++    evidence_ids:
++    - E60
++    version: 2.2.0-draft
++    status: candidate
++    review:
++      approver: 참가자 본인(CrAI LAB)
++      date: '2026-11-23'
++      source_cases:
++      - 30f7ea0170d3
+ 
+ # 신종 대응 원칙 6축 (H·M 에 안 걸려도 가치 흐름이 원칙을 어기면 판정)
+ #   severity red: 위반 시 🔴 위험(신종 의심) / yellow: 신뢰 신호가 없을 때 🟡 주의(신종 의심)

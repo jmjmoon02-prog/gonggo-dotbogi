@@ -1,0 +1,1684 @@
+[
+ {
+  "id": "G1-1",
+  "group": "G1",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A",
+   "AX_F",
+   "S2"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0155588,
+  "usage": {
+   "input_tokens": 5729,
+   "cached_input_tokens": 3068,
+   "output_tokens": 993,
+   "reasoning_tokens": 0
+  },
+  "seconds": 14.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G1-2",
+  "group": "G1",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A",
+   "AX_F",
+   "S1",
+   "S2",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 6,
+  "quotes_ok": 6,
+  "cost": 0.0173428,
+  "usage": {
+   "input_tokens": 5716,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1174,
+   "reasoning_tokens": 0
+  },
+  "seconds": 14.7,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G1-3",
+  "group": "G1",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A",
+   "S2"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.014994799999999999,
+  "usage": {
+   "input_tokens": 5697,
+   "cached_input_tokens": 3068,
+   "output_tokens": 943,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.7,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G2-1",
+  "group": "G2",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "orange",
+  "acceptable": [
+   "orange",
+   "red"
+  ],
+  "predicted": "orange",
+  "matched_ids": [
+   "S2",
+   "I1"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.0136228,
+  "usage": {
+   "input_tokens": 5696,
+   "cached_input_tokens": 3068,
+   "output_tokens": 806,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G2-2",
+  "group": "G2",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "orange",
+  "acceptable": [
+   "orange",
+   "red"
+  ],
+  "predicted": "orange",
+  "matched_ids": [
+   "M1",
+   "I1"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.013582799999999999,
+  "usage": {
+   "input_tokens": 5706,
+   "cached_input_tokens": 3068,
+   "output_tokens": 800,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.3,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G2-3",
+  "group": "G2",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "red",
+  "acceptable": [
+   "red",
+   "orange"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014976799999999998,
+  "usage": {
+   "input_tokens": 5703,
+   "cached_input_tokens": 3068,
+   "output_tokens": 940,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.9,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G3-1",
+  "group": "G3",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H4",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014194799999999999,
+  "usage": {
+   "input_tokens": 5702,
+   "cached_input_tokens": 3068,
+   "output_tokens": 862,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.8,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G3-2",
+  "group": "G3",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H1",
+   "AX_A",
+   "M1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0139808,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 840,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.7,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G3-3",
+  "group": "G3",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014430799999999999,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 885,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.2,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G4-1",
+  "group": "G4",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H5",
+   "AX_A",
+   "AX_F"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0164008,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1082,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G4-2",
+  "group": "G4",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H5",
+   "AX_A",
+   "AX_D",
+   "AX_F"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0166248,
+  "usage": {
+   "input_tokens": 5697,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1106,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G4-3",
+  "group": "G4",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H5",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0138248,
+  "usage": {
+   "input_tokens": 5677,
+   "cached_input_tokens": 3068,
+   "output_tokens": 830,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G5-1",
+  "group": "G5",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H2",
+   "AX_B",
+   "AX_E",
+   "AX_F",
+   "S2"
+  ],
+  "novel": false,
+  "quotes_total": 5,
+  "quotes_ok": 5,
+  "cost": 0.0158408,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1026,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.6,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G5-2",
+  "group": "G5",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H2",
+   "AX_B",
+   "AX_F"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0157508,
+  "usage": {
+   "input_tokens": 5710,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1016,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G5-3",
+  "group": "G5",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H2",
+   "AX_B",
+   "AX_F",
+   "S1",
+   "S2"
+  ],
+  "novel": false,
+  "quotes_total": 5,
+  "quotes_ok": 5,
+  "cost": 0.0150488,
+  "usage": {
+   "input_tokens": 5694,
+   "cached_input_tokens": 3068,
+   "output_tokens": 949,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.0,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G6-1",
+  "group": "G6",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H7",
+   "AX_F",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0156648,
+  "usage": {
+   "input_tokens": 5702,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1009,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G6-2",
+  "group": "G6",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H7",
+   "AX_D",
+   "S1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.015822799999999998,
+  "usage": {
+   "input_tokens": 5706,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1024,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G6-3",
+  "group": "G6",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H7",
+   "AX_C",
+   "AX_F",
+   "S1",
+   "S2",
+   "S3",
+   "S4"
+  ],
+  "novel": false,
+  "quotes_total": 6,
+  "quotes_ok": 6,
+  "cost": 0.0165428,
+  "usage": {
+   "input_tokens": 5701,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1097,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G7-1",
+  "group": "G7",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H6"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.011922799999999999,
+  "usage": {
+   "input_tokens": 5696,
+   "cached_input_tokens": 3068,
+   "output_tokens": 636,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.3,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G7-2",
+  "group": "G7",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H6",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0139568,
+  "usage": {
+   "input_tokens": 5693,
+   "cached_input_tokens": 3068,
+   "output_tokens": 840,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.6,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G7-3",
+  "group": "G7",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H5",
+   "H6",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.014966799999999999,
+  "usage": {
+   "input_tokens": 5683,
+   "cached_input_tokens": 3068,
+   "output_tokens": 943,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.0,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G12-1",
+  "group": "G12",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H1",
+   "AX_B"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0134688,
+  "usage": {
+   "input_tokens": 5704,
+   "cached_input_tokens": 3068,
+   "output_tokens": 789,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.1,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G12-2",
+  "group": "G12",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H1",
+   "H2",
+   "AX_B"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0156008,
+  "usage": {
+   "input_tokens": 5700,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1003,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.4,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G12-3",
+  "group": "G12",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H1",
+   "AX_B",
+   "AX_F"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0157828,
+  "usage": {
+   "input_tokens": 5691,
+   "cached_input_tokens": 3068,
+   "output_tokens": 1023,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.7,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G13-1",
+  "group": "G13",
+  "cls": "scam",
+  "source_channel": "platform",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M3",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014310799999999999,
+  "usage": {
+   "input_tokens": 5715,
+   "cached_input_tokens": 3068,
+   "output_tokens": 871,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.9,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G13-2",
+  "group": "G13",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M3",
+   "S1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.014626799999999999,
+  "usage": {
+   "input_tokens": 5688,
+   "cached_input_tokens": 3068,
+   "output_tokens": 908,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.1,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G13-3",
+  "group": "G13",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red",
+   "yellow"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "M3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014140799999999999,
+  "usage": {
+   "input_tokens": 5700,
+   "cached_input_tokens": 3068,
+   "output_tokens": 857,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.0,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G14-1",
+  "group": "G14",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M5",
+   "AX_F",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0141128,
+  "usage": {
+   "input_tokens": 5691,
+   "cached_input_tokens": 3068,
+   "output_tokens": 856,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.8,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G14-2",
+  "group": "G14",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M5",
+   "AX_F",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0149588,
+  "usage": {
+   "input_tokens": 5689,
+   "cached_input_tokens": 3068,
+   "output_tokens": 941,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.9,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G14-3",
+  "group": "G14",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M5",
+   "AX_F",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.014038799999999999,
+  "usage": {
+   "input_tokens": 5674,
+   "cached_input_tokens": 3068,
+   "output_tokens": 852,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.0,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G15-1",
+  "group": "G15",
+  "cls": "scam",
+  "source_channel": "platform",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014900799999999999,
+  "usage": {
+   "input_tokens": 5710,
+   "cached_input_tokens": 3068,
+   "output_tokens": 931,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.8,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G15-2",
+  "group": "G15",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.014626799999999999,
+  "usage": {
+   "input_tokens": 5698,
+   "cached_input_tokens": 3068,
+   "output_tokens": 906,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "G15-3",
+  "group": "G15",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H3",
+   "AX_A"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0142148,
+  "usage": {
+   "input_tokens": 5697,
+   "cached_input_tokens": 3068,
+   "output_tokens": 865,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.0,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "N1-1",
+  "group": "N1",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0130788,
+  "usage": {
+   "input_tokens": 5749,
+   "cached_input_tokens": 3068,
+   "output_tokens": 741,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.6,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N1-2",
+  "group": "N1",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.012194799999999999,
+  "usage": {
+   "input_tokens": 5717,
+   "cached_input_tokens": 3068,
+   "output_tokens": 659,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.0,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N1-3",
+  "group": "N1",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0120488,
+  "usage": {
+   "input_tokens": 5704,
+   "cached_input_tokens": 3068,
+   "output_tokens": 647,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.8,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N1-4",
+  "group": "N1",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.011686799999999999,
+  "usage": {
+   "input_tokens": 5708,
+   "cached_input_tokens": 3068,
+   "output_tokens": 610,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.2,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N2-1",
+  "group": "N2",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.012428799999999999,
+  "usage": {
+   "input_tokens": 5699,
+   "cached_input_tokens": 3068,
+   "output_tokens": 686,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.0,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N2-2",
+  "group": "N2",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0113808,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 580,
+   "reasoning_tokens": 0
+  },
+  "seconds": 7.6,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N2-3",
+  "group": "N2",
+  "cls": "normal",
+  "source_channel": "community",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.011854799999999999,
+  "usage": {
+   "input_tokens": 5707,
+   "cached_input_tokens": 3068,
+   "output_tokens": 627,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.3,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N2-4",
+  "group": "N2",
+  "cls": "normal",
+  "source_channel": "community",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0119268,
+  "usage": {
+   "input_tokens": 5703,
+   "cached_input_tokens": 3068,
+   "output_tokens": 635,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.4,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N3-1",
+  "group": "N3",
+  "cls": "normal",
+  "source_channel": "sns_messenger",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.012746799999999999,
+  "usage": {
+   "input_tokens": 5723,
+   "cached_input_tokens": 3068,
+   "output_tokens": 713,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.9,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N3-2",
+  "group": "N3",
+  "cls": "normal",
+  "source_channel": "sns_messenger",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.012022799999999998,
+  "usage": {
+   "input_tokens": 5716,
+   "cached_input_tokens": 3068,
+   "output_tokens": 642,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.5,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N3-3",
+  "group": "N3",
+  "cls": "normal",
+  "source_channel": "sns_messenger",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0119788,
+  "usage": {
+   "input_tokens": 5704,
+   "cached_input_tokens": 3068,
+   "output_tokens": 640,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.5,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N3-4",
+  "group": "N3",
+  "cls": "normal",
+  "source_channel": "sns_messenger",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "green"
+  ],
+  "predicted": "white",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0122428,
+  "usage": {
+   "input_tokens": 5706,
+   "cached_input_tokens": 3068,
+   "output_tokens": 666,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.1,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N4-1",
+  "group": "N4",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "S1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0136928,
+  "usage": {
+   "input_tokens": 5711,
+   "cached_input_tokens": 3068,
+   "output_tokens": 810,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": false
+ },
+ {
+  "id": "N4-2",
+  "group": "N4",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M2",
+   "S1"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.0134828,
+  "usage": {
+   "input_tokens": 5706,
+   "cached_input_tokens": 3068,
+   "output_tokens": 790,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.2,
+  "error": null,
+  "flagged": true,
+  "strict_ok": false
+ },
+ {
+  "id": "N4-3",
+  "group": "N4",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [
+   "S1"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.0130608,
+  "usage": {
+   "input_tokens": 5700,
+   "cached_input_tokens": 3068,
+   "output_tokens": 749,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.7,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N4-4",
+  "group": "N4",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M2",
+   "S1",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0140308,
+  "usage": {
+   "input_tokens": 5700,
+   "cached_input_tokens": 3068,
+   "output_tokens": 846,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.6,
+  "error": null,
+  "flagged": true,
+  "strict_ok": false
+ },
+ {
+  "id": "N5-1",
+  "group": "N5",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.013162799999999999,
+  "usage": {
+   "input_tokens": 5721,
+   "cached_input_tokens": 3068,
+   "output_tokens": 755,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.8,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N5-2",
+  "group": "N5",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.012026799999999999,
+  "usage": {
+   "input_tokens": 5698,
+   "cached_input_tokens": 3068,
+   "output_tokens": 646,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.6,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N5-3",
+  "group": "N5",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "green",
+  "matched_ids": [],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0125008,
+  "usage": {
+   "input_tokens": 5700,
+   "cached_input_tokens": 3068,
+   "output_tokens": 693,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.3,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ },
+ {
+  "id": "N5-4",
+  "group": "N5",
+  "cls": "normal",
+  "source_channel": "platform",
+  "expected_grade": "green",
+  "acceptable": [
+   "green",
+   "white"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M2"
+  ],
+  "novel": false,
+  "quotes_total": 0,
+  "quotes_ok": 0,
+  "cost": 0.0127108,
+  "usage": {
+   "input_tokens": 5705,
+   "cached_input_tokens": 3068,
+   "output_tokens": 713,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.3,
+  "error": null,
+  "flagged": true,
+  "strict_ok": false
+ },
+ {
+  "id": "X1-1",
+  "group": "X1",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red",
+   "yellow"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H7",
+   "AX_F",
+   "S1",
+   "S3",
+   "S4"
+  ],
+  "novel": false,
+  "quotes_total": 4,
+  "quotes_ok": 4,
+  "cost": 0.0148568,
+  "usage": {
+   "input_tokens": 5683,
+   "cached_input_tokens": 3068,
+   "output_tokens": 932,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.6,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "X2-1",
+  "group": "X2",
+  "cls": "scam",
+  "source_channel": "sns_messenger",
+  "expected_grade": "red",
+  "acceptable": [
+   "red"
+  ],
+  "predicted": "red",
+  "matched_ids": [
+   "H6",
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 2,
+  "quotes_ok": 2,
+  "cost": 0.0128648,
+  "usage": {
+   "input_tokens": 5682,
+   "cached_input_tokens": 3068,
+   "output_tokens": 733,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.6,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "X3-1",
+  "group": "X3",
+  "cls": "scam",
+  "source_channel": "community",
+  "expected_grade": "yellow",
+  "acceptable": [
+   "yellow",
+   "red"
+  ],
+  "predicted": "yellow",
+  "matched_ids": [
+   "M5",
+   "AX_F",
+   "S1"
+  ],
+  "novel": false,
+  "quotes_total": 3,
+  "quotes_ok": 3,
+  "cost": 0.0138908,
+  "usage": {
+   "input_tokens": 5680,
+   "cached_input_tokens": 3068,
+   "output_tokens": 836,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.5,
+  "error": null,
+  "flagged": true,
+  "strict_ok": true
+ },
+ {
+  "id": "X4-1",
+  "group": "X4",
+  "cls": "scam",
+  "source_channel": "sms",
+  "expected_grade": "white",
+  "acceptable": [
+   "white",
+   "yellow",
+   "orange",
+   "red"
+  ],
+  "predicted": "white",
+  "matched_ids": [
+   "S3"
+  ],
+  "novel": false,
+  "quotes_total": 1,
+  "quotes_ok": 1,
+  "cost": 0.0112768,
+  "usage": {
+   "input_tokens": 5653,
+   "cached_input_tokens": 3068,
+   "output_tokens": 580,
+   "reasoning_tokens": 0
+  },
+  "seconds": 7.9,
+  "error": null,
+  "flagged": false,
+  "strict_ok": true
+ }
+]

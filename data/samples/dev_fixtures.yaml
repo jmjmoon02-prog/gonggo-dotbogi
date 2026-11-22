@@ -52,7 +52,10 @@ demo_vague_dm:
     pay: { amount_text: "월 200 이상", unit: month, amount_krw: 2000000, quote: "월 200 이상 가능합니다" }
     contact: { channels: [instagram_dm] }
     signals:
+      - { signal_id: S1, quote: "하루 1~2시간, 월 200 이상 가능합니다", explanation: "업무 설명 없이 짧은 시간에 높은 수입을 강조합니다." }
       - { signal_id: S3, quote: "재택 부업 관심 있으시면 연락 주세요", explanation: "무슨 일을 하는지 적혀 있지 않습니다." }
+    axis_violations:
+      - { axis: F, quote: "하루 1~2시간, 월 200 이상 가능합니다", explanation: "하루 1~2시간에 월 200만 원 이상은 업무에 비해 보상이 비정상적으로 큽니다." }
     missing_info: ["업체명", "업무 내용", "급여 지급 방식"]
     follow_up_questions:
       - "하루 1~2시간에 월 200만 원 이상이 가능한 업무가 구체적으로 무엇인가요?"

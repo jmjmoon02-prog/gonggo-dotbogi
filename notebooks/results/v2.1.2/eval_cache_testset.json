@@ -1,0 +1,5741 @@
+{
+ "G1-1": {
+  "masked_text": "[재택부업] 쇼핑몰 구매대행 알바 모집\n상품을 먼저 대신 구매해 주시면 원금+수익 15%를 30분 안에 돌려드립니다.\n하루 1시간, 휴대폰만 있으면 가능\n문의는 텔레그램 @[메신저ID1]\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "쇼핑몰 구매대행 알바",
+    "duties_summary": "상품을 먼저 대신 구매하고 구매 원금과 수익을 돌려받는 재택 업무입니다.",
+    "duty_clarity": "clear",
+    "work_location": "재택",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "원금+수익 15%",
+    "unit": "per_task",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": true,
+    "quote": "원금+수익 15%를 30분 안에 돌려드립니다."
+   },
+   "contact": {
+    "channels": [
+     "telegram"
+    ],
+    "moves_to_messenger": true,
+    "quote": "문의는 텔레그램 @[메신저ID1]"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "상품 구매대금 선결제",
+      "quote": "상품을 먼저 대신 구매해 주시면 원금+수익 15%를 30분 안에 돌려드립니다."
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "구매 원금과 15% 수익",
+      "quote": "원금+수익 15%를 30분 안에 돌려드립니다."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "상품 대신 구매",
+      "quote": "상품을 먼저 대신 구매해 주시면"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "텔레그램 문의만 안내하며 채용 절차는 밝히지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "상품을 먼저 대신 구매해 주시면 원금+수익 15%를 30분 안에 돌려드립니다.",
+     "explanation": "지원자가 자기 돈으로 상품을 먼저 결제하고 나중에 돌려받는 방식입니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "원금+수익 15%를 30분 안에 돌려드립니다.",
+     "explanation": "구매 절차의 세부 설명 없이 30분 안에 원금과 15% 수익을 지급한다고 강조합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "문의는 텔레그램 @[메신저ID1]",
+     "explanation": "문의 경로로 외부 메신저인 텔레그램을 안내합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "상품을 먼저 대신 구매해 주시면 원금+수익 15%를 30분 안에 돌려드립니다.",
+     "explanation": "대금을 돌려받기 전에 지원자의 돈이 먼저 나가는 구조입니다."
+    },
+    {
+     "axis": "F",
+     "quote": "원금+수익 15%를 30분 안에 돌려드립니다.",
+     "explanation": "상품을 대신 구매하는 대가로 구매금액의 15%를 30분 안에 지급한다는 조건은 업무에 비해 이례적입니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 사업자 정보",
+    "구매 대상 상품과 쇼핑몰",
+    "건당 결제금액과 한도",
+    "환급 책임 주체와 미환급 시 처리 기준",
+    "계약서와 채용 절차"
+   ],
+   "follow_up_questions": [
+    "상품 대금은 제 돈으로 먼저 결제해야 하나요, 아니면 업체가 구매 전에 대금을 지급하나요?",
+    "건당 결제 한도는 얼마이며, 30분 안에 환급되지 않으면 어느 업체가 어떤 절차로 돌려주나요?",
+    "구매 전에 업체 상호와 사업자등록번호, 구매 및 환급 조건이 적힌 계약서를 확인할 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5982,
+   "cached_input_tokens": 3322,
+   "output_tokens": 888,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.3
+ },
+ "G1-2": {
+  "masked_text": "팀 미션 부업 같이 하실 분~ 첫 미션은 무료 체험으로 1만 원 바로 지급해 드리고,\n다음 단계부터는 미션 금액을 입금하고 진행하면 수익이 두 배예요. 오픈채팅으로 오세요\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "팀 미션 부업",
+    "duties_summary": "첫 미션은 무료 체험이고 이후 미션은 입금 후 진행하지만, 실제로 하는 일은 설명하지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "1만 원",
+    "unit": "per_task",
+    "amount_krw": 10000,
+    "hours_per_unit": null,
+    "same_day_pay": true,
+    "quote": "첫 미션은 무료 체험으로 1만 원 바로 지급해 드리고"
+   },
+   "contact": {
+    "channels": [
+     "kakao_openchat"
+    ],
+    "moves_to_messenger": true,
+    "quote": "오픈채팅으로 오세요"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "다음 단계 미션 진행을 위한 입금",
+      "quote": "다음 단계부터는 미션 금액을 입금하고 진행하면"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "첫 미션 보상 1만 원 즉시 지급 약속",
+      "quote": "첫 미션은 무료 체험으로 1만 원 바로 지급해 드리고"
+     },
+     {
+      "item": "후속 미션 수익 두 배 약속",
+      "quote": "다음 단계부터는 미션 금액을 입금하고 진행하면 수익이 두 배예요"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "후속 미션을 시작하기 전에 미션 금액 입금",
+      "quote": "다음 단계부터는 미션 금액을 입금하고 진행하면"
+     },
+     {
+      "item": "오픈채팅으로 이동",
+      "quote": "오픈채팅으로 오세요"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "오픈채팅으로 연락을 유도하며, 별도의 채용 절차는 설명하지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "다음 단계부터는 미션 금액을 입금하고 진행하면",
+     "explanation": "다음 단계 미션을 시작하려면 지원자가 먼저 돈을 입금해야 한다고 안내합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "첫 미션은 무료 체험으로 1만 원 바로 지급해 드리고,\n다음 단계부터는 미션 금액을 입금하고 진행하면 수익이 두 배예요",
+     "explanation": "구체적인 업무 설명 없이 첫 미션의 즉시 지급과 이후 미션의 두 배 수익을 강조합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "오픈채팅으로 오세요",
+     "explanation": "공고가 올라온 커뮤니티에서 외부 오픈채팅으로 이동하라고 합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "팀 미션 부업 같이 하실 분~",
+     "explanation": "팀 미션이라고만 부르고 실제로 어떤 일을 하는지는 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "다음 단계부터는 미션 금액을 입금하고 진행하면",
+     "explanation": "후속 미션을 하기 전에 지원자의 돈이 먼저 나가는 구조입니다."
+    },
+    {
+     "axis": "E",
+     "quote": "오픈채팅으로 오세요",
+     "explanation": "업체명과 계약 절차를 밝히지 않은 채 오픈채팅만 연락 경로로 안내합니다."
+    },
+    {
+     "axis": "F",
+     "quote": "미션 금액을 입금하고 진행하면 수익이 두 배예요",
+     "explanation": "업무 내용이나 수익 산정 근거 없이 입금 후 수익이 두 배라고 약속합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명과 사업자 정보",
+    "단계별 미션의 구체적인 업무",
+    "후속 미션의 입금액과 입금처",
+    "원금 반환 및 수익 지급 조건",
+    "계약서 제공 여부"
+   ],
+   "follow_up_questions": [
+    "업체명과 사업자등록번호를 알려주시고, 참여 전에 계약서를 확인할 수 있을까요?",
+    "첫 미션과 이후 미션에서 각각 어떤 일을 하며, 다른 사람의 돈이나 물건을 받아 전달하는 과정이 있나요?",
+    "후속 미션은 제 돈을 입금하지 않고도 진행할 수 있는지, 입금이 필수라면 얼마를 어디에 보내고 어떤 조건에서 돌려받는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5969,
+   "cached_input_tokens": 3309,
+   "output_tokens": 1262,
+   "reasoning_tokens": 0
+  },
+  "seconds": 15.0
+ },
+ "G1-3": {
+  "masked_text": "[부업안내] 앱 리뷰 작성만 하면 건당 3천원! 포인트 충.전 후 미션 시작,\n충전금은 당일 전액 환급됩니다. 상담: 카톡 ID [메신저ID1]\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "앱 리뷰 작성 부업",
+    "duties_summary": "앱 리뷰를 작성하는 일입니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 3천원",
+    "unit": "per_task",
+    "amount_krw": 3000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "앱 리뷰 작성만 하면 건당 3천원!"
+   },
+   "contact": {
+    "channels": [
+     "sms",
+     "kakao_personal"
+    ],
+    "moves_to_messenger": true,
+    "quote": "상담: 카톡 ID [메신저ID1]"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "미션 시작 전 포인트 충전금",
+      "quote": "포인트 충.전 후 미션 시작"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "리뷰 작성 보상 건당 3천 원",
+      "quote": "앱 리뷰 작성만 하면 건당 3천원!"
+     },
+     {
+      "item": "충전금 당일 전액 환급 약속",
+      "quote": "충전금은 당일 전액 환급됩니다."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "앱 리뷰 작성",
+      "quote": "앱 리뷰 작성만 하면 건당 3천원!"
+     },
+     {
+      "item": "포인트 충전 후 미션 시작",
+      "quote": "포인트 충.전 후 미션 시작"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "문자로 공고를 보내고 카카오톡 ID로 상담을 안내하며, 별도의 채용 절차는 밝히지 않았습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "포인트 충.전 후 미션 시작,\n충전금은 당일 전액 환급됩니다.",
+     "explanation": "당일 전액 환급을 약속하지만, 일을 시작하려면 지원자가 먼저 포인트를 충전해야 합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "상담: 카톡 ID [메신저ID1]",
+     "explanation": "문자로 받은 공고에서 상담은 카카오톡으로 하도록 안내합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "포인트 충.전 후 미션 시작",
+     "explanation": "일을 시작하기 전에 지원자의 돈이 충전금으로 먼저 나가는 구조입니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명과 사업자 정보",
+    "리뷰를 작성할 앱 이름",
+    "포인트 충전 금액과 결제처",
+    "충전금 환급 조건과 절차",
+    "리뷰 보상 지급 시점과 방법"
+   ],
+   "follow_up_questions": [
+    "포인트를 충전하거나 제 돈을 먼저 내지 않고도 리뷰 작성 업무를 시작할 수 있나요?",
+    "충전이 필수라면 얼마를 어디에 결제해야 하고, 미션을 완료하지 못해도 추가 입금 없이 전액 돌려받을 수 있나요?",
+    "구인 업체명과 리뷰를 작성할 앱 이름, 건당 보상 지급 시점을 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5950,
+   "cached_input_tokens": 3290,
+   "output_tokens": 958,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.8
+ },
+ "G2-1": {
+  "masked_text": "[국내 1위 오픈마켓 공식 협력] 상품 리뷰 체험단 모집\n하루 20분 리뷰 작성, 건당 1만5천 원.\n참여 신청은 카카오톡 친구 추가 후 안내드립니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": true,
+    "brand_name": null,
+    "brand_quote": "[국내 1위 오픈마켓 공식 협력]"
+   },
+   "job": {
+    "title": "상품 리뷰 체험단",
+    "duties_summary": "하루 20분 동안 상품 리뷰를 작성합니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 1만5천 원",
+    "unit": "per_task",
+    "amount_krw": 15000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "하루 20분 리뷰 작성, 건당 1만5천 원."
+   },
+   "contact": {
+    "channels": [
+     "sms",
+     "kakao_personal"
+    ],
+    "moves_to_messenger": true,
+    "quote": "참여 신청은 카카오톡 친구 추가 후 안내드립니다."
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "리뷰 작성 보상",
+      "quote": "건당 1만5천 원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "상품 리뷰 작성",
+      "quote": "하루 20분 리뷰 작성"
+     },
+     {
+      "item": "카카오톡 친구 추가",
+      "quote": "참여 신청은 카카오톡 친구 추가 후 안내드립니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "문자로 모집 공고를 받았으며, 카카오톡 친구를 추가하면 참여 신청 방법을 안내한다고 합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "S2",
+     "quote": "참여 신청은 카카오톡 친구 추가 후 안내드립니다.",
+     "explanation": "참여 신청 안내를 받으려면 문자에서 카카오톡으로 옮겨 친구를 추가해야 합니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "오픈마켓과 공식 협력한다고 하지만 어느 오픈마켓인지 밝히지 않았습니다.",
+     "quote": "[국내 1위 오픈마켓 공식 협력]"
+    }
+   ],
+   "missing_info": [
+    "모집 업체의 상호",
+    "제휴 오픈마켓 이름과 공식 협력 확인 방법",
+    "체험 상품 제공 방식과 본인 부담 비용",
+    "하루 리뷰 작성 건수",
+    "보상 지급 조건과 시기"
+   ],
+   "follow_up_questions": [
+    "모집 업체의 상호와 해당 오픈마켓에서 공식 협력 여부를 확인할 수 있는 페이지를 알려주실 수 있나요?",
+    "체험 상품은 무상으로 제공되나요, 아니면 제가 먼저 결제하거나 보증금·수수료를 내야 하나요?",
+    "하루에 리뷰를 몇 건 작성해야 하며, 건당 보상은 어떤 조건을 충족하면 언제 지급되나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5949,
+   "cached_input_tokens": 3289,
+   "output_tokens": 797,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.0
+ },
+ "G2-2": {
+  "masked_text": "유명 배달앱 본사 마케팅팀입니다. 매장 리뷰 알바 모집 중이에요.\n아래 링크에서 회원가입하시면 포인트 5천 원 바로 지급! http://review-point.example\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": true,
+    "brand_name": null,
+    "brand_quote": "유명 배달앱 본사 마케팅팀입니다."
+   },
+   "job": {
+    "title": "매장 리뷰 알바",
+    "duties_summary": "매장 리뷰 관련 업무로 소개하지만 실제 이용 여부나 리뷰 작성 기준은 밝히지 않았습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": null
+   },
+   "contact": {
+    "channels": [
+     "external_link"
+    ],
+    "moves_to_messenger": false,
+    "quote": "아래 링크에서 회원가입하시면 포인트 5천 원 바로 지급! http://review-point.example"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "회원가입 시 즉시 지급한다고 안내한 5천 원 포인트",
+      "quote": "아래 링크에서 회원가입하시면 포인트 5천 원 바로 지급!"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "외부 링크에서 회원가입",
+      "quote": "아래 링크에서 회원가입하시면 포인트 5천 원 바로 지급! http://review-point.example"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "외부 링크에서 회원가입하면 포인트를 지급한다고 안내하며, 이후 채용 절차는 밝히지 않았습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "M1",
+     "quote": "아래 링크에서 회원가입하시면 포인트 5천 원 바로 지급! http://review-point.example",
+     "explanation": "매장 리뷰 알바를 모집하면서 포인트 지급을 내세워 외부 사이트 가입을 유도합니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "유명 배달앱 본사 소속이라고 하지만 어느 배달앱인지 밝히지 않았습니다.",
+     "quote": "유명 배달앱 본사 마케팅팀입니다."
+    }
+   ],
+   "missing_info": [
+    "정확한 업체명과 본사 소속을 확인할 공식 채용 경로",
+    "실제 매장 이용 여부와 리뷰 작성 기준",
+    "가입 포인트와 별개인 업무 보수와 지급 기준",
+    "회원가입 시 필수 입력 항목과 비용 부담 여부",
+    "채용 절차와 계약 조건"
+   ],
+   "follow_up_questions": [
+    "정확한 업체명과 이 모집을 확인할 수 있는 본사 공식 채용 페이지를 알려 주실 수 있나요?",
+    "실제로 이용한 매장에만 리뷰를 작성하는 일인지, 정해진 문구나 별점이 있는지 알려 주실 수 있나요?",
+    "가입 포인트와 별도로 업무 보수가 얼마인지, 가입이나 업무 시작 전에 구매·충전·입금 또는 계정 제공이 필요한지 알려 주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5959,
+   "cached_input_tokens": 3299,
+   "output_tokens": 848,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.7
+ },
+ "G2-3": {
+  "masked_text": "[대형 쇼핑몰 체험단] 당첨을 축하드립니다! 상품 구매 후 리뷰를 남기시면\n구매금액+수수료 20%를 환급해 드립니다. 먼저 지정 계좌로 상품 금액을 입금해 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "대형 쇼핑몰 체험단",
+    "duties_summary": "상품 금액을 먼저 입금하고, 상품 구매 후 리뷰를 남기는 활동입니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "구매금액+수수료 20%",
+    "unit": "per_task",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "구매금액+수수료 20%를 환급해 드립니다."
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "상품 금액 선입금",
+      "quote": "먼저 지정 계좌로 상품 금액을 입금해 주세요."
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "구매금액과 20% 수수료 환급 약속",
+      "quote": "구매금액+수수료 20%를 환급해 드립니다."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "지정 계좌로 입금",
+      "quote": "먼저 지정 계좌로 상품 금액을 입금해 주세요."
+     },
+     {
+      "item": "상품 구매 후 리뷰 작성",
+      "quote": "상품 구매 후 리뷰를 남기시면"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "문자로 체험단 당첨을 알리고 선입금을 요청하며, 별도 지원이나 선발 절차는 안내하지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "먼저 지정 계좌로 상품 금액을 입금해 주세요.",
+     "explanation": "상품 구매와 리뷰 작성에 앞서 참여자가 자기 돈을 지정 계좌에 먼저 보내야 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "먼저 지정 계좌로 상품 금액을 입금해 주세요.",
+     "explanation": "리뷰를 작성하기 전에 참여자의 돈이 먼저 나가는 구조입니다."
+    },
+    {
+     "axis": "F",
+     "quote": "상품 구매 후 리뷰를 남기시면\n구매금액+수수료 20%를 환급해 드립니다.",
+     "explanation": "리뷰 작성 보상이 작업량이 아니라 상품 구매금액의 20%에 연동되어 상품값이 클수록 보상도 커지는 구조입니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "대형 쇼핑몰 체험단이라고 소개하지만 어느 쇼핑몰이 운영하는지 밝히지 않습니다.",
+     "quote": "[대형 쇼핑몰 체험단]"
+    }
+   ],
+   "missing_info": [
+    "쇼핑몰 및 운영 업체의 정확한 상호",
+    "공식 체험단 모집 공고",
+    "대상 상품과 구매금액",
+    "입금 계좌의 예금주와 운영 업체의 관계",
+    "환급 시점 및 취소·환불 조건"
+   ],
+   "follow_up_questions": [
+    "운영 업체의 정확한 상호와 쇼핑몰 공식 홈페이지에서 확인할 수 있는 체험단 공고를 알려 주실 수 있나요?",
+    "지정 계좌로 선입금하지 않고 상품을 제공받아 리뷰를 작성할 수 있나요?",
+    "상품값과 20% 수수료는 언제 지급되며, 환급 전에 추가 입금이나 수수료 납부가 필요한가요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5956,
+   "cached_input_tokens": 3296,
+   "output_tokens": 1008,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.4
+ },
+ "G3-1": {
+  "masked_text": "단기 포장 알바, 일당 12만 원.\n지원하시면 합격 여부와 상관없이 먼저 신분증 앞뒤 사진과 계좌번호를 보내 주셔야 일정 안내가 가능합니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "단기 포장 알바",
+    "duties_summary": "포장 업무",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "일당 12만 원",
+    "unit": "day",
+    "amount_krw": 120000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "일당 12만 원."
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "신분증 앞뒤 사진과 계좌번호",
+      "quote": "신분증 앞뒤 사진과 계좌번호를 보내 주셔야"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "일당 12만 원",
+      "quote": "일당 12만 원."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "일정 안내 전에 신분증 앞뒤 사진과 계좌번호 제출",
+      "quote": "지원하시면 합격 여부와 상관없이 먼저 신분증 앞뒤 사진과 계좌번호를 보내 주셔야 일정 안내가 가능합니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "합격 여부와 무관하게 신분증 사진과 계좌번호를 먼저 보내야 일정을 안내받습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H4",
+     "quote": "지원하시면 합격 여부와 상관없이 먼저 신분증 앞뒤 사진과 계좌번호를 보내 주셔야 일정 안내가 가능합니다.",
+     "explanation": "채용이 확정되기 전에 신분증 양면 사진과 계좌번호를 요구합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "합격 여부와 상관없이 먼저 신분증 앞뒤 사진과 계좌번호를 보내 주셔야",
+     "explanation": "일을 시작하기도 전에 신분증 사진과 금융정보를 구인자에게 넘겨야 합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명",
+    "근무지 주소",
+    "근무 날짜와 시간",
+    "급여 지급일",
+    "신분증 사진과 계좌번호의 수집 목적 및 보관·파기 기준"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 실제 근무지 주소를 알려 주실 수 있나요?",
+    "신분증 사진과 계좌번호가 일정 안내 전에 필요한 이유는 무엇이며, 불합격자의 정보는 언제 파기하시나요?",
+    "신분증 사진과 계좌번호를 제출하지 않고도 근무 일정과 계약 조건을 먼저 확인할 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5955,
+   "cached_input_tokens": 3295,
+   "output_tokens": 803,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.3
+ },
+ "G3-2": {
+  "masked_text": "재택 데이터 입력 알바! 업무용 사이트에 가입해 주시면 바로 시작 가능해요.\n가입할 때 휴대폰 본인인증이 필요하고, 인증번호는 담당자에게 전달해 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "재택 데이터 입력 알바",
+    "duties_summary": "재택에서 데이터를 입력하는 일로 소개되지만, 어떤 데이터를 어떻게 입력하는지는 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": "재택",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": null
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "휴대폰 본인인증번호",
+      "quote": "인증번호는 담당자에게 전달해 주세요."
+     }
+    ],
+    "worker_receives": [],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "업무용 사이트 가입",
+      "quote": "업무용 사이트에 가입해 주시면 바로 시작 가능해요."
+     },
+     {
+      "item": "휴대폰 본인인증 및 인증번호 전달",
+      "quote": "가입할 때 휴대폰 본인인증이 필요하고, 인증번호는 담당자에게 전달해 주세요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "업무용 사이트 가입을 시작 조건으로 제시하고, 가입 과정에서 휴대폰 본인인증번호를 담당자에게 전달하라고 합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H1",
+     "quote": "인증번호는 담당자에게 전달해 주세요.",
+     "explanation": "구직자의 휴대폰 본인인증번호를 담당자에게 넘기라고 합니다."
+    },
+    {
+     "signal_id": "M1",
+     "quote": "업무용 사이트에 가입해 주시면 바로 시작 가능해요.",
+     "explanation": "업무를 시작하려면 별도 사이트에 가입하라고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "가입할 때 휴대폰 본인인증이 필요하고, 인증번호는 담당자에게 전달해 주세요.",
+     "explanation": "업무를 시작하기 전에 본인 명의 확인에 쓰이는 인증번호를 담당자에게 넘기도록 요구합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명과 사업자 정보",
+    "업무용 사이트 이름과 운영 주체",
+    "인증번호 전달을 요구하는 이유와 사용처",
+    "입력할 데이터와 구체적인 업무 절차",
+    "급여와 근로계약 조건"
+   ],
+   "follow_up_questions": [
+    "구인 업체의 정식 상호와 업무용 사이트의 이름 및 운영 주체를 알려주실 수 있나요?",
+    "가입 시 인증번호는 어디에 쓰이며, 담당자에게 전달하지 않고 제가 사이트에 직접 입력해도 업무를 시작할 수 있나요?",
+    "어떤 데이터를 입력하는 일인지, 급여와 근로계약 조건은 어떻게 되는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 884,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.9
+ },
+ "G3-3": {
+  "masked_text": "중고거래 앱 보고 연락드려요~ 간단한 설문 알바인데 아래 링크 들어가서 회원가입하고\n이름·생년월일·주소 입력하면 끝! 건당 5천 원\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "설문 알바",
+    "duties_summary": "설문 알바라고 소개하지만, 안내된 절차는 외부 링크에서 회원가입하고 이름·생년월일·주소를 입력하는 것뿐입니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 5천 원",
+    "unit": "per_task",
+    "amount_krw": 5000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 5천 원"
+   },
+   "contact": {
+    "channels": [
+     "external_link"
+    ],
+    "moves_to_messenger": false,
+    "quote": "아래 링크 들어가서 회원가입하고"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "이름·생년월일·주소",
+      "quote": "이름·생년월일·주소 입력하면 끝!"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "건당 보수 5,000원",
+      "quote": "건당 5천 원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "외부 링크 접속 및 회원가입",
+      "quote": "아래 링크 들어가서 회원가입하고"
+     },
+     {
+      "item": "개인정보 입력",
+      "quote": "이름·생년월일·주소 입력하면 끝!"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "중고거래 앱을 보고 연락했다고 밝히며, 외부 링크에서 회원가입하고 개인정보를 입력하라고 안내합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "M1",
+     "quote": "아래 링크 들어가서 회원가입하고",
+     "explanation": "설문 알바를 하려면 외부 링크로 들어가 회원가입하라고 합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "간단한 설문 알바인데 아래 링크 들어가서 회원가입하고\n이름·생년월일·주소 입력하면 끝!",
+     "explanation": "설문 알바라고 하지만 설문 주제나 응답할 내용은 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "아래 링크 들어가서 회원가입하고\n이름·생년월일·주소 입력하면 끝!",
+     "explanation": "실제 설문 내용이나 계약 조건을 확인하기 전에 외부 사이트에 이름·생년월일·주소를 입력하라고 합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "아래 링크를 안내하지만 공고에 실제 링크 주소는 없습니다.",
+     "quote": "아래 링크 들어가서 회원가입하고"
+    }
+   ],
+   "missing_info": [
+    "구인 업체명과 설문 운영 주체",
+    "가입 사이트 주소",
+    "설문 주제와 구체적인 참여 절차",
+    "개인정보 수집 목적과 보관 기간",
+    "건당 보수 지급 기준과 시점"
+   ],
+   "follow_up_questions": [
+    "회원가입 없이 구인 업체명과 설문 운영 주체, 실제 설문 내용을 먼저 확인할 수 있을까요?",
+    "생년월일과 주소가 설문에 필요한 이유와 보관 기간을 알려 주실 수 있나요?",
+    "가입이나 보수 지급을 위해 비용을 내거나 신분증, 계좌 정보, 인증번호를 제출해야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 978,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.5
+ },
+ "G4-1": {
+  "masked_text": "휴대폰 개통 알바 구합니다. 본인 명의로 유심만 개통해서 보내 주시면\n1회선당 10만 원 바로 지급. 요금은 저희가 냅니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "휴대폰 개통 알바",
+    "duties_summary": "본인 명의로 유심을 개통해 구인자에게 보냅니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "1회선당 10만 원",
+    "unit": "per_task",
+    "amount_krw": 100000,
+    "hours_per_unit": null,
+    "same_day_pay": true,
+    "quote": "1회선당 10만 원 바로 지급."
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "회선 개통에 사용하는 본인 명의",
+      "quote": "본인 명의로 유심만 개통해서 보내 주시면"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "회선당 10만 원 즉시 지급",
+      "quote": "1회선당 10만 원 바로 지급."
+     },
+     {
+      "item": "구인자의 통신요금 부담 약속",
+      "quote": "요금은 저희가 냅니다."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "본인 명의로 개통해 구인자에게 넘기는 유심",
+      "quote": "본인 명의로 유심만 개통해서 보내 주시면"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "본인 명의로 유심 개통 및 발송",
+      "quote": "본인 명의로 유심만 개통해서 보내 주시면"
+     }
+    ],
+    "control_loss": [
+     {
+      "item": "본인 명의 유심의 실물과 사용 통제",
+      "quote": "본인 명의로 유심만 개통해서 보내 주시면"
+     }
+    ],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H5",
+     "quote": "본인 명의로 유심만 개통해서 보내 주시면",
+     "explanation": "지원자 본인 명의로 유심을 개통한 뒤 구인자에게 넘기라고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "본인 명의로 유심만 개통해서 보내 주시면",
+     "explanation": "보상을 받기 전에 본인 명의로 회선을 개통하고 유심을 넘겨야 합니다."
+    },
+    {
+     "axis": "D",
+     "quote": "본인 명의로 유심만 개통해서 보내 주시면",
+     "explanation": "유심을 보내면 본인 명의 회선을 누가 어떻게 사용하는지 직접 통제하기 어렵습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "1회선당 10만 원 바로 지급.",
+     "explanation": "유심을 개통해 보내는 대가로 회선마다 10만 원을 즉시 지급한다고 합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "구인자가 요금을 낸다고 하지만 납부 방식이나 미납 시 책임은 밝히지 않았습니다.",
+     "quote": "요금은 저희가 냅니다."
+    }
+   ],
+   "missing_info": [
+    "구인 업체 상호와 사업자 정보",
+    "유심 수령인과 실제 사용 목적",
+    "통신요금 납부 방식과 미납 시 책임",
+    "회선 사용 기간과 해지 절차",
+    "계약서 작성 여부"
+   ],
+   "follow_up_questions": [
+    "업체 명의가 아니라 지원자 명의로 개통해야 하는 이유와 유심을 실제로 사용할 사람 및 용도를 알려 주실 수 있나요?",
+    "개통비나 통신요금을 제가 먼저 내야 하는지, 요금이 미납되면 누가 책임지는지 알려 주실 수 있나요?",
+    "유심을 보낸 뒤에도 제가 통신사에 직접 회선 정지나 해지를 요청할 수 있는지 계약서에 명시해 주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 1122,
+   "reasoning_tokens": 0
+  },
+  "seconds": 14.3
+ },
+ "G4-2": {
+  "masked_text": "중고거래 계정 한 달만 빌려주시면 월 30만 원 드려요.\n거래는 저희가 알아서 하고 계정은 그대로 돌려드립니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": null,
+    "duties_summary": "지원자가 중고거래 계정을 한 달간 빌려주면 구인자가 해당 계정으로 거래하고 돌려준다고 합니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 30만 원",
+    "unit": "month",
+    "amount_krw": 300000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 30만 원 드려요."
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "중고거래 계정 사용권",
+      "quote": "중고거래 계정 한 달만 빌려주시면"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "월 30만 원",
+      "quote": "월 30만 원 드려요."
+     },
+     {
+      "item": "대여 계정 반환 약속",
+      "quote": "계정은 그대로 돌려드립니다."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "지원자 계정을 통한 구인자의 거래",
+      "quote": "거래는 저희가 알아서 하고 계정은 그대로 돌려드립니다."
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "중고거래 계정을 한 달간 빌려주기",
+      "quote": "중고거래 계정 한 달만 빌려주시면"
+     }
+    ],
+    "control_loss": [
+     {
+      "item": "대여 기간 중 구인자가 계정에서 하는 거래를 직접 관리하지 못할 수 있음",
+      "quote": "거래는 저희가 알아서 하고 계정은 그대로 돌려드립니다."
+     }
+    ],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H5",
+     "quote": "중고거래 계정 한 달만 빌려주시면 월 30만 원 드려요.",
+     "explanation": "지원자의 중고거래 계정을 한 달간 빌리는 대가로 월 30만 원을 제시합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "중고거래 계정 한 달만 빌려주시면 월 30만 원 드려요.",
+     "explanation": "보상을 받는 조건으로 지원자 계정의 사용권을 먼저 넘겨야 합니다."
+    },
+    {
+     "axis": "B",
+     "quote": "거래는 저희가 알아서 하고 계정은 그대로 돌려드립니다.",
+     "explanation": "지원자의 계정이 구인자와 제3자 사이의 거래 통로로 쓰입니다."
+    },
+    {
+     "axis": "C",
+     "quote": "거래는 저희가 알아서 하고 계정은 그대로 돌려드립니다.",
+     "explanation": "거래 상대방이 계정 주인을 실제 거래자로 오인해 분쟁이나 피해가 생길 수 있습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "중고거래 계정 한 달만 빌려주시면 월 30만 원 드려요.",
+     "explanation": "별도의 업무 없이 계정을 빌려주는 대가로 월 30만 원을 제시합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명",
+    "계정 접근 방식과 범위",
+    "거래 품목과 대금 처리 방식",
+    "계정 정지 및 거래 분쟁 시 책임",
+    "보상 지급 시점"
+   ],
+   "follow_up_questions": [
+    "어느 업체에서 어떤 물품을 거래하며 거래 대금은 누구의 계좌로 받으시나요?",
+    "계정을 빌리는 과정에서 로그인 정보나 인증번호 제공을 요구하시나요?",
+    "계정 정지나 거래 분쟁이 생겼을 때 누가 책임지는지 서면으로 확인해 주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5950,
+   "cached_input_tokens": 3290,
+   "output_tokens": 904,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.2
+ },
+ "G4-3": {
+  "masked_text": "[부업] 메신저 계정 대여 시 하루 2만 원. 로그인 정보만 공유해 주시면 되는 간단한 일입니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "[부업] 메신저 계정 대여",
+    "duties_summary": "본인의 메신저 계정을 빌려주고 로그인 정보를 공유하는 일입니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "하루 2만 원",
+    "unit": "day",
+    "amount_krw": 20000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "메신저 계정 대여 시 하루 2만 원."
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "본인 메신저 계정과 로그인 정보",
+      "quote": "메신저 계정 대여 시 하루 2만 원. 로그인 정보만 공유해 주시면 되는 간단한 일입니다."
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "계정 대여 대가",
+      "quote": "하루 2만 원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "메신저 계정 로그인 정보 공유",
+      "quote": "로그인 정보만 공유해 주시면 되는 간단한 일입니다."
+     }
+    ],
+    "control_loss": [
+     {
+      "item": "본인만 계정에 접속할 수 있는 통제권",
+      "quote": "로그인 정보만 공유해 주시면 되는 간단한 일입니다."
+     }
+    ],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H5",
+     "quote": "메신저 계정 대여 시 하루 2만 원. 로그인 정보만 공유해 주시면 되는 간단한 일입니다.",
+     "explanation": "하루 2만 원을 대가로 본인의 메신저 계정을 빌려주고 로그인 정보를 넘기라고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "메신저 계정 대여 시 하루 2만 원. 로그인 정보만 공유해 주시면 되는 간단한 일입니다.",
+     "explanation": "노동이나 시간을 제공하는 대신 본인 계정과 로그인 정보를 넘기는 것이 보상의 조건입니다."
+    },
+    {
+     "axis": "D",
+     "quote": "로그인 정보만 공유해 주시면 되는 간단한 일입니다.",
+     "explanation": "로그인 정보를 넘기면 다른 사람이 본인 계정에 접속할 수 있어 계정 사용을 통제하기 어려워질 수 있습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명",
+    "계정 사용 목적과 실제 사용자",
+    "대여 기간과 접근 종료 방식",
+    "계약서 작성 여부",
+    "대가 지급 시점과 방식"
+   ],
+   "follow_up_questions": [
+    "제 메신저 계정을 누가 어떤 목적으로 사용하나요?",
+    "로그인 정보 공유 없이 할 수 있는 업무가 있나요?",
+    "업체명과 계정 사용 범위, 대여 기간, 지급 시점이 적힌 계약서를 사전에 확인할 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5930,
+   "cached_input_tokens": 3270,
+   "output_tokens": 884,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.5
+ },
+ "G5-1": {
+  "masked_text": "고액 운반 알바. 지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면 건당 50만 원.\n내용물은 확인하지 마세요. 텔레그램 문의\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "고액 운반 알바",
+    "duties_summary": "지정된 장소에서 물건을 받아 내용물을 확인하지 않고 다른 장소에 두고 오는 일입니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 50만 원",
+    "unit": "per_task",
+    "amount_krw": 500000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 50만 원."
+   },
+   "contact": {
+    "channels": [
+     "telegram"
+    ],
+    "moves_to_messenger": true,
+    "quote": "텔레그램 문의"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "운반 보수",
+      "quote": "건당 50만 원"
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "내용물을 알 수 없는 물건",
+      "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면 건당 50만 원.\n내용물은 확인하지 마세요."
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "지정 장소에서 물건을 받아 다른 장소에 두기",
+      "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면"
+     },
+     {
+      "item": "내용물을 확인하지 않기",
+      "quote": "내용물은 확인하지 마세요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "텔레그램 문의만 안내하며 이후 채용 절차는 적혀 있지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H2",
+     "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면 건당 50만 원.\n내용물은 확인하지 마세요.",
+     "explanation": "내용물을 확인하지 않은 채 물건을 받아 다른 장소로 옮기라고 합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "고액 운반 알바. 지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면 건당 50만 원.",
+     "explanation": "무엇을 어디로 옮기는지 밝히지 않으면서 건당 50만 원을 강조합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "텔레그램 문의",
+     "explanation": "문의 경로로 외부 메신저인 텔레그램을 안내합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면",
+     "explanation": "물건을 옮긴다는 것 외에 물품 종류나 인수·인계 장소가 구체적으로 적혀 있지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면",
+     "explanation": "근로자가 물건을 인수해 다른 장소에 놓는 중간 전달 역할을 맡습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "지정된 장소에서 물건 받아서 다른 장소에 두고 오기만 하면 건당 50만 원.",
+     "explanation": "공고에 적힌 단순 운반 업무에 비해 건당 50만 원은 이례적으로 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명과 사업자 정보",
+    "운반 물품의 종류와 발송·수령 주체",
+    "물품 인수·인계 장소",
+    "근로계약 체결 절차",
+    "보수 지급 시점과 조건"
+   ],
+   "follow_up_questions": [
+    "운반할 물품은 무엇이며, 발송인과 수령인은 누구이고, 내용물을 확인하지 말라는 이유는 무엇인가요?",
+    "물품을 어디서 받아 어디에 두며, 인수·인계 내역은 어떤 서류로 확인할 수 있나요?",
+    "계약을 맺는 업체의 상호는 무엇이며, 업무 시작 전에 계약서를 받을 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 1100,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.7
+ },
+ "G5-2": {
+  "masked_text": "해외 직구 물품 수령 대행 알바! 본인 주소로 택배 받아서 저희가 알려 드리는 주소로\n다시 보내 주시면 건당 7만 원. 박스는 뜯지 말아 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "해외 직구 물품 수령 대행 알바",
+    "duties_summary": "본인 주소로 택배를 받아 개봉하지 않고 구인자가 지정하는 주소로 다시 보냅니다.",
+    "duty_clarity": "clear",
+    "work_location": "본인 주소",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 7만 원",
+    "unit": "per_task",
+    "amount_krw": 70000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 7만 원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "택배 수령에 본인 주소 사용",
+      "quote": "본인 주소로 택배 받아서"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "재발송 1건당 보수 7만 원",
+      "quote": "건당 7만 원"
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "구체적인 내용물이 밝혀지지 않은 해외 직구 물품",
+      "quote": "해외 직구 물품 수령 대행 알바! 본인 주소로 택배 받아서 저희가 알려 드리는 주소로\n다시 보내 주시면"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "본인 주소로 택배를 받아 지정 주소로 재발송",
+      "quote": "본인 주소로 택배 받아서 저희가 알려 드리는 주소로\n다시 보내 주시면"
+     },
+     {
+      "item": "택배 상자를 개봉하지 않기",
+      "quote": "박스는 뜯지 말아 주세요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H2",
+     "quote": "본인 주소로 택배 받아서 저희가 알려 드리는 주소로\n다시 보내 주시면 건당 7만 원. 박스는 뜯지 말아 주세요.",
+     "explanation": "내용물이 명시되지 않은 택배를 본인 주소로 받아 개봉하지 않은 채 지정된 곳으로 보내라고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "본인 주소로 택배 받아서 저희가 알려 드리는 주소로\n다시 보내 주시면",
+     "explanation": "근로자의 주소가 다른 사람의 물품을 받아 다시 보내는 중간 경유지가 됩니다."
+    },
+    {
+     "axis": "F",
+     "quote": "다시 보내 주시면 건당 7만 원.",
+     "explanation": "공고에 설명된 수령과 재발송 작업에 비해 건당 7만 원은 높은 보상으로 보입니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호 및 사업자 정보",
+    "물품의 구체적인 품목과 구매·통관 명의",
+    "최종 수령처와 재발송 사유",
+    "배송비·관세 부담 주체와 선결제 여부",
+    "계약서 작성 여부와 보수 지급 시점"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 사업자등록번호를 알려주시고, 업무 전에 계약서를 작성하는지 확인해 주실 수 있나요?",
+    "어떤 물품을 누구 명의로 구매·통관하는지, 제 주소로 받은 뒤 다른 곳으로 보내야 하는 이유가 무엇인지 알려주실 수 있나요?",
+    "배송비나 관세를 제가 먼저 내야 하는지, 건당 보수는 언제 지급되는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5963,
+   "cached_input_tokens": 3303,
+   "output_tokens": 1048,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.2
+ },
+ "G5-3": {
+  "masked_text": "퀵 배달 알바 일당 40만 💸 서류 봉투만 전달하면 끝, 차 없어도 OK. 텔ㄹ 연락 주세요\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "퀵 배달 알바",
+    "duties_summary": "서류 봉투를 전달하는 일로, 봉투의 구체적인 내용물과 수거·전달 장소는 적혀 있지 않습니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "일당 40만",
+    "unit": "day",
+    "amount_krw": 400000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "일당 40만"
+   },
+   "contact": {
+    "channels": [
+     "telegram"
+    ],
+    "moves_to_messenger": true,
+    "quote": "텔ㄹ 연락 주세요"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "일당 40만 원",
+      "quote": "일당 40만"
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "구체적인 내용물이 명시되지 않은 서류 봉투",
+      "quote": "서류 봉투만 전달하면 끝"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "서류 봉투 전달",
+      "quote": "서류 봉투만 전달하면 끝"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "텔레그램으로 연락하라고 안내하며 이후 채용 절차는 명시하지 않았습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H2",
+     "quote": "일당 40만 💸 서류 봉투만 전달하면 끝",
+     "explanation": "구체적인 내용물이 적혀 있지 않은 서류 봉투를 전달하는 대가로 일당 40만 원을 제시합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "일당 40만 💸 서류 봉투만 전달하면 끝",
+     "explanation": "근무시간이나 배달 건수는 설명하지 않고 일당 40만 원을 강조합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "텔ㄹ 연락 주세요",
+     "explanation": "텔레그램을 줄여 적고 그쪽으로 연락하라고 안내합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "서류 봉투만 전달하면 끝",
+     "explanation": "근로자가 구체적인 내용물을 알 수 없는 봉투를 받아 다른 사람에게 전달하는 구조입니다."
+    },
+    {
+     "axis": "F",
+     "quote": "일당 40만 💸 서류 봉투만 전달하면 끝",
+     "explanation": "봉투 전달만 한다는 설명에 비해 일당 40만 원은 상당히 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 사업장 주소",
+    "봉투 내용물과 수거·전달 장소",
+    "하루 근무시간과 배달 건수",
+    "일당 지급 조건과 지급일",
+    "근로계약서 작성 여부"
+   ],
+   "follow_up_questions": [
+    "봉투에 어떤 서류가 들어 있고, 어디에서 받아 어디로 전달하며, 현금이나 카드도 함께 받아 전달해야 하나요?",
+    "일당 40만 원은 하루 몇 시간과 몇 건을 기준으로 하고, 언제 지급되나요?",
+    "업체 상호와 사업장 주소를 알려주실 수 있고, 일을 시작하기 전에 근로계약서를 작성하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5947,
+   "cached_input_tokens": 3287,
+   "output_tokens": 961,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.3
+ },
+ "G6-1": {
+  "masked_text": "동남아 리조트 단기 알바 모집! 비자 없이 바로 출국 가능, 항공권·숙소 전부 제공.\n한 달 1,000만 원 이상 보장\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": "동남아",
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "동남아 리조트 단기 알바",
+    "duties_summary": null,
+    "duty_clarity": "vague",
+    "work_location": "동남아 리조트",
+    "overseas": true,
+    "overseas_country": null,
+    "overseas_perks": [
+     "flight",
+     "lodging",
+     "no_visa",
+     "high_pay"
+    ],
+    "overseas_quote": "동남아 리조트 단기 알바 모집! 비자 없이 바로 출국 가능, 항공권·숙소 전부 제공.\n한 달 1,000만 원 이상 보장"
+   },
+   "pay": {
+    "amount_text": "한 달 1,000만 원 이상",
+    "unit": "month",
+    "amount_krw": 10000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "한 달 1,000만 원 이상 보장"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "항공권과 숙소",
+      "quote": "항공권·숙소 전부 제공"
+     },
+     {
+      "item": "월 1,000만 원 이상의 급여",
+      "quote": "한 달 1,000만 원 이상 보장"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H7",
+     "quote": "동남아 리조트 단기 알바 모집! 비자 없이 바로 출국 가능, 항공권·숙소 전부 제공.\n한 달 1,000만 원 이상 보장",
+     "explanation": "해외 근무를 모집하면서 비자 없이 출국할 수 있다고 하고, 항공권과 숙소 제공 및 월 1,000만 원 이상의 급여를 내세웁니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "한 달 1,000만 원 이상 보장",
+     "explanation": "구체적인 업무 설명 없이 월 1,000만 원 이상의 고수익을 보장한다고 합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "동남아 리조트 단기 알바 모집!",
+     "explanation": "리조트 단기 알바라고만 적혀 있어 실제로 어떤 일을 하는지 알 수 없습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "한 달 1,000만 원 이상 보장",
+     "explanation": "업무와 근무시간을 밝히지 않은 단기 알바에 월 1,000만 원 이상을 보장한다고 해 보상이 이례적으로 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "비자 없이 출국할 수 있다고 하지만 현지에서 합법적으로 일할 수 있는 자격은 설명하지 않습니다.",
+     "quote": "비자 없이 바로 출국 가능"
+    }
+   ],
+   "missing_info": [
+    "고용 업체의 정식 상호와 사업자 등록 정보",
+    "근무 국가와 리조트의 정확한 주소",
+    "구체적인 업무와 근무시간",
+    "현지 취업 자격과 허가 절차",
+    "급여 지급 조건과 항공권·숙소 비용 부담이 명시된 근로계약서"
+   ],
+   "follow_up_questions": [
+    "고용 업체의 정식 상호와 리조트 주소, 실제 담당 업무를 알려주시고 업무에 고객의 돈이나 물건을 받아 전달하는 일이 포함되는지도 확인해 주실 수 있나요?",
+    "현지에서 일하려면 어떤 취업 허가가 필요하며, 출국 후에도 여권은 제가 계속 보관하나요?",
+    "출국 전에 제가 먼저 내야 할 항공권·숙소 비용이나 보증금이 있는지, 급여와 비용 부담 조건을 출국 전에 서면 계약서로 확인할 수 있는지 알려주시겠어요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5955,
+   "cached_input_tokens": 3295,
+   "output_tokens": 1089,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.3
+ },
+ "G6-2": {
+  "masked_text": "해외 콜센터 상담원 모집(한국어 가능자). 왕복 항공권 회사 부담, 숙식 제공, 월 600만 원 + 인센티브.\n출국 후 여권은 회사에서 보관합니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "해외 콜센터 상담원",
+    "duties_summary": "콜센터 상담원 모집이며, 상담 대상과 구체적인 업무는 나와 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": "해외",
+    "overseas": true,
+    "overseas_country": null,
+    "overseas_perks": [
+     "flight",
+     "lodging",
+     "high_pay"
+    ],
+    "overseas_quote": "해외 콜센터 상담원 모집(한국어 가능자). 왕복 항공권 회사 부담, 숙식 제공, 월 600만 원 + 인센티브."
+   },
+   "pay": {
+    "amount_text": "월 600만 원 + 인센티브",
+    "unit": "month",
+    "amount_krw": 6000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 600만 원 + 인센티브"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "회사 부담 왕복 항공권",
+      "quote": "왕복 항공권 회사 부담"
+     },
+     {
+      "item": "숙식",
+      "quote": "숙식 제공"
+     },
+     {
+      "item": "월급과 인센티브",
+      "quote": "월 600만 원 + 인센티브"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "출국 후 회사에 여권 맡기기",
+      "quote": "출국 후 여권은 회사에서 보관합니다."
+     }
+    ],
+    "control_loss": [
+     {
+      "item": "여권을 직접 보관할 수 없음",
+      "quote": "출국 후 여권은 회사에서 보관합니다."
+     }
+    ],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H7",
+     "quote": "해외 콜센터 상담원 모집(한국어 가능자). 왕복 항공권 회사 부담, 숙식 제공, 월 600만 원 + 인센티브.",
+     "explanation": "해외 근무 조건으로 회사 부담 왕복 항공권과 숙식, 높은 월급을 내세웁니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "월 600만 원 + 인센티브",
+     "explanation": "구체적인 상담 업무를 설명하지 않은 채 높은 월급과 인센티브를 제시합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "해외 콜센터 상담원 모집(한국어 가능자).",
+     "explanation": "콜센터 상담원이라는 직무명만 있고 누구를 대상으로 어떤 상담을 하는지는 나와 있지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "D",
+     "quote": "출국 후 여권은 회사에서 보관합니다.",
+     "explanation": "출국 후 회사가 여권을 보관하면 근로자가 필요할 때 여권을 바로 쓰거나 귀국하기 어려울 수 있습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "월 600만 원 + 인센티브",
+     "explanation": "공고에 적힌 콜센터 상담원 업무에 비해 월 600만 원에 인센티브까지 더한 보상은 이례적으로 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "고용 업체의 정식 상호",
+    "근무 국가와 사업장 주소",
+    "상담 대상과 구체적인 업무",
+    "취업비자 발급 절차와 비용 부담 주체",
+    "여권 보관을 거부할 수 있는지와 반환 절차"
+   ],
+   "follow_up_questions": [
+    "출국 후에도 여권 원본을 제가 직접 보관할 수 있나요?",
+    "어떤 고객을 대상으로 어떤 상담을 하며, 제 명의의 계좌나 휴대폰을 쓰거나 고객의 돈을 받아 전달하는 일도 있나요?",
+    "고용 업체의 정식 상호와 현지 사업장 주소는 무엇이며, 취업비자나 항공권을 위해 제가 미리 내야 하는 비용이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5959,
+   "cached_input_tokens": 3299,
+   "output_tokens": 1106,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.4
+ },
+ "G6-3": {
+  "masked_text": "캄보디아 현지 마케팅 사무직, 월 800만 원. 경력 무관, 관광비자로 입국 후 근무. 자세한 건 메신저로\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": "캄보디아",
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "마케팅 사무직",
+    "duties_summary": "마케팅 사무직으로 모집하지만 구체적인 업무는 설명하지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": "캄보디아 현지",
+    "overseas": true,
+    "overseas_country": "캄보디아",
+    "overseas_perks": [
+     "high_pay"
+    ],
+    "overseas_quote": "캄보디아 현지 마케팅 사무직, 월 800만 원. 경력 무관, 관광비자로 입국 후 근무."
+   },
+   "pay": {
+    "amount_text": "월 800만 원",
+    "unit": "month",
+    "amount_krw": 8000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 800만 원"
+   },
+   "contact": {
+    "channels": [
+     "other_messenger"
+    ],
+    "moves_to_messenger": true,
+    "quote": "자세한 건 메신저로"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "월급 800만 원",
+      "quote": "월 800만 원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "관광비자로 입국한 뒤 근무",
+      "quote": "관광비자로 입국 후 근무"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "자세한 내용은 메신저로 안내한다고 하며 면접과 계약 절차는 밝히지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H7",
+     "quote": "캄보디아 현지 마케팅 사무직, 월 800만 원. 경력 무관",
+     "explanation": "캄보디아 현지에서 경력과 관계없이 일할 수 있다며 월 800만 원을 제시합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "캄보디아 현지 마케팅 사무직, 월 800만 원.",
+     "explanation": "구체적으로 어떤 일을 하는지 설명하지 않은 채 월 800만 원의 높은 급여를 제시합니다."
+    },
+    {
+     "signal_id": "S2",
+     "quote": "자세한 건 메신저로",
+     "explanation": "자세한 내용은 메신저에서 확인하도록 유도합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "마케팅 사무직 … 자세한 건 메신저로",
+     "explanation": "마케팅 사무직이라는 직무명만 있고 실제로 맡을 업무는 적혀 있지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "C",
+     "quote": "관광비자로 입국 후 근무",
+     "explanation": "관광비자로 입국한 뒤 근무하라고 하면서 근무 시작 전에 취업 자격을 어떻게 갖추는지 밝히지 않아 무허가 취업이 될 우려가 있습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "마케팅 사무직, 월 800만 원. 경력 무관",
+     "explanation": "경력 요건이 없고 구체적인 업무도 밝히지 않은 사무직에 월 800만 원을 제시합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "고용업체의 정식 상호와 현지 근무지 주소",
+    "구체적인 담당 업무와 근무시간",
+    "취업비자 및 근로허가 발급 절차",
+    "서면 근로계약과 급여 지급 조건",
+    "비자·이동 비용 부담 주체와 여권 보관 방식"
+   ],
+   "follow_up_questions": [
+    "고용업체의 정식 상호와 현지 사무실 주소, 실제 담당 업무가 무엇인지 알려 주실 수 있나요?",
+    "근무를 시작하기 전에 어떤 취업비자와 근로허가를 발급받고, 관련 비용은 누가 부담하며 여권 원본은 제가 계속 보관할 수 있나요?",
+    "출국 전에 월 800만 원이 고정급인지와 근무시간·지급일이 적힌 근로계약서를 확인할 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5954,
+   "cached_input_tokens": 3294,
+   "output_tokens": 1132,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.8
+ },
+ "G7-1": {
+  "masked_text": "문자알바 주급 50만 원! 휴대폰으로 하루 300건씩 문자만 보내면 됩니다. 문구는 저희가 드려요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "문자알바",
+    "duties_summary": "구인자가 제공하는 문구를 휴대폰으로 하루 300건씩 발송하는 일",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "주급 50만 원",
+    "unit": "week",
+    "amount_krw": 500000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "문자알바 주급 50만 원!"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "주급 50만 원",
+      "quote": "주급 50만 원"
+     },
+     {
+      "item": "발송용 문자 문구",
+      "quote": "문구는 저희가 드려요."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "휴대폰으로 하루 300건씩 문자 발송",
+      "quote": "휴대폰으로 하루 300건씩 문자만 보내면 됩니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H6",
+     "quote": "휴대폰으로 하루 300건씩 문자만 보내면 됩니다.",
+     "explanation": "휴대폰으로 하루 300건의 문자를 대량 발송하도록 요구합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "C",
+     "quote": "휴대폰으로 하루 300건씩 문자만 보내면 됩니다.",
+     "explanation": "수신 동의나 발송 목적이 확인되지 않아 대량 문자가 스팸으로 수신자에게 피해를 줄 수 있습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호 및 사업자 정보",
+    "문자 내용과 발송 목적",
+    "수신자 명단 출처와 수신 동의 여부",
+    "발신 번호·휴대폰 제공 주체와 발송 비용 부담",
+    "근무시간과 근로계약 조건"
+   ],
+   "follow_up_questions": [
+    "어느 업체에서 채용하며, 어떤 내용의 문자를 어떤 목적으로 보내는 업무인가요?",
+    "수신자 명단은 어디서 확보하며, 수신자들이 문자 수신에 동의했나요?",
+    "업체에서 발신 번호와 휴대폰을 제공하고 발송 비용을 부담하나요, 아니면 제 명의의 번호를 쓰거나 제가 비용을 내야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5949,
+   "cached_input_tokens": 3289,
+   "output_tokens": 782,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.9
+ },
+ "G7-2": {
+  "masked_text": "용돈벌이 알바~ 친구 1명 데려올 때마다 3만 원 추가 지급, 10명 모으면 보너스 50만 원!\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "용돈벌이 알바",
+    "duties_summary": "친구를 데려오면 보상을 지급한다고 하지만, 친구를 어디에 모집하는지와 그 외에 어떤 일을 하는지는 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "친구 1명 데려올 때마다 3만 원 추가 지급, 10명 모으면 보너스 50만 원!",
+    "unit": "per_task",
+    "amount_krw": 30000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "친구 1명 데려올 때마다 3만 원 추가 지급, 10명 모으면 보너스 50만 원!"
+   },
+   "contact": {
+    "channels": [],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "친구 1명당 추가 수당 3만 원",
+      "quote": "친구 1명 데려올 때마다 3만 원 추가 지급"
+     },
+     {
+      "item": "10명 모집 시 보너스 50만 원",
+      "quote": "10명 모으면 보너스 50만 원!"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "수당을 받으려면 친구 모집",
+      "quote": "친구 1명 데려올 때마다 3만 원 추가 지급"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H6",
+     "quote": "친구 1명 데려올 때마다 3만 원 추가 지급, 10명 모으면 보너스 50만 원!",
+     "explanation": "친구를 데려올 때마다 수당을 주고 10명을 모으면 별도 보너스를 준다고 합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "용돈벌이 알바~ 친구 1명 데려올 때마다 3만 원 추가 지급, 10명 모으면 보너스 50만 원!",
+     "explanation": "지인 모집 보상만 적혀 있고 어떤 일이나 서비스에 친구를 모집하는지는 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명",
+    "지인 모집 목적과 실제 업무",
+    "기본급 유무와 수당 지급 조건",
+    "지원 방법",
+    "지원자와 소개받은 사람의 가입·비용 부담 조건"
+   ],
+   "follow_up_questions": [
+    "구인 업체명과 친구를 어떤 일이나 서비스에 모집하는지, 친구 소개 외에 제가 맡을 업무가 무엇인지 알려주실 수 있나요?",
+    "저나 소개받은 친구가 가입비를 내거나 상품을 구매하거나 계정·명의를 제공해야 하나요?",
+    "친구를 소개하지 않아도 받는 기본급이 있는지, 소개 수당과 보너스는 각각 어떤 조건에서 언제 지급되는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5946,
+   "cached_input_tokens": 3286,
+   "output_tokens": 909,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.0
+ },
+ "G7-3": {
+  "masked_text": "[홍보 부업] 단체 문자 발송 업무, 1건당 30원. 대량 발송용 유심은 본인 명의로 준비해 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "홍보 부업",
+    "duties_summary": "홍보용 단체 문자 발송",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "1건당 30원",
+    "unit": "per_task",
+    "amount_krw": 30,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "1건당 30원."
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "대량 발송용 본인 명의 유심",
+      "quote": "대량 발송용 유심은 본인 명의로 준비해 주세요."
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "문자 발송 건당 30원",
+      "quote": "단체 문자 발송 업무, 1건당 30원."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "단체 문자 발송",
+      "quote": "단체 문자 발송 업무"
+     },
+     {
+      "item": "본인 명의 유심 준비",
+      "quote": "대량 발송용 유심은 본인 명의로 준비해 주세요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H5",
+     "quote": "대량 발송용 유심은 본인 명의로 준비해 주세요.",
+     "explanation": "업무에 사용할 유심을 지원자 본인 명의로 준비하라고 요구합니다."
+    },
+    {
+     "signal_id": "H6",
+     "quote": "단체 문자 발송 업무, 1건당 30원.",
+     "explanation": "단체 문자를 발송하고 발송 건수에 따라 보수를 받는 구조입니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "대량 발송용 유심은 본인 명의로 준비해 주세요.",
+     "explanation": "업무를 시작하기 전에 지원자 본인 명의의 유심을 준비하도록 요구합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명과 사업자 정보",
+    "유심 신규 개통 여부와 비용 부담 주체",
+    "유심의 사용 및 보관 주체",
+    "문자 내용과 수신자 동의 확인 방식",
+    "급여 정산 및 지급 일정"
+   ],
+   "follow_up_questions": [
+    "구인 업체의 상호와 사업자등록번호를 알려주실 수 있나요?",
+    "본인 명의 유심을 새로 개통하거나 개통비·통신비를 부담해야 하는지, 유심을 업체에 넘겨야 하는지도 알려주실 수 있나요?",
+    "어떤 내용을 발송하며 수신자의 광고 문자 수신 동의는 어떻게 확인하시나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5936,
+   "cached_input_tokens": 3276,
+   "output_tokens": 873,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.0
+ },
+ "G12-1": {
+  "masked_text": "해외송금 대행 사무 보조. 회사 거래 대금이 본인 계좌로 들어오면 지정 계좌로 이체해 주시는\n간단한 업무, 건당 수수료 3%.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "해외송금 대행 사무 보조",
+    "duties_summary": "회사 거래 대금을 본인 계좌로 받아 지정 계좌로 이체합니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 수수료 3%",
+    "unit": "per_task",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 수수료 3%."
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "건당 수수료 3%",
+      "quote": "건당 수수료 3%."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "본인 계좌를 거치는 회사 거래 대금",
+      "quote": "회사 거래 대금이 본인 계좌로 들어오면 지정 계좌로 이체"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "본인 계좌로 받은 대금을 지정 계좌로 이체",
+      "quote": "회사 거래 대금이 본인 계좌로 들어오면 지정 계좌로 이체해 주시는"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H1",
+     "quote": "회사 거래 대금이 본인 계좌로 들어오면 지정 계좌로 이체해 주시는",
+     "explanation": "회사 거래 대금을 근로자 본인 계좌로 받은 뒤 지정 계좌로 보내도록 요구합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "회사 거래 대금이 본인 계좌로 들어오면 지정 계좌로 이체해 주시는",
+     "explanation": "근로자의 개인 계좌가 회사 거래 대금을 다른 계좌로 보내는 통로가 됩니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 사업자등록 정보",
+    "거래 대금의 출처와 지정 계좌의 명의",
+    "회사 계좌 대신 개인 계좌를 쓰는 이유",
+    "수수료 산정 기준과 지급 시점",
+    "근로계약서 작성 여부"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 사업자등록 정보를 안내해 주시고, 업무 시작 전에 근로계약서를 작성하는지 알려 주실 수 있나요?",
+    "회사 계좌 대신 제 개인 계좌로 거래 대금을 받아야 하는 이유와 돈을 보내는 쪽 및 지정 계좌의 명의를 알려 주실 수 있나요?",
+    "업무를 시작하거나 송금하는 과정에서 제 돈을 먼저 내거나 카드·인증번호를 제공해야 하는 절차가 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5957,
+   "cached_input_tokens": 3297,
+   "output_tokens": 852,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.9
+ },
+ "G12-2": {
+  "masked_text": "채권 회수 대행 아르바이트. 고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다. 일당 25만 원.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "채권 회수 대행 아르바이트",
+    "duties_summary": "고객에게 받은 현금으로 상품권을 구매한 뒤 상품권 핀번호를 보냅니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "일당 25만 원",
+    "unit": "day",
+    "amount_krw": 250000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "일당 25만 원."
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "일당 25만 원",
+      "quote": "일당 25만 원."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "고객에게 받은 현금",
+      "quote": "고객에게 받은 현금"
+     },
+     {
+      "item": "고객 현금으로 구매한 상품권의 핀번호",
+      "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다."
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "고객 현금을 상품권으로 바꾸고 핀번호 보내기",
+      "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H1",
+     "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다.",
+     "explanation": "고객에게 받은 돈을 상품권으로 바꾸고 핀번호를 보내도록 요구합니다."
+    },
+    {
+     "signal_id": "H2",
+     "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다.",
+     "explanation": "근로자가 고객으로부터 직접 현금을 받는 업무입니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다.",
+     "explanation": "고객의 돈이 근로자를 거쳐 상품권 핀번호 형태로 전달됩니다."
+    },
+    {
+     "axis": "F",
+     "quote": "고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다. 일당 25만 원.",
+     "explanation": "공고에 적힌 단순 업무에 비해 일당 25만 원은 높은 편이지만 근무시간은 나오지 않습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "채권 회수 대행이라고 하지만 회수 권한이나 상품권으로 바꾸는 이유를 밝히지 않습니다.",
+     "quote": "채권 회수 대행 아르바이트. 고객에게 받은 현금을 상품권으로 바꿔서 핀번호만 보내 주시면 됩니다."
+    }
+   ],
+   "missing_info": [
+    "업체 상호와 사업자등록 정보",
+    "채권 회수 권한을 확인할 서류",
+    "상품권 전환 이유와 핀번호 수령 주체",
+    "근무 지역과 근무시간",
+    "근로계약서 작성 여부와 급여 지급일"
+   ],
+   "follow_up_questions": [
+    "업체의 등록 상호와 채권 회수 권한을 확인할 수 있는 서류를 보여 주실 수 있나요?",
+    "고객에게 받은 현금을 상품권으로 바꿔야 하는 이유와 핀번호를 받는 주체가 누구인지 알려 주실 수 있나요?",
+    "업무 중 제 돈으로 먼저 상품권을 사거나 제 계좌나 카드를 사용해야 하는 경우가 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5953,
+   "cached_input_tokens": 3293,
+   "output_tokens": 1072,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.2
+ },
+ "G12-3": {
+  "masked_text": "정산 업무 재택 알바. 택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다. 건당 10만 원.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "정산 업무 재택 알바",
+    "duties_summary": "택배로 받은 체크카드로 ATM에서 현금을 출금한 뒤 지정 계좌에 입금하는 일입니다.",
+    "duty_clarity": "clear",
+    "work_location": "재택",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 10만 원",
+    "unit": "per_task",
+    "amount_krw": 100000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 10만 원."
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "건당 보수 10만 원",
+      "quote": "건당 10만 원."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "택배로 받는 체크카드",
+      "quote": "택배로 보내 드리는 체.크.카.드"
+     },
+     {
+      "item": "ATM에서 출금해 지정 계좌에 입금하는 돈",
+      "quote": "ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다."
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "받은 카드로 현금을 출금해 지정 계좌에 입금",
+      "quote": "택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H1",
+     "quote": "택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다.",
+     "explanation": "택배로 받은 타인의 체크카드로 현금을 뽑아 지정 계좌에 입금하라고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "B",
+     "quote": "택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다.",
+     "explanation": "근로자가 타인의 체크카드를 받아 돈을 다른 계좌로 옮기는 통로가 됩니다."
+    },
+    {
+     "axis": "C",
+     "quote": "택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다.",
+     "explanation": "카드 사용 권한과 자금 출처가 확인되지 않아 무단 인출이나 범죄 자금 이동에 연루될 수 있습니다."
+    },
+    {
+     "axis": "F",
+     "quote": "ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다. 건당 10만 원.",
+     "explanation": "ATM 출금과 입금만 하는 일에 건당 10만 원을 제시해 업무에 비해 보상이 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "재택 업무라고 소개하지만 실제로는 ATM에 가야 합니다.",
+     "quote": "정산 업무 재택 알바. 택배로 보내 드리는 체.크.카.드로 ATM에서 출금 후 지정 계좌로 입금해 주시면 됩니다."
+    }
+   ],
+   "missing_info": [
+    "업체명과 사업자 정보",
+    "카드 명의와 사용 권한",
+    "자금 출처와 지정 계좌의 용도",
+    "근로계약 체결 방식",
+    "보수 지급 시점과 방식"
+   ],
+   "follow_up_questions": [
+    "업체명과 사업자등록번호는 무엇이며, 업무 전에 근로계약서를 작성하나요?",
+    "보내 주시는 카드는 누구 명의이며, 제가 그 카드로 출금할 권한은 어떻게 확인할 수 있나요?",
+    "출금할 돈의 출처와 지정 계좌에 입금해야 하는 이유는 무엇이며, 제 개인 계좌를 쓰거나 제 돈을 먼저 내야 하는 경우도 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5944,
+   "cached_input_tokens": 3284,
+   "output_tokens": 1094,
+   "reasoning_tokens": 0
+  },
+  "seconds": 13.4
+ },
+ "G13-1": {
+  "masked_text": "[사무직 신입 채용] 가상에듀컨설팅\n경력 무관, 교육 후 배치. 2주 합숙 교육 진행, 직급 수당·소개 수당 별도.\n월 300만 원 이상 가능\n",
+  "extraction": {
+   "company": {
+    "name": "가상에듀컨설팅",
+    "name_quote": "가상에듀컨설팅",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "사무직 신입 채용",
+    "duties_summary": "교육 후 배치한다고만 안내하며, 배치 후 맡을 업무는 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 300만 원 이상 가능",
+    "unit": "month",
+    "amount_krw": 3000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 300만 원 이상 가능"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "월 300만 원 이상 가능하다고 안내한 보수",
+      "quote": "월 300만 원 이상 가능"
+     },
+     {
+      "item": "별도 직급 수당·소개 수당",
+      "quote": "직급 수당·소개 수당 별도"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "2주 합숙 교육 참여",
+      "quote": "2주 합숙 교육 진행"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "경력과 무관하게 모집하며, 2주 합숙 교육 후 배치한다고 안내합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "M3",
+     "quote": "교육 후 배치. 2주 합숙 교육 진행, 직급 수당·소개 수당 별도.",
+     "explanation": "사무직으로 모집하면서 합숙 교육 후 배치와 직급·소개 수당을 제시해 실제 업무에 판매나 인원 모집이 포함되는지 확인이 필요합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "[사무직 신입 채용] 가상에듀컨설팅",
+     "explanation": "사무직이라는 직종만 제시하고 실제로 맡을 업무는 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "배치 후 실제 업무와 소개 수당 지급 조건",
+    "실제 근무지와 근무시간",
+    "보장 기본급과 월 300만 원 산정 기준",
+    "합숙 교육비·숙박비 부담 주체와 교육 중 외출 조건",
+    "근로계약 체결 시점"
+   ],
+   "follow_up_questions": [
+    "배치 후 맡을 업무를 구체적으로 알려주시고, 소개 수당이 지인이나 신규 인력을 모집할 때 지급되는지도 설명해 주실 수 있나요?",
+    "2주 합숙 교육에 지원자가 부담할 교육비나 숙박비가 있는지, 교육 중 외출이나 중도 퇴소가 가능한지 알려주실 수 있나요?",
+    "근로계약은 합숙 교육 전에 체결하는지, 월 300만 원 중 수당을 제외하고 보장되는 기본급은 얼마인지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5968,
+   "cached_input_tokens": 3308,
+   "output_tokens": 875,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.1
+ },
+ "G13-2": {
+  "masked_text": "재테크 교육 받고 일하는 사무 보조 모집! 교육 수료 후 투자 상담 업무 배치, 첫 달부터 월 400 가능\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "사무 보조",
+    "duties_summary": "재테크 교육을 수료하면 투자 상담 업무에 배치된다고 안내합니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 400 가능",
+    "unit": "month",
+    "amount_krw": 4000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "첫 달부터 월 400 가능"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "첫 달부터 월 400만 원 수입 가능성(보장 여부 미기재)",
+      "quote": "첫 달부터 월 400 가능"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "재테크 교육 수료",
+      "quote": "재테크 교육 받고 일하는 사무 보조 모집! 교육 수료 후 투자 상담 업무 배치"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "교육 수료 후 투자 상담 업무에 배치한다고 안내하지만 지원 방법과 계약 시점은 적혀 있지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "M3",
+     "quote": "재테크 교육 받고 일하는 사무 보조 모집! 교육 수료 후 투자 상담 업무 배치",
+     "explanation": "사무 보조로 모집하지만 재테크 교육을 마치면 투자 상담 업무에 배치한다고 안내합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "첫 달부터 월 400 가능",
+     "explanation": "구체적인 업무와 급여 산정 기준 없이 첫 달부터 월 400만 원을 벌 수 있다고 강조합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "교육 수료 후 투자 상담 업무 배치",
+     "explanation": "투자 상담에 배치된다고만 적혀 있어 실제로 어떤 일을 하는지 알기 어렵습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 근무지",
+    "투자 상담의 구체적인 업무 범위",
+    "교육비와 교육 중 급여 지급 여부",
+    "고정급·성과급 구분과 지급 조건",
+    "근로계약 체결 시점"
+   ],
+   "follow_up_questions": [
+    "교육을 받거나 업무에 배치되기 전에 제가 내야 하는 교육비·등록비가 있거나 직접 투자해야 하는 조건이 있나요?",
+    "교육 후 맡는 투자 상담의 구체적인 업무는 무엇이며, 고객의 투자금을 제 계좌로 받거나 대신 송금하는 일도 포함되나요?",
+    "첫 달 월 400만 원은 근로계약서에 명시되는 고정급인가요, 아니면 실적에 따른 수당을 포함한 예상 금액인가요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5941,
+   "cached_input_tokens": 3281,
+   "output_tokens": 865,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.3
+ },
+ "G13-3": {
+  "masked_text": "취업 보장 과정 수강생 모집합니다. 과정 수료하면 협력사 정규직 100% 취업!\n수강료는 첫 월급에서 분할 차감\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "취업 보장 과정 수강생",
+    "duties_summary": "수료 후 협력사 정규직 취업을 보장한다고 광고하지만, 배치될 직무와 업무는 명시하지 않습니다.",
+    "duty_clarity": "unknown",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "month",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "수강료는 첫 월급에서 분할 차감"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "월급에서 차감되는 수강료",
+      "quote": "수강료는 첫 월급에서 분할 차감"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "수료 후 협력사 정규직 취업 약속",
+      "quote": "과정 수료하면 협력사 정규직 100% 취업!"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "취업 보장의 조건으로 교육 과정 수료",
+      "quote": "과정 수료하면 협력사 정규직 100% 취업!"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "교육 과정 수강생을 먼저 모집하고 수료 후 협력사 정규직 취업을 약속하지만, 지원 방법과 근로계약 체결 절차는 밝히지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "수강료는 첫 월급에서 분할 차감",
+     "explanation": "선납 요구는 없지만, 취업과 연계된 교육 비용을 지원자의 월급에서 차감하는 구조입니다."
+    },
+    {
+     "signal_id": "M3",
+     "quote": "취업 보장 과정 수강생 모집합니다. 과정 수료하면 협력사 정규직 100% 취업!",
+     "explanation": "구체적인 채용 직무를 밝히지 않고 정규직 취업 보장을 내세워 유료 과정의 수강생을 모집합니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "첫 월급에서 분할 차감한다고만 적혀 있어 공제 금액과 횟수, 이후 월급에서도 공제되는지는 알 수 없습니다.",
+     "quote": "수강료는 첫 월급에서 분할 차감"
+    }
+   ],
+   "missing_info": [
+    "교육 운영 업체와 채용 협력사 상호",
+    "배치 직무와 근무지",
+    "급여와 근로계약 체결 시점",
+    "수강료 총액과 월급 공제 일정",
+    "미취업·중도 포기 시 수강료 부담 조건"
+   ],
+   "follow_up_questions": [
+    "교육 운영 업체와 실제 채용 협력사의 상호, 배치 직무를 알려 주실 수 있나요?",
+    "수강료 총액과 월급에서 공제되는 금액·횟수, 등록 전에 따로 내야 할 비용이 있는지 알려 주실 수 있나요?",
+    "근로계약은 언제 체결하며, 취업이 되지 않거나 수강을 중도에 그만두면 수강료나 위약금을 내야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5953,
+   "cached_input_tokens": 3293,
+   "output_tokens": 971,
+   "reasoning_tokens": 0
+  },
+  "seconds": 12.1
+ },
+ "G14-1": {
+  "masked_text": "20~30세 여성만 모집, 일급 50만 원 이상. 간단한 서빙·대화 업무, 경험 없어도 가능\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": null,
+    "duties_summary": "서빙과 대화 업무입니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "일급 50만 원 이상",
+    "unit": "day",
+    "amount_krw": 500000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "일급 50만 원 이상"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": "여성만",
+    "age_restriction": "20~30세",
+    "quote": "20~30세 여성만 모집"
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "일급 50만 원 이상",
+      "quote": "일급 50만 원 이상"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "서빙과 대화",
+      "quote": "간단한 서빙·대화 업무"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "M5",
+     "quote": "20~30세 여성만 모집, 일급 50만 원 이상. 간단한 서빙·대화 업무",
+     "explanation": "20~30세 여성만 모집하면서 서빙과 대화 업무에 일급 50만 원 이상을 제시합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "일급 50만 원 이상. 간단한 서빙·대화 업무",
+     "explanation": "구체적인 업무 설명 없이 높은 일급을 내세웁니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "간단한 서빙·대화 업무",
+     "explanation": "무엇을 서빙하고 누구와 어떤 상황에서 대화하는지 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "일급 50만 원 이상. 간단한 서빙·대화 업무, 경험 없어도 가능",
+     "explanation": "경력이 필요 없는 간단한 서빙·대화 업무로 소개한 것에 비해 제시된 일급이 이례적으로 높습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명과 근무지 주소",
+    "서빙·대화 업무의 구체적인 범위",
+    "하루 근무시간",
+    "일급 보장 조건과 지급일",
+    "근로계약서 작성 여부"
+   ],
+   "follow_up_questions": [
+    "업체명과 실제 근무지 주소를 알려주실 수 있나요?",
+    "서빙과 대화는 구체적으로 어떤 일이며, 고객과의 동석이나 현금·물품을 받아 전달하는 일도 포함되나요?",
+    "하루 몇 시간 근무하며, 별도 비용 부담이나 실적 조건 없이 일급 50만 원 이상이 보장되나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5944,
+   "cached_input_tokens": 3284,
+   "output_tokens": 873,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.8
+ },
+ "G14-2": {
+  "masked_text": "고소득 여성 알바, 월 1,000만 원 가능. 외모 단정한 20대 여성 우대, 숙소 제공\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "고소득 여성 알바",
+    "duties_summary": null,
+    "duty_clarity": "unknown",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 1,000만 원 가능",
+    "unit": "month",
+    "amount_krw": 10000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 1,000만 원 가능"
+   },
+   "contact": {
+    "channels": [],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": "여성 우대",
+    "age_restriction": "20대 우대",
+    "quote": "외모 단정한 20대 여성 우대"
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "가능하다고 제시한 월 수입",
+      "quote": "월 1,000만 원 가능"
+     },
+     {
+      "item": "숙소",
+      "quote": "숙소 제공"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "M5",
+     "quote": "고소득 여성 알바, 월 1,000만 원 가능. 외모 단정한 20대 여성 우대",
+     "explanation": "20대 여성을 우대하는 공고에서 구체적인 업무 설명 없이 월 1,000만 원이 가능하다고 내세웁니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "고소득 여성 알바, 월 1,000만 원 가능.",
+     "explanation": "구체적인 업무를 밝히지 않고 높은 수입을 강조합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "고소득 여성 알바",
+     "explanation": "아르바이트라고만 적혀 있어 실제로 어떤 일을 하는지 알 수 없습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "월 1,000만 원 가능",
+     "explanation": "업무 내용이나 급여 산정 기준 없이 월 1,000만 원이라는 높은 수입을 제시합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [
+    {
+     "description": "업무 설명 없이 외모를 우대 조건으로 제시합니다.",
+     "quote": "외모 단정한 20대 여성 우대"
+    }
+   ],
+   "missing_info": [
+    "업체명과 근무지 주소",
+    "구체적인 업무와 근무시간",
+    "기본급과 월 수입 산정 기준",
+    "숙소 비용과 이용 조건",
+    "지원 방법과 근로계약 절차"
+   ],
+   "follow_up_questions": [
+    "업체명과 실제 근무지 주소, 출근 후 맡게 될 구체적인 업무를 알려주실 수 있나요?",
+    "월 1,000만 원은 보장되는 기본급인가요, 아니면 실적에 따라 달라지는 금액인가요?",
+    "숙소 이용은 선택할 수 있고, 입실 전 보증금이나 선납 비용을 내거나 신분증 원본을 맡겨야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5942,
+   "cached_input_tokens": 3282,
+   "output_tokens": 907,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.1
+ },
+ "G14-3": {
+  "masked_text": "[모집] 22~32세 여성 / 시급 8만 원 / 바 매니저 업무 / 출퇴근 자유\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "바 매니저",
+    "duties_summary": "바 매니저로 모집하지만 구체적으로 맡을 일은 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 8만 원",
+    "unit": "hour",
+    "amount_krw": 80000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 8만 원"
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": "여성",
+    "age_restriction": "22~32세",
+    "quote": "22~32세 여성"
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시간당 임금 8만 원",
+      "quote": "시급 8만 원"
+     },
+     {
+      "item": "출퇴근 시간 자율",
+      "quote": "출퇴근 자유"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "바 매니저 업무 수행",
+      "quote": "바 매니저 업무"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "문자로 받은 공고이며 지원이나 면접 절차는 적혀 있지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "M5",
+     "quote": "22~32세 여성 / 시급 8만 원 / 바 매니저 업무",
+     "explanation": "22~32세 여성으로 지원 대상을 제한하면서 바 매니저 업무에 시급 8만 원이라는 높은 급여를 제시합니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "시급 8만 원 / 바 매니저 업무",
+     "explanation": "구체적으로 맡을 일은 설명하지 않으면서 시급 8만 원이라는 높은 급여를 내세웁니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "바 매니저 업무",
+     "explanation": "직무 이름만 적혀 있어 실제로 어떤 일을 맡는지 알 수 없습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "시급 8만 원 / 바 매니저 업무",
+     "explanation": "바 매니저라는 직무명만 제시된 데 비해 시급 8만 원은 높고, 지급 조건이 적혀 있지 않습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 근무지 주소",
+    "바 매니저의 구체적인 업무 범위",
+    "근무시간과 출퇴근 자율의 범위",
+    "시급 8만 원의 적용 조건과 지급일",
+    "면접 및 근로계약 절차"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 실제 근무지 주소를 알려주실 수 있나요?",
+    "바 매니저가 구체적으로 어떤 일을 하며, 손님에게 받은 현금이나 물품을 매장 밖의 다른 사람에게 전달하는 일도 포함되나요?",
+    "시급 8만 원이 모든 근무시간에 적용되는 기본 시급인지, 별도 지급 조건이 있는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5927,
+   "cached_input_tokens": 3267,
+   "output_tokens": 925,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.5
+ },
+ "G15-1": {
+  "masked_text": "가상로지스 택배 기사 모집, 월 500만 원 이상.\n배송 차량은 회사 지정 차량을 할부로 구매해야 하며, 캐피털 대출 심사를 위한 신용조회 동의가 필요합니다.\n",
+  "extraction": {
+   "company": {
+    "name": "가상로지스",
+    "name_quote": "가상로지스",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "택배 기사",
+    "duties_summary": "택배 배송",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 500만 원 이상",
+    "unit": "month",
+    "amount_krw": 5000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 500만 원 이상"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "회사 지정 배송 차량의 할부 구매 비용",
+      "quote": "배송 차량은 회사 지정 차량을 할부로 구매해야 하며"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "공고에 제시된 월 보상",
+      "quote": "월 500만 원 이상"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "회사 지정 차량 할부 구매",
+      "quote": "배송 차량은 회사 지정 차량을 할부로 구매해야 하며"
+     },
+     {
+      "item": "캐피털 대출 심사를 위한 신용조회 동의",
+      "quote": "캐피털 대출 심사를 위한 신용조회 동의가 필요합니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "회사 지정 배송 차량의 할부 구매와 대출 심사를 위한 신용조회 동의가 필요하며, 지원 방법과 계약 절차는 명시되지 않았습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "배송 차량은 회사 지정 차량을 할부로 구매해야 하며, 캐피털 대출 심사를 위한 신용조회 동의가 필요합니다.",
+     "explanation": "일을 하려면 회사 지정 차량을 할부로 구매하고 대출 심사를 위한 신용조회에 동의해야 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "배송 차량은 회사 지정 차량을 할부로 구매해야 하며, 캐피털 대출 심사를 위한 신용조회 동의가 필요합니다.",
+     "explanation": "업무를 시작하기 위한 조건으로 지원자가 차량 구매 비용을 부담하고 신용조회에 동의해야 합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "계약 형태와 계약 체결 시점",
+    "차량 총구매가와 할부 금리·기간",
+    "월 500만 원의 보장 여부와 비용 공제 기준",
+    "배송 지역과 근무시간",
+    "채용 취소·계약 종료 시 차량과 대출 처리 조건"
+   ],
+   "follow_up_questions": [
+    "회사 지정 차량을 구매하거나 신용조회에 동의하지 않아도 본인 차량이나 회사 제공 차량으로 근무할 수 있나요?",
+    "차량 구매가 필수라면 계약 체결 전에도 신용조회나 결제가 필요한지, 차량 총구매가와 할부 금리·기간은 어떻게 되는지 알려주실 수 있나요?",
+    "월 500만 원은 보장되는 금액인지, 차량 할부금·유류비·보험료 등을 빼기 전 금액인지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5963,
+   "cached_input_tokens": 3303,
+   "output_tokens": 942,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.8
+ },
+ "G15-2": {
+  "masked_text": "택배 지입 기사 모집. 차량 리스는 저희 쪽에서 연결해 드리고, 계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "택배 지입 기사",
+    "duties_summary": "배정받은 구역에서 택배를 배송하는 일입니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": null
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "배송 구역 배정 전 계약금 300만 원",
+      "quote": "계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요."
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "입금 후 배송 구역 배정",
+      "quote": "계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요."
+     },
+     {
+      "item": "차량 리스 연결",
+      "quote": "차량 리스는 저희 쪽에서 연결해 드리고"
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "배송할 택배 물품",
+      "quote": "택배 지입 기사 모집."
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "배송 구역을 배정받기 전에 계약금 입금",
+      "quote": "계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "구인자가 차량 리스를 연결해 준다고 하며, 계약금 입금 후 배송 구역을 배정한다고 안내합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요.",
+     "explanation": "배송 구역을 배정받으려면 지원자가 계약금 300만 원을 먼저 내야 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "계약금 300만 원 입금 후 바로 배송 구역 배정해 드려요.",
+     "explanation": "일을 시작하기 전에 지원자의 돈 300만 원이 먼저 나가는 구조입니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명과 계약 상대방",
+    "계약금의 용도·수령 주체·환불 조건",
+    "차량 리스 필수 여부와 총비용",
+    "배송 구역과 근무시간",
+    "배송 보수와 정산 방식"
+   ],
+   "follow_up_questions": [
+    "입금 전에 계약 상대방의 업체명과 계약금 300만 원의 용도, 수령 주체, 환불 조건이 적힌 계약서를 확인할 수 있을까요?",
+    "소개해 주시는 차량 리스가 필수인지, 본인 차량으로도 일할 수 있는지, 리스가 필수라면 총비용이 얼마인지 알려 주실 수 있나요?",
+    "입금 전에 배정 예정 구역과 배송 보수, 정산 방식을 확인할 수 있을까요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5951,
+   "cached_input_tokens": 3291,
+   "output_tokens": 893,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.5
+ },
+ "G15-3": {
+  "masked_text": "택배 배송 기사 급구! 일 300건 보장. 탑차는 대리점 통해 구매 필수, 대출은 저희가 알아봐 드립니다.\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "택배 배송 기사",
+    "duties_summary": "택배를 배송하는 일이며, 공고는 하루 배송 물량 300건을 보장한다고 합니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": null
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [
+     {
+      "item": "탑차 구매 비용",
+      "quote": "탑차는 대리점 통해 구매 필수"
+     }
+    ],
+    "worker_receives": [
+     {
+      "item": "하루 배송 물량 300건 보장",
+      "quote": "일 300건 보장."
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "배송용 택배 물품",
+      "quote": "택배 배송 기사 급구!"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "대리점을 통한 탑차 구매",
+      "quote": "탑차는 대리점 통해 구매 필수"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H3",
+     "quote": "탑차는 대리점 통해 구매 필수, 대출은 저희가 알아봐 드립니다.",
+     "explanation": "일을 하려면 대리점을 통해 탑차를 사야 하며, 구인자는 구매에 필요한 대출을 알아봐 주겠다고 합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "A",
+     "quote": "탑차는 대리점 통해 구매 필수",
+     "explanation": "일을 시작하는 조건으로 지원자에게 탑차 구매 비용을 부담하게 합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "구인 업체명과 계약 상대방",
+    "배송 지역과 근무시간",
+    "배송 단가와 정산 기준",
+    "탑차 구매 총비용과 대출 조건",
+    "채용 절차와 계약 형태"
+   ],
+   "follow_up_questions": [
+    "기존 탑차나 회사 차량으로 일할 수 있나요, 아니면 계약 전에 대리점에서 탑차를 반드시 구매해야 하나요?",
+    "탑차 구매 총비용은 얼마이고, 대출을 이용하면 누구 명의로 진행하며 이자와 상환금은 누가 부담하나요?",
+    "배송 단가와 정산 주기는 어떻게 되며, 하루 물량이 300건에 못 미치면 보수는 어떻게 계산되나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5950,
+   "cached_input_tokens": 3290,
+   "output_tokens": 798,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.3
+ },
+ "N1-1": {
+  "masked_text": "[채용 플랫폼 공고] 가상제빵 망원점 주말 매장 스태프 모집\n근무: 토·일 09:00~15:00 (하루 6시간) / 시급 11,000원, 주휴수당 별도\n근로계약서 작성, 4대보험 가입 / 업무: 빵 진열, 계산, 매장 정리\n",
+  "extraction": {
+   "company": {
+    "name": "가상제빵 망원점",
+    "name_quote": "가상제빵 망원점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "주말 매장 스태프",
+    "duties_summary": "빵 진열, 계산, 매장 정리를 합니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상제빵 망원점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 11,000원, 주휴수당 별도",
+    "unit": "hour",
+    "amount_krw": 11000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 11,000원, 주휴수당 별도"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급과 별도 주휴수당",
+      "quote": "시급 11,000원, 주휴수당 별도"
+     },
+     {
+      "item": "4대보험 가입",
+      "quote": "4대보험 가입"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "토·일 하루 6시간 근무",
+      "quote": "토·일 09:00~15:00 (하루 6시간)"
+     },
+     {
+      "item": "빵 진열, 계산, 매장 정리",
+      "quote": "업무: 빵 진열, 계산, 매장 정리"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 상세 주소",
+    "지원 방법과 면접 절차",
+    "휴게시간과 실제 유급 근무시간",
+    "주휴수당 지급 조건",
+    "급여 지급일"
+   ],
+   "follow_up_questions": [
+    "플랫폼에서 지원한 뒤 망원점에서 면접을 보고 근로계약서를 작성하는 절차인가요?",
+    "오전 9시부터 오후 3시까지의 근무에 휴게시간이 포함되는지, 실제 유급 근무시간과 주휴수당 지급 조건은 어떻게 되는지 알려주실 수 있나요?",
+    "계산 업무는 매장 계산대에서만 처리하고, 직원이 개인 계좌를 쓰거나 개인 돈을 먼저 내야 하는 경우는 없나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6002,
+   "cached_input_tokens": 3342,
+   "output_tokens": 774,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.8
+ },
+ "N1-2": {
+  "masked_text": "[채용] 가상마트 성수점 물류 보조 / 평일 13:00~18:00 / 시급 10,500원\n근로계약서 작성, 4대보험 / 업무: 입고 상품 검수, 진열\n",
+  "extraction": {
+   "company": {
+    "name": "가상마트 성수점",
+    "name_quote": "가상마트 성수점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "물류 보조",
+    "duties_summary": "입고 상품을 검수하고 진열합니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상마트 성수점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 10,500원",
+    "unit": "hour",
+    "amount_krw": 10500,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 10,500원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 10,500원",
+      "quote": "시급 10,500원"
+     },
+     {
+      "item": "4대보험",
+      "quote": "4대보험"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "입고 상품 검수 및 진열",
+      "quote": "업무: 입고 상품 검수, 진열"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "근로계약서 작성은 명시되어 있으나 지원 방법과 채용 절차는 안내되지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "지원 방법",
+    "근무지 상세 주소",
+    "휴게시간",
+    "급여 지급일",
+    "근로계약 기간"
+   ],
+   "follow_up_questions": [
+    "입고 상품 검수와 진열 외에 매장 밖에서 물품이나 현금을 받아 전달하는 업무도 있나요?",
+    "지원이나 근무를 시작할 때 유니폼이나 장비 비용을 제가 먼저 내야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5970,
+   "cached_input_tokens": 3310,
+   "output_tokens": 584,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.1
+ },
+ "N1-3": {
+  "masked_text": "가상카페 신촌점 바리스타 모집 / 주 3일 / 시급 11,000원 / 주휴수당 지급\n음료 제조·포스 응대 / 플랫폼으로 지원\n",
+  "extraction": {
+   "company": {
+    "name": "가상카페 신촌점",
+    "name_quote": "가상카페 신촌점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "바리스타",
+    "duties_summary": "음료를 제조하고 포스에서 고객을 응대합니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상카페 신촌점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 11,000원",
+    "unit": "hour",
+    "amount_krw": 11000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 11,000원 / 주휴수당 지급"
+   },
+   "contact": {
+    "channels": [
+     "platform_message"
+    ],
+    "moves_to_messenger": false,
+    "quote": "플랫폼으로 지원"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 11,000원",
+      "quote": "시급 11,000원"
+     },
+     {
+      "item": "주휴수당",
+      "quote": "주휴수당 지급"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "주 3일 근무",
+      "quote": "주 3일"
+     },
+     {
+      "item": "음료 제조 및 포스 응대",
+      "quote": "음료 제조·포스 응대"
+     },
+     {
+      "item": "플랫폼으로 지원",
+      "quote": "플랫폼으로 지원"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "플랫폼으로 지원하며 이후 채용 절차는 명시되지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 상세 주소",
+    "근무 요일과 하루 근무시간",
+    "급여 지급일",
+    "면접 및 근로계약 절차"
+   ],
+   "follow_up_questions": [
+    "근무할 매장의 정확한 주소와 주 3일의 근무 요일 및 시간대를 알려주실 수 있나요?",
+    "포스 응대 외에 매장 밖에서 현금이나 물품을 받아 전달하는 업무도 있나요?",
+    "근로계약서는 언제 작성하며, 근무 시작 전에 교육비나 유니폼 비용을 제가 먼저 내야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5957,
+   "cached_input_tokens": 3297,
+   "output_tokens": 674,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.8
+ },
+ "N1-4": {
+  "masked_text": "가상학원 대치점 수업 조교 / 평일 16:00~21:00 / 시급 12,000원 / 채점·자료 정리\n면접 후 근로계약서 작성\n",
+  "extraction": {
+   "company": {
+    "name": "가상학원 대치점",
+    "name_quote": "가상학원 대치점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "수업 조교",
+    "duties_summary": "채점과 자료 정리",
+    "duty_clarity": "clear",
+    "work_location": "가상학원 대치점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 12,000원",
+    "unit": "hour",
+    "amount_krw": 12000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 12,000원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시간당 임금 12,000원",
+      "quote": "시급 12,000원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "평일 16시부터 21시까지 근무",
+      "quote": "평일 16:00~21:00"
+     },
+     {
+      "item": "채점 및 자료 정리",
+      "quote": "채점·자료 정리"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "면접 후 근로계약서를 작성하며, 공고 본문에는 지원 방법이 적혀 있지 않습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "지원 방법",
+    "근무지 상세 주소",
+    "휴게시간과 유급 근무시간",
+    "급여 지급일"
+   ],
+   "follow_up_questions": [
+    "지원 방법과 면접을 보는 대치점의 상세 주소를 알려주실 수 있을까요?",
+    "16시부터 21시까지 근무할 때 휴게시간은 얼마나 되며, 시급이 적용되는 시간과 급여 지급일은 어떻게 되나요?",
+    "채점과 자료 정리 외에 수강료 수납·전달이나 교재비를 개인 돈으로 먼저 결제하는 업무도 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5961,
+   "cached_input_tokens": 3301,
+   "output_tokens": 634,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.5
+ },
+ "N2-1": {
+  "masked_text": "가상분식 홍대점 / 주방 보조 / 주말 10:00~16:00 / 시급 10,800원 / 근로계약서 작성\n",
+  "extraction": {
+   "company": {
+    "name": "가상분식 홍대점",
+    "name_quote": "가상분식 홍대점",
+    "name_missing": false,
+    "region": "홍대",
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "주방 보조",
+    "duties_summary": "주말 10:00~16:00에 주방 보조로 근무합니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상분식 홍대점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 10,800원",
+    "unit": "hour",
+    "amount_krw": 10800,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 10,800원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시간당 임금 10,800원",
+      "quote": "시급 10,800원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "주말 주방 보조 근무",
+      "quote": "주방 보조 / 주말 10:00~16:00"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "근로계약서를 작성한다고 명시했으나 지원 방법과 면접 절차는 안내하지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 상세 주소",
+    "주말 근무 요일과 휴게시간",
+    "주방 보조의 세부 업무",
+    "급여 지급일",
+    "지원 방법"
+   ],
+   "follow_up_questions": [
+    "토요일과 일요일 모두 근무하는지, 10:00~16:00 중 휴게시간은 언제인지 알려주실 수 있을까요?",
+    "주방 보조의 세부 업무와 매장 밖에서 현금이나 물품을 전달하는 일도 포함되는지 알려주실 수 있을까요?",
+    "근무복이나 장비는 매장에서 제공하는지, 근무 전에 제가 부담해야 하는 비용이 있는지 알려주실 수 있을까요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5952,
+   "cached_input_tokens": 3292,
+   "output_tokens": 696,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.3
+ },
+ "N2-2": {
+  "masked_text": "가상인쇄소 / 제본·포장 / 평일 09:00~13:00 / 시급 10,500원 / 초보 가능, 근로계약서·4대보험\n",
+  "extraction": {
+   "company": {
+    "name": "가상인쇄소",
+    "name_quote": "가상인쇄소",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "제본·포장",
+    "duties_summary": "인쇄물 제본 및 포장",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 10,500원",
+    "unit": "hour",
+    "amount_krw": 10500,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 10,500원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 10,500원",
+      "quote": "시급 10,500원"
+     },
+     {
+      "item": "근로계약서 및 4대보험",
+      "quote": "근로계약서·4대보험"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "제본 및 포장",
+      "quote": "제본·포장"
+     },
+     {
+      "item": "평일 오전 근무",
+      "quote": "평일 09:00~13:00"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "근무지 주소",
+    "휴게시간 및 실제 유급 근무시간",
+    "급여 지급일",
+    "계약 기간",
+    "지원 방법"
+   ],
+   "follow_up_questions": [
+    "근무지 주소와 지원 방법을 알려주실 수 있나요?",
+    "제본·포장 외에 외부에서 물품이나 대금을 받아 전달하는 업무도 있나요?",
+    "작업 도구와 포장재는 업체에서 제공하시나요, 아니면 근로자가 부담해야 할 비용이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 616,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.2
+ },
+ "N2-3": {
+  "masked_text": "동네 가상꽃집에서 주말 포장 도와주실 분 구해요. 토요일 10시~4시, 시급 11,000원,\n가게로 직접 오셔서 면접 보시면 됩니다.\n",
+  "extraction": {
+   "company": {
+    "name": "가상꽃집",
+    "name_quote": "가상꽃집",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "주말 포장 보조",
+    "duties_summary": "꽃집에서 주말 포장 업무를 돕습니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상꽃집 매장",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 11,000원",
+    "unit": "hour",
+    "amount_krw": 11000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "토요일 10시~4시, 시급 11,000원"
+   },
+   "contact": {
+    "channels": [
+     "in_person"
+    ],
+    "moves_to_messenger": false,
+    "quote": "가게로 직접 오셔서 면접 보시면 됩니다."
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 11,000원",
+      "quote": "시급 11,000원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "주말 포장 보조",
+      "quote": "주말 포장 도와주실 분 구해요."
+     },
+     {
+      "item": "매장 방문 면접",
+      "quote": "가게로 직접 오셔서 면접 보시면 됩니다."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "매장에 직접 방문해 면접을 봅니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 주소",
+    "면접 가능 시간",
+    "포장 외 추가 업무",
+    "휴게시간",
+    "급여 지급일"
+   ],
+   "follow_up_questions": [
+    "매장 주소와 면접 가능한 시간을 알려주실 수 있을까요?",
+    "매장 내 포장 외에 배달이나 현금 수금도 해야 하나요?",
+    "토요일 근무 중 휴게시간은 얼마이고 급여는 언제 지급되나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5960,
+   "cached_input_tokens": 3300,
+   "output_tokens": 615,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.6
+ },
+ "N2-4": {
+  "masked_text": "대학가 가상복사집 평일 오후 아르바이트 구합니다. 시급 10,400원, 근로계약서 작성하고 주휴수당 드립니다. 매장 방문 면접\n",
+  "extraction": {
+   "company": {
+    "name": "가상복사집",
+    "name_quote": "가상복사집",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "복사집 평일 오후 아르바이트",
+    "duties_summary": null,
+    "duty_clarity": "unknown",
+    "work_location": "대학가 가상복사집",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 10,400원",
+    "unit": "hour",
+    "amount_krw": 10400,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 10,400원, 근로계약서 작성하고 주휴수당 드립니다."
+   },
+   "contact": {
+    "channels": [
+     "in_person"
+    ],
+    "moves_to_messenger": false,
+    "quote": "매장 방문 면접"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 10,400원",
+      "quote": "시급 10,400원"
+     },
+     {
+      "item": "주휴수당",
+      "quote": "주휴수당 드립니다."
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "매장 방문 면접",
+      "quote": "매장 방문 면접"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성하고"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "매장에서 대면 면접을 진행하며 근로계약서를 작성한다고 안내합니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 상세 주소",
+    "구체적인 담당 업무",
+    "근무 요일과 시작·종료 시각",
+    "면접 일정과 예약 방법"
+   ],
+   "follow_up_questions": [
+    "복사·출력이나 손님 응대 외에 매장 밖에서 돈이나 물건을 받아 전달하는 업무도 있나요?",
+    "근무 요일과 출퇴근 시각은 어떻게 되나요?",
+    "매장 주소와 방문 면접 예약 방법을 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5956,
+   "cached_input_tokens": 3296,
+   "output_tokens": 663,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.5
+ },
+ "N3-1": {
+  "masked_text": "가상네일샵 인스타 계정에서 공지합니다 💅 주말 보조 스태프 1명 구해요.\n토·일 11~7시, 시급 11,000원, 근로계약서 작성해요. DM으로 가능한 요일 보내 주세요!\n",
+  "extraction": {
+   "company": {
+    "name": "가상네일샵",
+    "name_quote": "가상네일샵 인스타 계정에서 공지합니다",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "주말 보조 스태프",
+    "duties_summary": "네일샵 주말 보조 업무이며, 구체적인 담당 업무는 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 11,000원",
+    "unit": "hour",
+    "amount_krw": 11000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 11,000원"
+   },
+   "contact": {
+    "channels": [
+     "instagram_dm"
+    ],
+    "moves_to_messenger": false,
+    "quote": "DM으로 가능한 요일 보내 주세요!"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 11,000원",
+      "quote": "시급 11,000원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "근무 가능한 요일을 인스타그램 DM으로 전달",
+      "quote": "DM으로 가능한 요일 보내 주세요!"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "인스타그램 DM으로 근무 가능한 요일을 보내 지원하며, 근로계약서를 작성한다고 안내합니다."
+   },
+   "signals": [
+    {
+     "signal_id": "S3",
+     "quote": "주말 보조 스태프 1명 구해요.",
+     "explanation": "네일샵 보조 스태프를 모집하지만 실제로 맡을 업무는 적혀 있지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 주소",
+    "구체적인 담당 업무",
+    "토·일 양일 근무 필수 여부",
+    "휴게시간",
+    "급여 지급일"
+   ],
+   "follow_up_questions": [
+    "실제 근무할 매장 주소와 보조 스태프가 맡는 구체적인 업무를 알려 주실 수 있나요?",
+    "근무를 시작하기 전에 교육비나 도구·유니폼 비용을 제가 부담해야 하나요?",
+    "토요일과 일요일 모두 근무해야 하는지, 근무 중 휴게시간은 얼마나 되는지 알려 주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5976,
+   "cached_input_tokens": 3316,
+   "output_tokens": 707,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.9
+ },
+ "N3-2": {
+  "masked_text": "가상떡볶이 망원점입니다. 평일 저녁 홀서빙 구해요! 18~22시 시급 10,500원.\n관심 있으시면 인스타 DM 주시고 매장 방문 면접 봐요.\n",
+  "extraction": {
+   "company": {
+    "name": "가상떡볶이 망원점",
+    "name_quote": "가상떡볶이 망원점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "홀서빙",
+    "duties_summary": "평일 저녁 18~22시에 매장에서 홀서빙을 합니다.",
+    "duty_clarity": "clear",
+    "work_location": "가상떡볶이 망원점",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 10,500원",
+    "unit": "hour",
+    "amount_krw": 10500,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "18~22시 시급 10,500원."
+   },
+   "contact": {
+    "channels": [
+     "instagram_dm",
+     "in_person"
+    ],
+    "moves_to_messenger": false,
+    "quote": "관심 있으시면 인스타 DM 주시고 매장 방문 면접 봐요."
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시급 10,500원",
+      "quote": "시급 10,500원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "인스타그램 DM으로 지원",
+      "quote": "인스타 DM 주시고"
+     },
+     {
+      "item": "매장 방문 면접",
+      "quote": "매장 방문 면접 봐요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "인스타그램 DM으로 연락한 뒤 매장에서 대면 면접을 봅니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "매장 상세 주소",
+    "근무 요일과 주당 근무일수",
+    "휴게시간과 실제 유급 근무시간",
+    "급여 지급일",
+    "근로계약서 작성 시점"
+   ],
+   "follow_up_questions": [
+    "면접을 볼 매장의 정확한 주소를 알려주실 수 있나요?",
+    "평일 중 어느 요일에 근무하고, 18시부터 22시까지 휴게시간을 제외한 유급 근무시간은 몇 시간인가요?",
+    "홀서빙 외에 맡는 업무가 있는지, 유니폼이나 교육 등 근무 전에 제가 부담할 비용이 있는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5969,
+   "cached_input_tokens": 3309,
+   "output_tokens": 683,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.9
+ },
+ "N3-3": {
+  "masked_text": "가상공방에서 원데이클래스 보조 강사 모집합니다. 주 2회 3시간, 회당 5만 원. 포트폴리오를 DM으로 보내 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": "가상공방",
+    "name_quote": "가상공방",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "원데이클래스 보조 강사",
+    "duties_summary": "원데이클래스 진행을 보조합니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "회당 5만 원",
+    "unit": "per_task",
+    "amount_krw": 50000,
+    "hours_per_unit": 3.0,
+    "same_day_pay": false,
+    "quote": "주 2회 3시간, 회당 5만 원."
+   },
+   "contact": {
+    "channels": [
+     "platform_message"
+    ],
+    "moves_to_messenger": false,
+    "quote": "포트폴리오를 DM으로 보내 주세요."
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "회당 보수 5만 원",
+      "quote": "회당 5만 원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "DM으로 포트폴리오 제출",
+      "quote": "포트폴리오를 DM으로 보내 주세요."
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "DM으로 포트폴리오를 제출하며, 이후 채용 절차는 안내되지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "공방 주소",
+    "근무 요일과 시간대",
+    "구체적인 보조 업무 범위",
+    "재료비·도구비 부담 주체",
+    "계약 방식과 급여 지급일"
+   ],
+   "follow_up_questions": [
+    "공방 주소와 주 2회 근무 요일·시간대를 알려 주실 수 있나요?",
+    "수업 준비부터 마무리까지 어떤 일을 맡으며, 제가 부담해야 할 재료비나 도구비가 있나요?",
+    "계약은 어떤 방식으로 체결하고 회당 보수는 언제 지급하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5957,
+   "cached_input_tokens": 3297,
+   "output_tokens": 622,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.0
+ },
+ "N3-4": {
+  "masked_text": "동네 가상헬스장 오후 데스크 근무자 구합니다. 평일 14~19시, 월 130만 원, 4대보험 가입. 카카오톡 채널로 문의 주세요.\n",
+  "extraction": {
+   "company": {
+    "name": "동네 가상헬스장",
+    "name_quote": "동네 가상헬스장",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "오후 데스크 근무자",
+    "duties_summary": "헬스장 오후 데스크 근무로, 세부 업무는 명시되지 않았습니다.",
+    "duty_clarity": "clear",
+    "work_location": "동네 가상헬스장",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 130만 원",
+    "unit": "month",
+    "amount_krw": 1300000,
+    "hours_per_unit": 108.625,
+    "same_day_pay": false,
+    "quote": "평일 14~19시, 월 130만 원"
+   },
+   "contact": {
+    "channels": [
+     "other_messenger"
+    ],
+    "moves_to_messenger": true,
+    "quote": "카카오톡 채널로 문의 주세요."
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "월급",
+      "quote": "월 130만 원"
+     },
+     {
+      "item": "4대보험 가입",
+      "quote": "4대보험 가입"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "오후 데스크 근무",
+      "quote": "오후 데스크 근무자"
+     },
+     {
+      "item": "평일 14~19시 근무",
+      "quote": "평일 14~19시"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "카카오톡 채널로 문의하며, 면접과 계약 절차는 명시되지 않았습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "S2",
+     "quote": "카카오톡 채널로 문의 주세요.",
+     "explanation": "구인 문의를 카카오톡 채널로 안내합니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "근무지 주소",
+    "데스크 세부 업무",
+    "휴게시간",
+    "월급의 세전·세후 기준",
+    "면접 및 근로계약 절차"
+   ],
+   "follow_up_questions": [
+    "데스크에서 맡는 업무는 무엇이며, 개인 계좌로 회원 결제를 받거나 현금을 외부에 전달하는 일도 있나요?",
+    "근무지 주소와 현장 면접 및 근로계약서 작성 절차를 알려주실 수 있나요?",
+    "오후 2시부터 7시 사이 휴게시간은 어떻게 되며, 월 130만 원은 세전 금액인가요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5959,
+   "cached_input_tokens": 3299,
+   "output_tokens": 732,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.5
+ },
+ "N4-1": {
+  "masked_text": "[가상보험대리점] 영업직 정규직 채용 / 기본급 230만 원 + 성과 인센티브(고수익 가능)\n4대보험, 근로계약서 / 본사 면접\n",
+  "extraction": {
+   "company": {
+    "name": "가상보험대리점",
+    "name_quote": "[가상보험대리점]",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "영업직 정규직",
+    "duties_summary": "영업직으로 모집하지만 구체적인 판매 상품과 업무 범위는 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "기본급 230만 원 + 성과 인센티브(고수익 가능)",
+    "unit": "unknown",
+    "amount_krw": 2300000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "기본급 230만 원 + 성과 인센티브(고수익 가능)"
+   },
+   "contact": {
+    "channels": [
+     "in_person"
+    ],
+    "moves_to_messenger": false,
+    "quote": "본사 면접"
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "기본급 230만 원",
+      "quote": "기본급 230만 원"
+     },
+     {
+      "item": "성과 인센티브",
+      "quote": "성과 인센티브(고수익 가능)"
+     },
+     {
+      "item": "4대보험 및 근로계약서",
+      "quote": "4대보험, 근로계약서"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "본사 면접 참석",
+      "quote": "본사 면접"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "본사 면접이 안내되어 있으나 지원 방법은 적혀 있지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "S1",
+     "quote": "성과 인센티브(고수익 가능)",
+     "explanation": "구체적인 업무나 인센티브 산정 기준 없이 고수익이 가능하다고 안내합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "영업직 정규직 채용",
+     "explanation": "영업직이라는 직무명만 있고 판매 상품, 고객 확보 방식, 실제 담당 업무는 적혀 있지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "판매 상품과 구체적인 담당 업무",
+    "기본급 지급 단위와 인센티브 산정 기준",
+    "실제 근무지와 근무시간",
+    "지원 방법과 본사 면접 주소",
+    "교육·등록 등 입사 관련 비용 부담 여부"
+   ],
+   "follow_up_questions": [
+    "어떤 상품을 판매하고 고객은 어떻게 확보하며, 고객의 보험료를 직접 받거나 개인 계좌로 처리하는 업무도 있나요?",
+    "기본급 230만 원은 실적과 무관하게 매월 지급되는 금액인지, 인센티브 산정과 환수 기준은 무엇인지 알려 주실 수 있나요?",
+    "입사 전후 교육비나 등록비를 부담하거나 영업 실적을 위해 본인 명의로 보험에 가입해야 하는 조건이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5964,
+   "cached_input_tokens": 3304,
+   "output_tokens": 863,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.9
+ },
+ "N4-2": {
+  "masked_text": "가상자동차 판매 딜러 채용 / 고수익 보장 인센티브제 / 기본급 220만 원 / 경력 무관, 입사 후 제품 교육 1주(유급)\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "가상자동차 판매 딜러",
+    "duties_summary": "가상자동차 판매로 소개되지만, 판매 상품의 실체와 구체적인 업무 방식은 설명되지 않았습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "기본급 220만 원",
+    "unit": "unknown",
+    "amount_krw": 2200000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "기본급 220만 원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "기본급",
+      "quote": "기본급 220만 원"
+     },
+     {
+      "item": "판매 인센티브",
+      "quote": "고수익 보장 인센티브제"
+     },
+     {
+      "item": "유급 제품 교육",
+      "quote": "입사 후 제품 교육 1주(유급)"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "가상자동차 판매",
+      "quote": "가상자동차 판매 딜러 채용"
+     },
+     {
+      "item": "입사 후 1주 제품 교육 참여",
+      "quote": "입사 후 제품 교육 1주(유급)"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "S1",
+     "quote": "고수익 보장 인센티브제",
+     "explanation": "구체적인 판매 업무와 인센티브 지급 조건을 설명하지 않은 채 고수익을 보장한다고 강조합니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "고용 업체명과 근무지",
+    "가상자동차의 의미와 구체적인 판매 업무",
+    "근무일과 근무시간",
+    "기본급 지급 주기와 인센티브 산정 기준",
+    "지원 및 채용 절차"
+   ],
+   "follow_up_questions": [
+    "고용 업체명과 근무지는 어디이며, 공고의 ‘가상자동차’는 구체적으로 어떤 상품인가요?",
+    "판매나 교육을 시작하려면 제가 먼저 내야 하는 비용이나 직접 구매해야 하는 상품이 있나요?",
+    "기본급 220만 원의 지급 주기와 인센티브 산정 기준은 무엇이며, 고객 결제는 회사가 직접 처리하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5959,
+   "cached_input_tokens": 3299,
+   "output_tokens": 766,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.1
+ },
+ "N4-3": {
+  "masked_text": "가상통신 매장 판매직 / 월 평균 350만 원 이상 고수익 가능 / 기본급 + 판매 수당 / 근로계약서 작성 / 매장 근무\n",
+  "extraction": {
+   "company": {
+    "name": "가상통신",
+    "name_quote": "가상통신",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "매장 판매직",
+    "duties_summary": "매장에서 판매 업무를 합니다.",
+    "duty_clarity": "clear",
+    "work_location": "매장",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "월 평균 350만 원 이상",
+    "unit": "month",
+    "amount_krw": 3500000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "월 평균 350만 원 이상 고수익 가능 / 기본급 + 판매 수당"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "기본급과 판매 수당",
+      "quote": "기본급 + 판매 수당"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "매장 판매 업무",
+      "quote": "매장 판매직"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "근로계약서를 작성한다고 명시했으나 지원 방법과 면접 절차는 안내하지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "고정 기본급과 판매 수당 산정 기준",
+    "근무 매장 주소",
+    "근무 요일과 시간",
+    "판매 품목과 세부 업무",
+    "지원 방법과 면접 절차"
+   ],
+   "follow_up_questions": [
+    "월 350만 원은 보장되는 금액인가요, 아니면 판매 실적을 포함한 평균인가요?",
+    "판매 실적과 무관하게 지급되는 기본급은 얼마이며, 판매 수당은 어떤 기준으로 계산되나요?",
+    "매장에서 어떤 상품을 판매하며, 업무 중 직원 본인 명의로 휴대폰이나 유심을 개통하거나 상품을 먼저 구매해야 하는 경우가 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5953,
+   "cached_input_tokens": 3293,
+   "output_tokens": 664,
+   "reasoning_tokens": 0
+  },
+  "seconds": 8.6
+ },
+ "N4-4": {
+  "masked_text": "가상부동산중개 사무 보조·영업 / 기본급 210만 원 + 계약 성사 시 성과급, 고수익 가능 / 주 5일\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "가상부동산중개 사무 보조·영업",
+    "duties_summary": "가상부동산 중개 관련 사무 보조와 영업으로, 구체적인 업무는 명시되지 않았습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "기본급 210만 원 + 계약 성사 시 성과급",
+    "unit": "unknown",
+    "amount_krw": 2100000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "기본급 210만 원 + 계약 성사 시 성과급, 고수익 가능"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "기본급 210만 원",
+      "quote": "기본급 210만 원"
+     },
+     {
+      "item": "계약 성사 시 성과급",
+      "quote": "계약 성사 시 성과급"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "사무 보조 및 영업",
+      "quote": "가상부동산중개 사무 보조·영업"
+     },
+     {
+      "item": "주 5일 근무",
+      "quote": "주 5일"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "S1",
+     "quote": "고수익 가능",
+     "explanation": "구체적인 업무나 성과급 산정 기준을 설명하지 않고 고수익이 가능하다고 강조합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "가상부동산중개 사무 보조·영업",
+     "explanation": "사무 보조와 영업이라고만 적혀 있어 무엇을 중개하고 어떤 일을 맡는지 알기 어렵습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체 상호와 근무지",
+    "중개 대상과 구체적인 담당 업무",
+    "기본급 지급 단위와 성과급 산정 기준",
+    "하루 근무시간",
+    "고용 형태와 근로계약 조건"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 근무지는 어디이며, 어떤 대상을 중개하고 사무 보조와 영업에서 각각 어떤 일을 맡나요?",
+    "기본급 210만 원은 월 기준인지, 성과급은 어떤 기준으로 산정되는지 알려주실 수 있나요?",
+    "업무를 시작하거나 계약을 처리할 때 직원이 비용을 먼저 내거나 본인 명의의 계좌로 고객 돈을 받아 전달하는 일이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5953,
+   "cached_input_tokens": 3293,
+   "output_tokens": 832,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.7
+ },
+ "N5-1": {
+  "masked_text": "가상택배 ○○대리점 배송 기사(위수탁) 모집 / 본인 차량(1톤 탑차) 소유자\n배송 구역·물량·수수료 위수탁계약서에 명시 / 건당 수수료 800원\n",
+  "extraction": {
+   "company": {
+    "name": "가상택배 ○○대리점",
+    "name_quote": "가상택배 ○○대리점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "배송 기사(위수탁)",
+    "duties_summary": "본인 소유 1톤 탑차로 택배를 배송하며, 배송 구역과 물량은 위수탁계약서에 명시됩니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "건당 수수료 800원",
+    "unit": "per_task",
+    "amount_krw": 800,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "건당 수수료 800원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "배송 건당 수수료 800원",
+      "quote": "건당 수수료 800원"
+     }
+    ],
+    "passes_through_worker": [
+     {
+      "item": "배송할 택배 물품",
+      "quote": "가상택배 ○○대리점 배송 기사(위수탁) 모집"
+     }
+    ],
+    "required_actions": [
+     {
+      "item": "본인 소유 1톤 탑차로 배송",
+      "quote": "배송 기사(위수탁) 모집 / 본인 차량(1톤 탑차) 소유자"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "대리점 정식 상호와 소재지",
+    "배송 구역과 일평균 물량",
+    "근무 요일과 예상 배송 시간",
+    "수수료 정산일과 공제 항목",
+    "차량 운행 비용 부담과 계약 전 납부 조건"
+   ],
+   "follow_up_questions": [
+    "배송 구역, 일평균 물량, 건당 수수료와 정산일이 적힌 위수탁계약서를 계약 전에 확인할 수 있을까요?",
+    "본인 소유 1톤 탑차로 바로 배송을 시작할 수 있는지, 아니면 지정 장비를 구매하거나 보증금 등 비용을 먼저 내야 하는지 알려주실 수 있을까요?",
+    "유류비·보험료·통행료는 누가 부담하며, 배송 수수료에서 별도로 공제되는 항목이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5974,
+   "cached_input_tokens": 3314,
+   "output_tokens": 752,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.7
+ },
+ "N5-2": {
+  "masked_text": "가상화장품 백화점 매장 판매직 / 시급 11,500원 + 판매 수당 / 근로계약서 작성 / 제품 구매 의무 없음\n",
+  "extraction": {
+   "company": {
+    "name": "가상화장품",
+    "name_quote": "가상화장품",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "백화점 매장 판매직",
+    "duties_summary": "백화점 매장에서 화장품을 판매하는 일입니다.",
+    "duty_clarity": "clear",
+    "work_location": "백화점 매장",
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 11,500원 + 판매 수당",
+    "unit": "hour",
+    "amount_krw": 11500,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 11,500원 + 판매 수당"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "기본 시급과 판매 수당",
+      "quote": "시급 11,500원 + 판매 수당"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "백화점 매장 판매",
+      "quote": "백화점 매장 판매직"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "근로계약서를 작성한다고 명시했으나 지원 방법과 채용 절차는 안내하지 않았습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "근무할 백화점 지점과 주소",
+    "실제 근로계약 체결 업체",
+    "근무 요일과 시간",
+    "판매 수당 산정 기준과 급여 지급일",
+    "지원 방법과 채용 절차"
+   ],
+   "follow_up_questions": [
+    "근무할 백화점 지점과 근로계약을 체결하는 업체명을 알려주실 수 있나요?",
+    "판매 수당은 어떤 기준으로 계산하고 언제 지급하시나요?",
+    "제품 구매 의무 외에 교육비나 유니폼 비용, 보증금 등 지원자나 직원이 부담해야 하는 비용이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5951,
+   "cached_input_tokens": 3291,
+   "output_tokens": 675,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.3
+ },
+ "N5-3": {
+  "masked_text": "가상택배 대리점 분류 아르바이트 / 새벽 05:00~09:00 / 시급 12,000원 / 근로계약서 작성\n",
+  "extraction": {
+   "company": {
+    "name": "가상택배",
+    "name_quote": "가상택배 대리점",
+    "name_missing": false,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "대리점 분류 아르바이트",
+    "duties_summary": "택배 대리점에서 택배 물품을 분류하는 업무입니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "시급 12,000원",
+    "unit": "hour",
+    "amount_krw": 12000,
+    "hours_per_unit": 1.0,
+    "same_day_pay": false,
+    "quote": "시급 12,000원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "시간당 임금",
+      "quote": "시급 12,000원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "택배 물품 분류",
+      "quote": "가상택배 대리점 분류 아르바이트"
+     },
+     {
+      "item": "새벽 근무",
+      "quote": "새벽 05:00~09:00"
+     },
+     {
+      "item": "근로계약서 작성",
+      "quote": "근로계약서 작성"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "근로계약서를 작성한다고 명시했으나 지원 방법과 계약서 작성 시점은 적혀 있지 않습니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "대리점 지점명과 근무지 주소",
+    "근무 요일과 휴게시간",
+    "급여 지급일",
+    "지원 방법",
+    "근로계약서 작성 시점"
+   ],
+   "follow_up_questions": [
+    "근무할 대리점의 지점명과 주소, 근무 요일을 알려주실 수 있나요?",
+    "업무는 대리점 안에서 택배를 분류하는 일만인지, 외부에서 물품이나 현금을 수거하거나 전달하는 일도 포함되는지 알려주실 수 있나요?",
+    "근로계약서는 첫 근무 전에 작성하는지, 지원이나 근무를 시작하기 전에 제가 부담해야 할 비용이 있는지 알려주실 수 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5953,
+   "cached_input_tokens": 3293,
+   "output_tokens": 723,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.2
+ },
+ "N5-4": {
+  "masked_text": "가상정수기 방문 관리 매니저(위탁 계약) / 활동비 지원, 실적 수수료 / 교육 3일(무료) 후 담당 지역 배정 / 제품 구매 의무 없음\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "name_missing": true,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "가상정수기 방문 관리 매니저",
+    "duties_summary": "배정된 지역에서 정수기 방문 관리를 하는 위탁 업무로, 구체적인 관리 항목은 명시되지 않았습니다.",
+    "duty_clarity": "clear",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "활동비 지원, 실적 수수료",
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "활동비 지원, 실적 수수료"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "활동비 지원",
+      "quote": "활동비 지원"
+     },
+     {
+      "item": "실적에 따른 수수료",
+      "quote": "실적 수수료"
+     },
+     {
+      "item": "3일간 무료 교육",
+      "quote": "교육 3일(무료)"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "지역 배정 전 3일 교육 이수",
+      "quote": "교육 3일(무료) 후 담당 지역 배정"
+     },
+     {
+      "item": "정수기 방문 관리",
+      "quote": "가상정수기 방문 관리 매니저"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": "위탁 계약이며, 3일간 무료 교육을 받은 뒤 담당 지역을 배정합니다."
+   },
+   "signals": [],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "위탁 계약 상대 업체명과 사업자 정보",
+    "담당 지역과 방문 일정",
+    "방문 관리 범위와 판매·수금 포함 여부",
+    "활동비 지급 조건과 실적 수수료 산정·지급 기준",
+    "교통비·장비비 등 업무 비용 부담 주체"
+   ],
+   "follow_up_questions": [
+    "위탁 계약을 맺는 업체의 상호와 계약서 양식을 확인할 수 있을까요?",
+    "방문 시 어떤 관리 업무를 하며, 제품 판매나 고객에게 받은 돈을 회사에 전달하는 일도 포함되나요?",
+    "활동비와 실적 수수료는 어떤 기준으로 지급되며, 제품 구매 외에 교통비나 장비비처럼 제가 부담할 비용이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5958,
+   "cached_input_tokens": 3298,
+   "output_tokens": 728,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.5
+ }
+}

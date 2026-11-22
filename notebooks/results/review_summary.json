@@ -1,0 +1,27 @@
+{
+ "run_at": "2026-11-23T05:36:51+09:00",
+ "cases": 22,
+ "expired_deleted": 0,
+ "clusters": 8,
+ "candidates": [
+  "C01 근무 조건으로 여권 원본 보관 요구",
+  "C02 취업 자격 확보 전 근무 요구"
+ ],
+ "approved": [
+  "H9"
+ ],
+ "regression": {
+  "ok": true,
+  "errors": [],
+  "changes": [],
+  "before": {
+   "탐지율": 1.0,
+   "오탐률": 0.05
+  },
+  "after": {
+   "탐지율": 1.0,
+   "오탐률": 0.05
+  },
+  "note": "오탐률 증가 없음"
+ }
+}

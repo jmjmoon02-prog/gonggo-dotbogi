@@ -1,0 +1,42 @@
+{
+ "X1-1": {
+  "risk": "high",
+  "reason": "취업 자격 확인 없이 일할 수 있다고 홍보하면서 리조트 아르바이트에 월 1,000만 원이라는 이례적으로 높은 수입을 내세워 불법 취업이나 취업사기 유인일 위험이 큽니다.",
+  "usage": {
+   "input_tokens": 187,
+   "output_tokens": 74,
+   "cached_input_tokens": 0
+  },
+  "seconds": 2.6
+ },
+ "X2-1": {
+  "risk": "medium",
+  "reason": "문자 발송의 목적과 고용주 정보가 불분명하고 친구를 데려오면 보상을 준다는 조건이 있어 스팸이나 사기성 문자 발송에 동원될 위험이 있습니다.",
+  "usage": {
+   "input_tokens": 186,
+   "output_tokens": 64,
+   "cached_input_tokens": 0
+  },
+  "seconds": 2.1
+ },
+ "X3-1": {
+  "risk": "high",
+  "reason": "업무 내용과 업체 정보 없이 특정 연령대의 여성만 모집하며 일급 50만 원을 내세우는 것은 취업사기나 불법 업무 유인의 위험 신호입니다.",
+  "usage": {
+   "input_tokens": 187,
+   "output_tokens": 60,
+   "cached_input_tokens": 0
+  },
+  "seconds": 2.2
+ },
+ "X4-1": {
+  "risk": "unknown",
+  "reason": "리뷰 체험단을 모집한다는 문구만으로는 모집 주체, 활동 조건, 선결제 요구 여부를 알 수 없어 사기나 범죄 가담 위험을 판단하기 어렵습니다.",
+  "usage": {
+   "input_tokens": 172,
+   "output_tokens": 61,
+   "cached_input_tokens": 0
+  },
+  "seconds": 2.3
+ }
+}

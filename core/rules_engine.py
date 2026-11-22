@@ -78,6 +78,7 @@ class Rule:
     evidence_ids: tuple[str, ...]
     version: str
     status: str
+    blocks_green: bool = False  # 이 신호가 있으면 🟢 낮은 위험을 주지 않는다
 
     @property
     def ai_detectable(self) -> bool:
@@ -107,6 +108,7 @@ class RuleBook:
     rules: dict[str, Rule]
     axes: dict[str, Axis]
     fact_questions: dict = field(default_factory=dict)
+    industry_mismatch: dict = field(default_factory=dict)
 
     @property
     def version(self) -> str:
@@ -142,6 +144,7 @@ def _parse_rulebook(data: dict) -> RuleBook:
             evidence_ids=tuple(raw.get("evidence_ids") or ()),
             version=str(raw.get("version")),
             status=raw.get("status", "active"),
+            blocks_green=bool(raw.get("blocks_green", False)),
         )
     axes = {
         a["id"]: Axis(
@@ -166,6 +169,7 @@ def _parse_rulebook(data: dict) -> RuleBook:
         rules=rules,
         axes=axes,
         fact_questions=data.get("fact_questions", {}) or {},
+        industry_mismatch=data.get("industry_mismatch", {}) or {},
     )
 
 
@@ -419,7 +423,7 @@ def judge(
 
     # H8 은 폐업만 결정적 신호. 휴업·미등록 번호·형식 오류는 '확인 필요' + 번호 재확인 질문 (오타·휴업 정상 업체 오판 방지)
     if (r := code_rule("H8")) and facts.nts.status == "closed":
-        add(_rule_hit(r, "red", None, None, "code", "국세청 조회 결과: 폐업"), r.status)
+        add(_rule_hit(r, _BASE_LEVEL[r.tier], None, None, "code", "국세청 조회 결과: 폐업"), r.status)
     fact_q: list[tuple[str, str]] = []
     if facts.nts.status == "suspended":
         fact_q.append(("NTS", rb.fact_questions.get("nts_suspended", "")))
@@ -431,11 +435,15 @@ def judge(
 
     company = extraction.company
     has_company_name = bool(company.name) and (verified(company.name) or verified(company.name_quote))
-    if (r := code_rule("M2")) and source_channel in config.OFFICIAL_SOURCE_CHANNELS and not has_company_name:
-        add(_rule_hit(r, "yellow", None, None, "code", "정식 플랫폼 출처인데 업체명이 없습니다"), r.status)
+    # M2: AI 가 '업체명이 전혀 없다'고 직접 판단했거나, AI 가 낸 업체명이 원문에 없을 때(지어낸 이름)만.
+    # AI 가 이름을 비워 두기만 한 경우는 업체명 없음으로 단정하지 않는다(v2.1.1, 오탐 개선)
+    name_absent = company.name_missing or (bool(company.name) and not has_company_name)
+    if (r := code_rule("M2")) and source_channel in config.OFFICIAL_SOURCE_CHANNELS and name_absent:
+        add(_rule_hit(r, _BASE_LEVEL[r.tier], None, None, "code", "정식 플랫폼 출처인데 업체명이 없습니다"), r.status)
 
     if (r := code_rule("M4")) and facts.industry_mismatch is True:
-        add(_rule_hit(r, "yellow", None, None, "code", "국민연금 등록 업종과 공고 직무가 다릅니다"), r.status)
+        add(_rule_hit(r, _BASE_LEVEL[r.tier], None, None, "code",
+                      facts.industry_mismatch_detail or "등록 업종과 공고 직무가 다릅니다"), r.status)
 
     wage, assumed_hours = hourly_wage(extraction.pay)
     pay_ok = wage is not None and (verified(extraction.pay.quote) or verified(extraction.pay.amount_text))
@@ -444,7 +452,7 @@ def judge(
     if pay_ok:
         if (r := code_rule("S4")) and wage >= config.MINIMUM_WAGE_HOURLY * ratio:
             note = f"시급 환산 약 {wage:,.0f}원 (2026 최저임금의 {wage / config.MINIMUM_WAGE_HOURLY:.1f}배)"
-            add(_rule_hit(r, "weak", extraction.pay.quote, True, "code", note), r.status)
+            add(_rule_hit(r, _BASE_LEVEL[r.tier], extraction.pay.quote, True, "code", note), r.status)
         if (r := code_rule("L1")) and not assumed_hours and wage < config.MINIMUM_WAGE_HOURLY:
             labor_flags.append(_rule_hit(r, "none", extraction.pay.quote, True, "code",
                                          f"시급 환산 약 {wage:,.0f}원 < 2026 최저임금 {config.MINIMUM_WAGE_HOURLY:,}원"))
@@ -494,7 +502,11 @@ def judge(
     yellow = [h for h in hits if h.level == "yellow"]
     yellow_untrusted = [h for h in hits if h.level == "yellow_untrusted"]
     weak = [h for h in hits if h.level == "weak"]
+    green_blockers = [h for h in hits if h.level != "none" and (rb.rules.get(h.rule_id) is not None)
+                      and rb.rules[h.rule_id].blocks_green]
     weak_needed = int(th.get("weak_signals_for_yellow", 2))
+    if has_trust:
+        weak_needed = int(th.get("weak_signals_for_yellow_with_trust", weak_needed))
     max_weak_green = int(th.get("max_weak_signals_for_green", 1))
     reasons: list[str] = []
     novel = False
@@ -520,7 +532,7 @@ def judge(
             reasons.append(f"약한 신호 {len(weak)}개: " + ", ".join(h.name for h in weak))
         if novel:
             reasons.append("알려진 수법 목록에는 없지만 원칙에 어긋나는 부분이 있습니다(신종 의심).")
-    elif has_trust and len(weak) <= max_weak_green and not number_recheck_needed:
+    elif has_trust and len(weak) <= max_weak_green and not number_recheck_needed and not green_blockers:
         grade = "green"
         reasons.append("신뢰 신호: " + ", ".join(t.name for t in trust))
         reasons.append("결정적·중간 위험 신호를 찾지 못했습니다. 위험이 전혀 없다는 뜻은 아니니 근로계약서를 꼭 확인하세요.")
@@ -528,6 +540,9 @@ def judge(
         grade = "white"
         if number_recheck_needed:
             reasons.append("결정적·중간 위험 신호는 찾지 못했지만, 사업자등록번호를 다시 확인해야 합니다.")
+        elif green_blockers:
+            reasons.append("결정적·중간 위험 신호는 찾지 못했지만, " + ", ".join(h.name for h in green_blockers)
+                           + " — 확인 전에는 낮은 위험으로 단정하지 않습니다.")
         else:
             reasons.append("결정적·중간 위험 신호는 찾지 못했지만, 업체와 공고의 연결을 확인할 신뢰 신호가 없습니다.")
 

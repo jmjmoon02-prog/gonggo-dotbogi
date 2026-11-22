@@ -169,14 +169,15 @@ def test_leave_one_type_out_principle_layer_still_catches():
 # ---------------------------------------------------------------------------
 # 약한 신호·코드 신호
 # ---------------------------------------------------------------------------
-def test_two_weak_signals_on_platform_is_yellow():
-    text = "[채용 플랫폼] 해솔물류 고수익 당일 지급! 자세한 건 카톡 친구 추가 후 안내"
+def test_weak_signal_threshold_depends_on_trust():
+    """v2.1.3: 신뢰 신호(정식 플랫폼)가 있으면 약한 신호 3개부터 🟡, 2개는 ⚪. 신뢰 신호가 없으면 2개부터 🟡."""
+    text = "[채용 플랫폼] 해솔물류 고수익 당일 지급! 자세한 건 카톡 친구 추가 후 안내. 간단한 업무"
     masked = mask_text(text).masked_text
-    ex = make_extraction(
-        company_name="해솔물류",
-        signals=[sig("S1", "고수익 당일 지급"), sig("S2", "카톡 친구 추가 후 안내")],
-    )
-    assert judge(ex, masked, "platform").grade == "yellow"
+    two = [sig("S1", "고수익 당일 지급"), sig("S2", "카톡 친구 추가 후 안내")]
+    assert judge(make_extraction(company_name="해솔물류", signals=two), masked, "platform").grade == "white"
+    three = two + [sig("S3", "간단한 업무")]
+    assert judge(make_extraction(company_name="해솔물류", signals=three), masked, "platform").grade == "yellow"
+    assert judge(make_extraction(company_name="해솔물류", signals=two), masked, "sns_messenger").grade == "yellow"
 
 
 def test_one_weak_signal_on_platform_stays_green():
@@ -194,11 +195,15 @@ def test_closed_business_is_red_even_on_platform():
     assert v.grade == "red" and "H8" in v.matched_ids
 
 
-def test_platform_without_company_name_is_yellow():
+def test_platform_without_company_name_is_check_not_green():
+    """v2.1.4: M2 는 약한 신호이지만 🟢 를 막는다(⚪ 확인 필요)."""
     text = "[채용 플랫폼] 사무 보조 모집, 시급 11,000원, 근로계약서 작성"
     masked = mask_text(text).masked_text
     v = judge(make_extraction(company_name=None), masked, "platform")
-    assert v.grade == "yellow" and "M2" in v.matched_ids
+    assert v.grade == "white" and "M2" in v.matched_ids
+    assert any("낮은 위험으로 단정하지 않습니다" in r for r in v.reasons)
+    m2 = next(h for h in v.hits if h.rule_id == "M2")
+    assert m2.level == "weak"
 
 
 def test_hallucinated_company_name_does_not_count():

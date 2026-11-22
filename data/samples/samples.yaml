@@ -43,7 +43,8 @@
 - id: demo_vague_dm
   title: "④ 정보 부족 DM → 구인자 답변 후 재판정"
   source_channel: sns_messenger
-  expected_grade: white
+  # 2026-11-23 실제 AI 실측으로 확정: '하루 1~2시간, 월 200 이상' → 고수익(S1)·업무 모호(S3) 약한 신호 2개 + 원칙 F → 🟡
+  expected_grade: yellow
   text: |
     안녕하세요~ 재택 부업 관심 있으시면 연락 주세요. 하루 1~2시간, 월 200 이상 가능합니다.
   reply: |

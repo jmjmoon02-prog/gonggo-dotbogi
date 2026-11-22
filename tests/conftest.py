@@ -10,7 +10,7 @@ from pathlib import Path
 
 # 실제 키(.env / secrets.toml)를 읽지 않게 한다. 테스트에서 OpenAI 를 실제로 호출하는 일은 없다.
 os.environ["APP_TEST_MODE"] = "1"
-for _k in ("OPENAI_API_KEY", "DATA_GO_KR_SERVICE_KEY", "HF_TOKEN", "DEV_FIXTURES"):
+for _k in ("OPENAI_API_KEY", "DATA_GO_KR_SERVICE_KEY", "WORK24_AUTH_KEY", "HF_TOKEN", "DEV_FIXTURES"):
     os.environ.pop(_k, None)
 
 APP_DIR = Path(__file__).resolve().parent.parent
@@ -62,6 +62,7 @@ def make_extraction(
         company=Company(
             name=company_name,
             name_quote=company_name,
+            name_missing=company_name is None,
             region=None,
             claims_known_brand=claims_known_brand,
             brand_name=brand_name,

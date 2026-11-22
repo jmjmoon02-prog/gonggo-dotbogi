@@ -56,7 +56,7 @@ def get_sample(sample_id: str) -> Sample | None:
 # 개발용 고정 추출값 (AI 대신)
 # ---------------------------------------------------------------------------
 _EMPTY_EXTRACTION = {
-    "company": {"name": None, "name_quote": None, "region": None, "claims_known_brand": False,
+    "company": {"name": None, "name_quote": None, "name_missing": False, "region": None, "claims_known_brand": False,
                 "brand_name": None, "brand_quote": None},
     "job": {"title": None, "duties_summary": None, "duty_clarity": "unknown", "work_location": None,
             "overseas": False, "overseas_country": None, "overseas_perks": [], "overseas_quote": None},

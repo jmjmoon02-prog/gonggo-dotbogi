@@ -51,3 +51,12 @@ def test_no_secret_files_in_app():
 def _ignored() -> bool:
     gi = (APP_DIR / ".gitignore").read_text(encoding="utf-8")
     return ".streamlit/secrets.toml" in gi and ".env" in gi
+
+
+def test_no_local_user_paths_in_public_files():
+    """노트북 실행 기록 등에 이 PC의 사용자 폴더 경로가 남지 않아야 한다."""
+    home = str(Path.home())
+    hits = [str(p.relative_to(APP_DIR)) for p in _public_files()
+            if home in p.read_text(encoding="utf-8", errors="ignore")
+            or home.replace("\\", "/") in p.read_text(encoding="utf-8", errors="ignore")]
+    assert hits == []

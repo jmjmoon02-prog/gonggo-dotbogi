@@ -1,0 +1,20 @@
+{
+ "reviewed_at": "2026-11-23",
+ "approver_note": "승인자는 참가자 본인(CrAI LAB). 채팅으로 결정을 받아 기록함(사용자 답: 'C01 승인, C02 보류').",
+ "approvals": [
+  {
+   "suggested_id": "C01",
+   "rule_id": "H9",
+   "evidence_ids": ["E60"],
+   "approver": "참가자 본인(CrAI LAB)",
+   "status": "candidate",
+   "reason": "E60(KTV·정책브리핑 2025-11-19)이 해외 취업사기에서 '여권·휴대전화 압수 후 감금'을 직접 다룬다. 후보(candidate) 상태로만 기록하고 판정에는 반영하지 않는다."
+  }
+ ],
+ "rejections": [
+  {
+   "suggested_id": "C02",
+   "reason": "E60은 '무비자 취업은 현지 불법체류 처벌 가능'만 다룬다. '관광비자로 입국 후 근무'를 직접 뒷받침하는 공식 근거가 없어 보류. 해당 시나리오(G6-3)는 기존 H7로 이미 🔴 판정됨."
+  }
+ ]
+}

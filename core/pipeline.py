@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Callable, Protocol
 
-from .masking import BusinessNumber, Masker
+from .masking import BusinessNumber, Masker, quote_in_text
 from .rules_engine import RuleBook, Verdict, judge
 from .schema import Extraction, Facts
 
@@ -85,7 +85,12 @@ def analyze(
 
     extraction = extractor(masked_text, source_channel, round_no)
     prior_facts = previous.facts if previous else None
-    facts = fact_checker(extraction, biz, prior_facts) if fact_checker else (prior_facts or Facts())
+    # 원문에 없는 업체명(AI 가 지어낸 이름)으로는 공공 API 를 조회하지 않는다
+    ex_for_facts = extraction
+    name = extraction.company.name
+    if name and not (quote_in_text(name, masked_text) or quote_in_text(extraction.company.name_quote, masked_text)):
+        ex_for_facts = extraction.model_copy(update={"company": extraction.company.model_copy(update={"name": None})})
+    facts = fact_checker(ex_for_facts, biz, prior_facts) if fact_checker else (prior_facts or Facts())
     verdict = judge(extraction, masked_text, source_channel, facts=facts, business_numbers=biz, rulebook=rulebook)
     return RoundResult(
         round_no=round_no,

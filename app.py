@@ -29,12 +29,15 @@ from core.pipeline import (  # noqa: E402
 from core.questions import compose_message, select_questions, stop_advice  # noqa: E402
 from core.rules_engine import Hit, load_rules  # noqa: E402
 from core.samples import get_sample, load_samples  # noqa: E402
+from core.verify_apis import WORK24_SOURCE, PublicDataChecker  # noqa: E402
+from core import storage  # noqa: E402
 
 st.set_page_config(page_title=config.display_service_name(), page_icon="🔎", layout="centered")
 
 RB = load_rules()
 DEV_FIXTURES = config.get_setting("DEV_FIXTURES", "0") == "1"
 HAS_AI_KEY = bool(config.get_secret("OPENAI_API_KEY"))
+HAS_PUBLIC_KEYS = bool(config.get_secret("DATA_GO_KR_SERVICE_KEY") or config.get_secret("WORK24_AUTH_KEY"))
 SESSION_LIMIT = config.session_call_limit()
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
 MAX_IMAGE_SIDE = 2000
@@ -112,6 +115,9 @@ def _init_state() -> None:
     ss.setdefault("sample_image", False)
     ss.setdefault("error_kind", None)
     ss.setdefault("fallback_mode", False)  # AI 대신 미리 저장한 샘플 결과를 보여 주는 중
+    ss.setdefault("save_consent", False)  # 사례 저장 동의(기본 꺼짐)
+    if "fact_checker" not in ss:  # 세션마다 하나 (이전 조회 결과 재사용 상태가 세션 사이에 섞이지 않게)
+        ss["fact_checker"] = PublicDataChecker() if HAS_PUBLIC_KEYS else None
 
 
 def _reset_results() -> None:
@@ -191,8 +197,11 @@ def _run(round_no: int) -> None:
                 return
             extractor = _choose_extractor(1)
             ss["masker"] = Masker()
-            ss["rounds"] = [analyze(text, ss["source_channel"], ss["masker"], extractor)]
+            ss["rounds"] = [analyze(text, ss["source_channel"], ss["masker"], extractor, fact_checker=ss["fact_checker"])]
             ss["reply_text"] = ""  # 답변 칸은 결과 아래에 그려지므로 아직 위젯 생성 전이다
+            ss["save_consent"] = False  # 새 판정마다 저장 동의를 다시 받는다
+            ss["saved_triggers"] = []
+            ss["save_message"] = None
         else:
             reply = ss["reply_text"].strip()
             if not reply:
@@ -200,7 +209,8 @@ def _run(round_no: int) -> None:
                 return
             extractor = _choose_extractor(2)
             prev: RoundResult = ss["rounds"][0]
-            ss["rounds"] = [prev, analyze(reply, prev.source_channel, ss["masker"], extractor, previous=prev)]
+            ss["rounds"] = [prev, analyze(reply, prev.source_channel, ss["masker"], extractor,
+                                           fact_checker=ss["fact_checker"], previous=prev)]
     except ExtractionUnavailable as e:
         ss["error"] = str(e)
         ss["error_kind"] = e.kind
@@ -354,17 +364,30 @@ def _facts_section(r: RoundResult) -> None:
     c2.markdown(f"**사업자등록번호**: {bn_txt}")
     c2.markdown(f"**연락 경로**: {', '.join(CHANNEL_LABEL.get(c, c) for c in ex.contact.channels) or '알 수 없음'}")
     status_text = {
-        "not_checked": "조회 안 함 (공공 API 연결 전)", "error": "조회 실패", "disabled": "기능 꺼짐",
+        "not_checked": "조회 안 함", "error": "조회 실패", "disabled": "이번 버전 제외",
         "active": "계속사업자", "suspended": "휴업", "closed": "폐업", "not_registered": "국세청 미등록 번호",
         "single": "1곳 확인", "multiple": "여러 곳(후보 선택 필요)", "none": "찾지 못함(확인 불가, 위험 아님)",
         "match": "공식 공고 일치", "mismatch": "공식 공고와 불일치",
     }
     rows = [
-        ("국세청 사업자 상태", f.nts.status, f.nts.checked_at),
-        ("국민연금 가입 사업장", f.nps.match, f.nps.checked_at),
-        ("워크넷 공식 채용정보", f.worknet.match, f.worknet.checked_at),
+        ("국세청 사업자 상태", f.nts.status, f.nts.message, f.nts.checked_at),
+        ("국민연금 가입 사업장", f.nps.match, f.nps.message, f.nps.checked_at),
+        ("워크넷(고용24) 공식 공고 대조 [확장 예정]", f.worknet.match, f.worknet.detail, f.worknet.checked_at),
     ]
-    st.table(hide_index=True, data=[{"확인 항목": n, "결과": status_text.get(s, s), "조회 시각": t or "-"} for n, s, t in rows])
+    st.table(hide_index=True, data=[{"확인 항목": n, "결과": status_text.get(s, s), "설명": m or "-", "조회 시각": t or "-"}
+                                    for n, s, m, t in rows])
+    if f.nps.candidates:
+        st.caption("국민연금 가입 사업장 조회 결과 (출처: 국민연금공단, 공공데이터포털)")
+        st.table(hide_index=True, data=[{"사업장명": c.name, "주소": c.address or "-", "업종": c.industry or "-",
+                                         "가입자 수": c.members or "-", "상태": c.status or "-"} for c in f.nps.candidates])
+        if f.nps.match == "multiple":
+            st.caption("같은 이름의 사업장이 여러 곳입니다. 공고의 근무지와 같은 곳이 있는지 직접 비교해 보세요(자동으로 단정하지 않습니다).")
+    if f.worknet.postings:
+        st.caption(WORK24_SOURCE)
+        for p in f.worknet.postings:
+            line = f"{p.company or '-'} · {p.title or '-'} · {p.region or '-'} · {p.sal or '-'} · 마감 {p.close_dt or '-'}"
+            safe_url = p.url if p.url and p.url.startswith(("https://", "http://")) else None
+            st.markdown(f"- [{line}]({safe_url})" if safe_url else f"- {line}")
     if r.verdict.hourly_wage:
         ratio = r.verdict.hourly_wage / config.MINIMUM_WAGE_HOURLY
         st.caption(f"시급 환산 약 {r.verdict.hourly_wage:,.0f}원 · {config.MINIMUM_WAGE_YEAR} 최저임금 "
@@ -468,6 +491,67 @@ def _result_section(r: RoundResult) -> None:
 
 
 # ---------------------------------------------------------------------------
+# 사례 저장 (동의한 경우에만)
+# ---------------------------------------------------------------------------
+def _case_store():
+    return storage.get_store(dev_mode=DEV_FIXTURES)
+
+
+def _save_case(trigger: str) -> None:
+    ss = st.session_state
+    ss["save_message"] = None
+    store = _case_store()
+    if not ss.get("save_consent"):
+        ss["save_message"] = ("warning", "저장에 동의해 주셔야 저장할 수 있습니다.")
+        return
+    if store is None or not ss.get("rounds"):
+        ss["save_message"] = ("warning", "사례 저장소가 설정되지 않아 저장하지 못했습니다.")
+        return
+    if ss.get("save_count", 0) >= storage.MAX_SAVES_PER_SESSION:
+        ss["save_message"] = ("warning", f"이 화면에서는 {storage.MAX_SAVES_PER_SESSION}건까지 저장할 수 있습니다.")
+        return
+    if trigger in ss.get("saved_triggers", []):
+        ss["save_message"] = ("info", "이 판정은 이미 저장했습니다.")
+        return
+    try:
+        case = storage.build_case(ss["rounds"], trigger)
+        store.save(case)
+    except Exception as exc:  # 저장 실패해도 판정 화면은 그대로
+        ss["save_message"] = ("warning", f"저장에 실패했습니다({type(exc).__name__}). 잠시 후 다시 시도해 주세요.")
+        return
+    ss["save_count"] = ss.get("save_count", 0) + 1
+    ss.setdefault("saved_triggers", []).append(trigger)
+    ss["save_message"] = ("success", f"저장했습니다(사례 번호 {case['case_id']}). 고맙습니다. 보관 기한: {case['expires_at']}")
+
+
+def _feedback_section(rounds: list[RoundResult]) -> None:
+    v = rounds[-1].verdict
+    store = _case_store()
+    st.subheader("판정이 맞았나요? (선택)")
+    if v.novel_suspect:
+        st.info("알려진 수법 목록에 없는 '신종 의심' 사례입니다. 저장에 동의해 주시면 규칙을 보완하는 검토에 쓰입니다.")
+    with st.expander("무엇이 저장되나요? (저장 전에 꼭 확인)", expanded=False):
+        nl = "\n"
+        st.markdown("**저장하는 것**" + nl + nl.join(f"- {s}" for s in storage.SAVED_ITEMS))
+        st.markdown("**저장하지 않는 것**" + nl + nl.join(f"- {s}" for s in storage.NOT_SAVED_ITEMS))
+        st.caption(storage.retention_notice())
+    st.checkbox("위 내용을 확인했고, 이 사례 저장에 동의합니다 (선택)", key="save_consent")
+    disabled = store is None or not st.session_state.get("save_consent")
+    help_txt = "사례 저장소가 설정되지 않았습니다" if store is None else None
+    c1, c2 = st.columns(2)
+    c1.button("판정이 틀렸어요", on_click=_save_case, args=("feedback_wrong",), disabled=disabled,
+              width="stretch", help=help_txt)
+    c2.button("실제로 사기였어요", on_click=_save_case, args=("feedback_scam",), disabled=disabled,
+              width="stretch", help=help_txt)
+    if v.novel_suspect:
+        st.button("신종 의심 사례로 보내기", on_click=_save_case, args=("novel_suspect",), disabled=disabled, help=help_txt)
+    msg = st.session_state.get("save_message")
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    st.caption("동의하지 않으면 아무것도 저장되지 않습니다. " + storage.retention_notice())
+
+
+# ---------------------------------------------------------------------------
 # 화면
 # ---------------------------------------------------------------------------
 _init_state()
@@ -486,7 +570,7 @@ with st.sidebar:
         "1. 전화번호·계좌·이름 등을 자동으로 가립니다\n"
         "2. AI가 업체·급여·연락 경로·돈의 흐름과 위험 신호를 근거 문장과 함께 뽑습니다\n"
         "3. 근거 문장이 원문에 실제로 있는지 코드로 확인합니다\n"
-        "4. 공공 API로 업체를 확인합니다\n"
+        "4. 국세청·국민연금 공공 API로 업체를 확인합니다\n"
         "5. 공개된 규칙으로 등급을 정합니다"
     )
     if DEV_FIXTURES:
@@ -554,7 +638,7 @@ st.button("판정하기", type="primary", on_click=_request, args=(1,), width="s
 if st.session_state["pending"] in (1, 2):
     action = st.session_state["pending"]
     st.session_state["pending"] = None
-    with st.spinner("AI가 공고를 읽고, 규칙으로 판정하는 중입니다… (10~30초)"):
+    with st.spinner("AI가 공고를 읽고, 규칙으로 공공 API로 업체를 확인해 판정하는 중입니다… (20~40초)"):
         _run(action)
 
 if not st.session_state["rounds"]:
@@ -587,11 +671,7 @@ if rounds:
     _error_box()
 
     st.divider()
-    st.subheader("판정이 맞았나요?")
-    c1, c2 = st.columns(2)
-    c1.button("판정이 틀렸어요", disabled=True, width="stretch", help="사례 저장 기능은 다음 단계에서 연결됩니다")
-    c2.button("실제로 사기였어요", disabled=True, width="stretch", help="사례 저장 기능은 다음 단계에서 연결됩니다")
-    st.caption("누르면 개인정보를 가린 내용과 판정 결과만 저장해 규칙 검토에 씁니다. 피드백만으로 규칙이 바뀌지는 않습니다.")
+    _feedback_section(rounds)
 
 st.divider()
 st.caption(WAKE_NOTICE)

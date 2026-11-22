@@ -1,0 +1,397 @@
+{
+ "X1-1": {
+  "masked_text": "비자 없이 리조트 알바 가능\n한 달에 1,000만 원 벌 수 있다\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "리조트 알바",
+    "duties_summary": null,
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": true,
+    "overseas_country": null,
+    "overseas_perks": [
+     "no_visa",
+     "high_pay"
+    ],
+    "overseas_quote": "비자 없이 리조트 알바 가능 … 한 달에 1,000만 원 벌 수 있다"
+   },
+   "pay": {
+    "amount_text": "한 달에 1,000만 원",
+    "unit": "month",
+    "amount_krw": 10000000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "한 달에 1,000만 원 벌 수 있다"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "월 1,000만 원의 수입 가능성 제시(보장 여부 미기재)",
+      "quote": "한 달에 1,000만 원 벌 수 있다"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H7",
+     "quote": "비자 없이 리조트 알바 가능 … 한 달에 1,000만 원 벌 수 있다",
+     "explanation": "해외 리조트 근무로 읽히는 공고에서 비자 없이 일할 수 있다고 하며 월 1,000만 원의 수입을 내세웁니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "한 달에 1,000만 원 벌 수 있다",
+     "explanation": "구체적인 업무나 급여 산정 조건 없이 월 1,000만 원을 벌 수 있다고 강조합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "리조트 알바",
+     "explanation": "리조트 아르바이트라고만 적혀 있어 실제로 어떤 일을 하는지 알 수 없습니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "한 달에 1,000만 원 벌 수 있다",
+     "explanation": "업무 내용과 근무시간을 밝히지 않은 채 리조트 아르바이트로 월 1,000만 원의 수입을 제시합니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "고용업체 상호와 리조트 소재지",
+    "구체적인 업무와 근무시간",
+    "현지 취업 자격과 비자 요건",
+    "기본급과 성과급 등 급여 산정 기준",
+    "지원 경로와 근로계약 절차"
+   ],
+   "follow_up_questions": [
+    "고용업체의 정식 상호와 리조트가 있는 국가·주소, 비자 없이 일할 수 있다는 현지 취업 자격의 근거를 알려주실 수 있나요?",
+    "실제 업무와 근무시간은 어떻게 되며, 월 1,000만 원은 계약서에 명시되는 기본급인가요, 아니면 성과에 따른 예상 수입인가요?",
+    "출국이나 근무 시작 전에 제가 먼저 내야 하는 비용이 있거나, 회사에 여권을 맡겨야 하는 조건이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5683,
+   "cached_input_tokens": 3068,
+   "output_tokens": 932,
+   "reasoning_tokens": 0
+  },
+  "seconds": 11.6
+ },
+ "X2-1": {
+  "masked_text": "문자알바 주급 5만원\n친구 섭외 시 추가 5천원\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "문자알바",
+    "duties_summary": "문자 관련 아르바이트로, 문자 내용이나 발송 대상은 적혀 있지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "주급 5만원",
+    "unit": "week",
+    "amount_krw": 50000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "문자알바 주급 5만원"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "주급 5만 원",
+      "quote": "주급 5만원"
+     },
+     {
+      "item": "친구 섭외 시 추가 5천 원",
+      "quote": "친구 섭외 시 추가 5천원"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [
+     {
+      "item": "추가 수당을 받으려면 친구 섭외",
+      "quote": "친구 섭외 시 추가 5천원"
+     }
+    ],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "H6",
+     "quote": "친구 섭외 시 추가 5천원",
+     "explanation": "친구를 섭외하면 추가로 5천 원을 준다고 합니다."
+    },
+    {
+     "signal_id": "S3",
+     "quote": "문자알바",
+     "explanation": "문자 관련 일이라는 말만 있고 구체적으로 어떤 일을 하는지 설명하지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명과 사업자 정보",
+    "문자 내용·수신 대상·발송량",
+    "문자 발송에 사용하는 번호와 비용 부담 주체",
+    "주당 근무시간",
+    "지원 방법과 근로계약 조건"
+   ],
+   "follow_up_questions": [
+    "어떤 내용의 문자를 누구에게 하루 몇 건 보내며, 수신자가 사전에 동의한 문자인가요?",
+    "문자 발송에 제 번호나 유심을 써야 하거나 제가 이용료를 먼저 내야 하나요?",
+    "친구 섭외는 선택 사항이며, 섭외할 때 친구의 연락처를 업체에 넘겨야 하나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5682,
+   "cached_input_tokens": 3068,
+   "output_tokens": 733,
+   "reasoning_tokens": 0
+  },
+  "seconds": 9.6
+ },
+ "X3-1": {
+  "masked_text": "일급 50만원, 20-35세 여성 모집, 월급 7백만원 이상 가능\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": null,
+    "duties_summary": null,
+    "duty_clarity": "unknown",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": "일급 50만원",
+    "unit": "day",
+    "amount_krw": 500000,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": "일급 50만원, 20-35세 여성 모집, 월급 7백만원 이상 가능"
+   },
+   "contact": {
+    "channels": [
+     "unknown"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": "여성",
+    "age_restriction": "20-35세",
+    "quote": "20-35세 여성 모집"
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [
+     {
+      "item": "일급 50만 원",
+      "quote": "일급 50만원"
+     },
+     {
+      "item": "월 700만 원 이상 가능하다고 제시한 급여",
+      "quote": "월급 7백만원 이상 가능"
+     }
+    ],
+    "passes_through_worker": [],
+    "required_actions": [],
+    "control_loss": [],
+    "hiring_process": null
+   },
+   "signals": [
+    {
+     "signal_id": "M5",
+     "quote": "일급 50만원, 20-35세 여성 모집, 월급 7백만원 이상 가능",
+     "explanation": "20~35세 여성으로 모집 대상을 한정하면서 업무 설명 없이 일급 50만 원과 월 700만 원 이상 가능하다는 조건을 내세웁니다."
+    },
+    {
+     "signal_id": "S1",
+     "quote": "일급 50만원, 20-35세 여성 모집, 월급 7백만원 이상 가능",
+     "explanation": "구체적으로 무슨 일을 하는지 밝히지 않고 높은 급여를 강조합니다."
+    }
+   ],
+   "axis_violations": [
+    {
+     "axis": "F",
+     "quote": "일급 50만원, 20-35세 여성 모집, 월급 7백만원 이상 가능",
+     "explanation": "업무와 근무시간을 밝히지 않은 채 높은 보상을 제시해 그 금액이 어떤 조건에서 지급되는지 확인하기 어렵습니다."
+    }
+   ],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "업체명",
+    "구체적인 업무 내용",
+    "근무지",
+    "근무일수와 근무시간",
+    "급여 산정 기준과 지급일"
+   ],
+   "follow_up_questions": [
+    "업체 상호와 실제 근무지, 맡게 될 업무를 알려주실 수 있나요?",
+    "일급 50만 원이 계약서에 명시되는 고정급인지, 월 700만 원 이상을 받으려면 근무일수나 실적 조건이 어떻게 되는지 알려주실 수 있나요?",
+    "지원이나 업무 과정에서 제가 먼저 내야 하는 비용, 제 계좌나 명의를 사용해야 하는 일, 다른 사람의 돈이나 물건을 받아 전달하는 일이 있나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5680,
+   "cached_input_tokens": 3068,
+   "output_tokens": 836,
+   "reasoning_tokens": 0
+  },
+  "seconds": 10.5
+ },
+ "X4-1": {
+  "masked_text": "리뷰 체험단 모집합니다\n",
+  "extraction": {
+   "company": {
+    "name": null,
+    "name_quote": null,
+    "region": null,
+    "claims_known_brand": false,
+    "brand_name": null,
+    "brand_quote": null
+   },
+   "job": {
+    "title": "리뷰 체험단",
+    "duties_summary": "리뷰 체험단을 모집하지만 체험 대상과 구체적인 활동은 안내하지 않습니다.",
+    "duty_clarity": "vague",
+    "work_location": null,
+    "overseas": false,
+    "overseas_country": null,
+    "overseas_perks": [],
+    "overseas_quote": null
+   },
+   "pay": {
+    "amount_text": null,
+    "unit": "unknown",
+    "amount_krw": null,
+    "hours_per_unit": null,
+    "same_day_pay": false,
+    "quote": null
+   },
+   "contact": {
+    "channels": [
+     "sms"
+    ],
+    "moves_to_messenger": false,
+    "quote": null
+   },
+   "requirements": {
+    "gender_restriction": null,
+    "age_restriction": null,
+    "quote": null
+   },
+   "value_flow": {
+    "worker_pays": [],
+    "worker_receives": [],
+    "passes_through_worker": [],
+    "required_actions": [],
+    "control_loss": [],
+    "hiring_process": "문자로 모집 안내를 받았으며, 지원 방법이나 선발 절차는 적혀 있지 않습니다."
+   },
+   "signals": [
+    {
+     "signal_id": "S3",
+     "quote": "리뷰 체험단 모집합니다",
+     "explanation": "리뷰 체험단이라는 이름만 있고 무엇을 체험하고 어떤 활동을 해야 하는지 나와 있지 않습니다."
+    }
+   ],
+   "axis_violations": [],
+   "injection": {
+    "detected": false,
+    "quote": null
+   },
+   "other_anomalies": [],
+   "missing_info": [
+    "모집 업체명",
+    "체험 대상과 구체적인 활동",
+    "보상 금액과 지급 조건",
+    "선구매 등 참여자 부담 비용",
+    "지원 방법과 선발 절차"
+   ],
+   "follow_up_questions": [
+    "어느 업체가 모집하며, 어떤 제품이나 서비스를 체험하고 어떤 활동을 해야 하나요?",
+    "참여하려면 제 돈으로 제품을 먼저 구매하거나 보증금·충전금·배송비를 내야 하나요?",
+    "보상이 있다면 금액과 지급 시점은 어떻게 되나요?"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5653,
+   "cached_input_tokens": 3068,
+   "output_tokens": 580,
+   "reasoning_tokens": 0
+  },
+  "seconds": 7.9
+ }
+}

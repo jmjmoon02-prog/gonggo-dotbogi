@@ -38,7 +38,7 @@ def test_demo_set_covers_required_scenarios():
     assert grades["demo_platform_normal"][0] == "green"
     assert grades["demo_telegram_cash"][0] == "red"
     assert grades["demo_brand_review"][0] == "orange"
-    assert grades["demo_vague_dm"] == ("white", "red")
+    assert grades["demo_vague_dm"] == ("yellow", "red")  # 실제 AI 실측으로 확정(🟡 → 🔴)
 
 
 def test_demo_samples_have_no_forbidden_word_or_real_contacts():
@@ -156,12 +156,12 @@ def test_app_vague_dm_two_rounds(dev_mode):
     _button(at, "샘플 불러오기").click().run()
     _button(at, "판정하기").click().run()
     assert not at.exception
-    assert "확인 필요" in _markdown_text(at)
+    assert "주의" in _markdown_text(at)
     _button(at, "샘플 답변 넣기").click().run()
     _button(at, "답변 반영해 다시 판정").click().run()
     assert not at.exception
     text = _markdown_text(at)
-    assert "1회차 ⚪ 확인 필요 → 2회차 🔴 위험" in text
+    assert "1회차 🟡 주의 → 2회차 🔴 위험 신호 발견" in text
 
 
 @pytest.mark.parametrize(
