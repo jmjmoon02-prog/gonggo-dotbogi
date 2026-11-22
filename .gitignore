@@ -1,0 +1,17 @@
+# 비밀 정보 — 절대 커밋 금지 (루트 .gitignore 와 같은 규칙을 app/ 단독 사용 대비로 한 번 더)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# 가상환경·캐시
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 로컬 실행 결과·사례 데이터 (실제 사례는 비공개 저장소에만)
+data/cases_local/
+*.log

@@ -1,0 +1,64 @@
+# 데모용 가상 공고 (화면의 [샘플 불러오기], 데모 시나리오)
+# - 모든 문장·업체명·번호·ID 는 지어낸 것이다. 실제 개인정보 없음.
+# - 업체명은 실존 업체와 겹치지 않도록 '가상' 접두어를 쓴다. 사칭 시나리오의 브랜드는 '국내 최대 쇼핑몰'로 일반화한다.
+# - 작성: Claude(AI)로 초안 작성 → AI 활용내역에 기재 대상
+- id: demo_platform_normal
+  title: "① 정식 플랫폼 정상 공고 (매장 스태프)"
+  source_channel: platform
+  expected_grade: green
+  text: |
+    [채용 플랫폼 공고] 가상제빵 망원점 주말 매장 스태프 모집
+    근무: 토·일 09:00~15:00 (하루 6시간)
+    급여: 시급 11,000원, 주휴수당 별도
+    근로계약서 작성, 4대보험 가입
+    업무: 빵 진열, 계산, 매장 정리
+    지원 방법: 플랫폼 '지원하기' 버튼
+  reply: null
+  reply_expected_grade: null
+
+- id: demo_telegram_cash
+  title: "② 텔레그램 고액 알바 (현금 전달)"
+  source_channel: sns_messenger
+  expected_grade: red
+  text: |
+    🔥고액 알바 당일 지급🔥 일당 30만 원
+    업무: 고객님께 받은 현금을 지정 장소에 전달하는 간단한 심부름
+    나이·경력 무관, 차 없어도 가능
+    자세한 건 텔레그램 @fastjob_demo 로 연락 주세요
+  reply: null
+  reply_expected_grade: null
+
+- id: demo_brand_review
+  title: "③ 유명 쇼핑몰 사칭 리뷰 체험단 (문자)"
+  source_channel: sms
+  expected_grade: orange
+  text: |
+    [국내 최대 쇼핑몰 공식] 상품 리뷰 체험단 모집
+    하루 30분, 리뷰 1건당 2만 원 지급
+    아래 링크에서 회원가입 후 시작하세요 http://review-event.example
+    문의: 카카오톡 친구 추가 ID: shopreview_demo
+  reply: null
+  reply_expected_grade: null
+
+- id: demo_vague_dm
+  title: "④ 정보 부족 DM → 구인자 답변 후 재판정"
+  source_channel: sns_messenger
+  expected_grade: white
+  text: |
+    안녕하세요~ 재택 부업 관심 있으시면 연락 주세요. 하루 1~2시간, 월 200 이상 가능합니다.
+  reply: |
+    업무는 쇼핑몰 상품을 대신 구매해 주시면 원금+수익 15% 바로 환급해 드려요. 먼저 체크카드 앞면 사진 보내 주세요.
+  reply_expected_grade: red
+
+- id: demo_overseas
+  title: "⑤ 해외 리조트 고수익 알바 (인스타 DM)"
+  source_channel: sns_messenger
+  expected_grade: red
+  text: |
+    ✈️ 동남아 리조트 단기 알바 모집
+    비자 없이 바로 출국 가능, 항공권·숙소 전부 제공
+    한 달 1,000만 원 이상 보장
+    도착 후 여권은 회사에서 보관합니다
+    인스타 DM 주세요
+  reply: null
+  reply_expected_grade: null

@@ -1,0 +1,9 @@
+# Streamlit Community Cloud 는 진입점(app/app.py)과 같은 폴더의 의존성 파일을 먼저 찾는다
+# (docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies, 2026-11-23 확인).
+# 제출본 재현성을 위해 로컬(Python 3.14)에서 테스트한 버전으로 고정한다. 단계마다 필요한 패키지를 추가한다.
+streamlit==1.67.0
+PyYAML==6.0.4
+pydantic==2.14.4
+python-dotenv==1.2.4
+openai==3.57.0
+pillow==13.0.0

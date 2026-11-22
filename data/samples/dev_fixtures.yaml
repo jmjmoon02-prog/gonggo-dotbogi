@@ -1,0 +1,94 @@
+# 개발 전용 고정 추출값 — AI 대신 사람이 손으로 적은 '추출 결과'
+# - 로컬에서 DEV_FIXTURES=1 일 때만, 샘플 문장을 고치지 않고 판정할 때만 쓴다. 배포 화면에서는 쓰지 않는다.
+# - 용도: AI 연결 전 화면 흐름 확인, 규칙 엔진 회귀 시험.
+# - 빠진 필드는 core/samples.py 가 기본값(없음·false·빈 목록)으로 채운다.
+# - 인용(quote)은 마스킹된 원문에 있는 문장이어야 한다(메신저 ID 등은 [메신저ID1] 같은 토큰으로 바뀐다).
+demo_platform_normal:
+  round1:
+    company: { name: "가상제빵", name_quote: "가상제빵 망원점", region: "망원" }
+    job: { title: "주말 매장 스태프", duties_summary: "빵 진열, 계산, 매장 정리", duty_clarity: clear, work_location: "망원점" }
+    pay: { amount_text: "시급 11,000원", unit: hour, amount_krw: 11000, hours_per_unit: 1, quote: "시급 11,000원, 주휴수당 별도" }
+    contact: { channels: [platform_message], quote: "지원 방법: 플랫폼 '지원하기' 버튼" }
+    value_flow:
+      worker_receives: [{ item: "시급 11,000원 + 주휴수당", quote: "시급 11,000원, 주휴수당 별도" }]
+      required_actions: [{ item: "매장 업무", quote: "빵 진열, 계산, 매장 정리" }]
+      hiring_process: "플랫폼 지원, 근로계약서 작성"
+
+demo_telegram_cash:
+  round1:
+    job: { title: "심부름", duties_summary: "받은 현금을 지정 장소에 전달", duty_clarity: vague }
+    pay: { amount_text: "일당 30만 원", unit: day, amount_krw: 300000, same_day_pay: true, quote: "고액 알바 당일 지급🔥 일당 30만 원" }
+    contact: { channels: [telegram], moves_to_messenger: true, quote: "텔레그램 @[메신저ID1] 로 연락 주세요" }
+    value_flow:
+      passes_through_worker: [{ item: "고객 현금", quote: "고객님께 받은 현금을 지정 장소에 전달하는 간단한 심부름" }]
+      required_actions: [{ item: "현금 전달", quote: "지정 장소에 전달하는 간단한 심부름" }]
+      hiring_process: "텔레그램 연락"
+    signals:
+      - { signal_id: H2, quote: "고객님께 받은 현금을 지정 장소에 전달하는 간단한 심부름", explanation: "제3자에게 받은 현금을 전달하는 업무로, 보이스피싱 수거책 모집 수법과 같습니다." }
+      - { signal_id: S1, quote: "고액 알바 당일 지급", explanation: "업무 설명 없이 고액·당일 지급을 강조합니다." }
+      - { signal_id: S2, quote: "자세한 건 텔레그램 @[메신저ID1] 로 연락 주세요", explanation: "텔레그램으로 이동을 유도합니다." }
+    axis_violations:
+      - { axis: B, quote: "고객님께 받은 현금을 지정 장소에 전달", explanation: "근로자가 남의 돈이 지나가는 통로가 됩니다." }
+    missing_info: ["업체명·사업자등록번호", "근로계약서 작성 여부"]
+
+demo_brand_review:
+  round1:
+    company: { claims_known_brand: true, brand_name: "국내 최대 쇼핑몰", brand_quote: "국내 최대 쇼핑몰 공식" }
+    job: { title: "상품 리뷰 체험단", duties_summary: "리뷰 작성", duty_clarity: vague }
+    pay: { amount_text: "리뷰 1건당 2만 원", unit: per_task, amount_krw: 20000, quote: "리뷰 1건당 2만 원 지급" }
+    contact: { channels: [sms, external_link, kakao_personal], moves_to_messenger: true, quote: "카카오톡 친구 추가 ID: [메신저ID1]" }
+    value_flow:
+      required_actions:
+        - { item: "외부 사이트 회원가입", quote: "아래 링크에서 회원가입 후 시작하세요" }
+      hiring_process: "문자 → 외부 링크 가입 → 카카오톡 친구 추가"
+    signals:
+      - { signal_id: M1, quote: "아래 링크에서 회원가입 후 시작하세요", explanation: "업무를 이유로 외부 사이트 가입을 유도합니다." }
+      - { signal_id: S2, quote: "카카오톡 친구 추가", explanation: "개인 메신저로 이동을 유도합니다." }
+    missing_info: ["쇼핑몰 공식 채용 페이지·대표번호", "운영 업체 사업자 정보"]
+
+demo_vague_dm:
+  round1:
+    job: { title: "재택 부업", duty_clarity: vague }
+    pay: { amount_text: "월 200 이상", unit: month, amount_krw: 2000000, quote: "월 200 이상 가능합니다" }
+    contact: { channels: [instagram_dm] }
+    signals:
+      - { signal_id: S3, quote: "재택 부업 관심 있으시면 연락 주세요", explanation: "무슨 일을 하는지 적혀 있지 않습니다." }
+    missing_info: ["업체명", "업무 내용", "급여 지급 방식"]
+    follow_up_questions:
+      - "하루 1~2시간에 월 200만 원 이상이 가능한 업무가 구체적으로 무엇인가요?"
+      - "급여는 누가, 어떤 계좌에서, 어떤 명목으로 보내 주시나요?"
+  round2:
+    job: { title: "구매대행 재택 부업", duties_summary: "상품 대신 구매 후 환급", duty_clarity: clear }
+    pay: { amount_text: "월 200 이상", unit: month, amount_krw: 2000000, quote: "월 200 이상 가능합니다" }
+    contact: { channels: [instagram_dm] }
+    value_flow:
+      worker_pays:
+        - { item: "상품 대금(대신 구매)", quote: "쇼핑몰 상품을 대신 구매해 주시면" }
+        - { item: "체크카드 사진", quote: "먼저 체크카드 앞면 사진 보내 주세요" }
+      worker_receives: [{ item: "원금+수익 15% 환급 약속", quote: "원금+수익 15% 바로 환급해 드려요" }]
+    signals:
+      - { signal_id: S3, quote: "재택 부업 관심 있으시면 연락 주세요", explanation: "처음 메시지에는 업무가 적혀 있지 않았습니다." }
+      - { signal_id: H3, quote: "쇼핑몰 상품을 대신 구매해 주시면 원금+수익 15% 바로 환급해 드려요", explanation: "지원자 돈으로 대신 구매하게 하는 구매대행 사기 수법입니다." }
+      - { signal_id: H4, quote: "먼저 체크카드 앞면 사진 보내 주세요", explanation: "채용 전에 금융정보를 요구합니다." }
+    axis_violations:
+      - { axis: A, quote: "먼저 체크카드 앞면 사진 보내 주세요", explanation: "일하기 전에 금융정보가 먼저 나갑니다." }
+
+demo_overseas:
+  round1:
+    job:
+      title: "동남아 리조트 단기 알바"
+      duty_clarity: vague
+      overseas: true
+      overseas_country: "동남아(국가 미기재)"
+      overseas_perks: [flight, lodging, no_visa, high_pay]
+      overseas_quote: "비자 없이 바로 출국 가능, 항공권·숙소 전부 제공"
+    pay: { amount_text: "한 달 1,000만 원 이상", unit: month, amount_krw: 10000000, quote: "한 달 1,000만 원 이상 보장" }
+    contact: { channels: [instagram_dm], moves_to_messenger: true, quote: "인스타 DM 주세요" }
+    value_flow:
+      control_loss: [{ item: "여권", quote: "도착 후 여권은 회사에서 보관합니다" }]
+    signals:
+      - { signal_id: H7, quote: "비자 없이 바로 출국 가능, 항공권·숙소 전부 제공", explanation: "해외 근무에 무비자·항공권·숙소 제공을 내세웁니다." }
+      - { signal_id: S1, quote: "한 달 1,000만 원 이상 보장", explanation: "업무 설명 없이 고수익을 보장합니다." }
+    axis_violations:
+      - { axis: D, quote: "도착 후 여권은 회사에서 보관합니다", explanation: "여권을 맡기면 이동·귀국 통제를 잃습니다." }
+    missing_info: ["근무 국가·현지 회사 정식 명칭", "취업비자 종류"]
