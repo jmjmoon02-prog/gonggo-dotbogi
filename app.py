@@ -93,11 +93,11 @@ APP_CSS = """
   --mono: 'IBM Plex Mono', Pretendard, ui-monospace, monospace;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-/* 상단 밴드(연회색 → 연한 인디고 두 색): 페이지 맨 위 약 1/3 에만 두고 스크롤과 함께 올라간다 */
+/* 상단 밴드(연한 인디고 → 인디고 두 색): 페이지 맨 위 약 1/3 에만 두고 스크롤과 함께 올라간다 */
 [data-testid="stMain"] {
   background:
-    linear-gradient(to bottom, rgba(246,245,243,0) 45%, var(--canvas) 100%) top left / 100% 480px no-repeat local,
-    linear-gradient(105deg, #f3f3f7 0%, #d5daf4 100%) top left / 100% 480px no-repeat local,
+    linear-gradient(to bottom, rgba(246,245,243,0) 55%, var(--canvas) 100%) top left / 100% 480px no-repeat local,
+    linear-gradient(105deg, #e2e5f8 0%, #a7b0ec 100%) top left / 100% 480px no-repeat local,
     var(--canvas);
 }
 [data-testid="stHeader"] { background: transparent; }
