@@ -96,61 +96,101 @@ APP_CSS = """
 /* 상단 이리데센트 밴드: 페이지 맨 위 약 1/3 에만 두고 스크롤과 함께 올라간다 */
 [data-testid="stMain"] {
   background:
-    linear-gradient(to bottom, rgba(246,245,243,0) 45%, var(--canvas) 100%) top left / 100% 420px no-repeat local,
-    linear-gradient(105deg, #fef6e4 0%, #fcd9c6 26%, #e6d6f5 58%, #cdd3f5 82%, #c3c9f0 100%) top left / 100% 420px no-repeat local,
+    linear-gradient(to bottom, rgba(246,245,243,0) 45%, var(--canvas) 100%) top left / 100% 480px no-repeat local,
+    linear-gradient(105deg, #fef6e4 0%, #fcd9c6 26%, #e6d6f5 58%, #cdd3f5 82%, #c3c9f0 100%) top left / 100% 480px no-repeat local,
     var(--canvas);
 }
 [data-testid="stHeader"] { background: transparent; }
-[data-testid="stMainBlockContainer"] { max-width: 1120px; padding: 3.5rem 24px 4rem 24px; }
+[data-testid="stMainBlockContainer"] { max-width: 1120px; padding: 3rem 24px 4rem 24px; }
 [data-testid="stMain"] { font-variant-numeric: tabular-nums; }
 [data-testid="stMain"] p, [data-testid="stMain"] li { line-height: 1.65; }
 [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p { color: var(--ink-2); }
+html { scroll-behavior: smooth; }
+[id^="sec-"] { scroll-margin-top: 4.5rem; }
+
+/* 상단 바 */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+          padding: 0 0 2.4rem 0; font-size: 0.875rem; }
+.topbar .brand { font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+.topbar .brand small { font-family: var(--mono); font-weight: 400; font-size: 0.72rem; color: var(--ink-2);
+                       margin-left: 0.5rem; }
+.topbar .mark { display: inline-block; width: 11px; height: 11px; border: 1.5px solid var(--ink); border-radius: 50%;
+                margin-right: 0.5rem; vertical-align: -0.05em; position: relative; }
+.topbar nav a { color: var(--ink-2) !important; text-decoration: none; margin-left: 1.4rem; }
+.topbar nav a:hover { color: var(--accent) !important; }
 
 /* 히어로 */
-.stApp .hero { padding: 1.2rem 0 1.4rem 0; }
+.stApp .hero { padding: 0 0 1.2rem 0; }
 .stApp .eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em;
            color: var(--ink-2); margin: 0 0 0.6rem 0; }
 .stApp .hero h1 { font-family: var(--display); font-weight: 500; font-size: clamp(2.6rem, 5.5vw, 4.6rem);
            letter-spacing: -0.035em; line-height: 1.04; margin: 0; padding: 0; color: var(--ink); }
-.stApp .hero-tag { font-size: 1.125rem; color: var(--ink-2); margin: 1rem 0 0 0; max-width: 34em; }
-.stApp .hero-meta { font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2); margin: 1.4rem 0 0 0;
-             font-variant-numeric: tabular-nums; }
+.stApp .hero-tag { font-size: 1.125rem; color: var(--ink-2); margin: 1rem 0 0 0; max-width: 30em; }
+.cta-row { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; margin: 1.6rem 0 0 0; }
+.stApp a.cta { display: inline-block; background: var(--accent); color: #ffffff; text-decoration: none;
+               padding: 0.6rem 1.2rem; border-radius: 999px; font-weight: 500; font-size: 0.95rem;
+               transition: background-color 200ms var(--ease); }
+.stApp a.cta:hover { background: #4338ca; color: #ffffff; }
+.stApp a.text-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line);
+                     font-size: 0.95rem; transition: border-color 200ms var(--ease); }
+.stApp a.text-link:hover { border-color: var(--accent); }
+.stApp .hero-meta { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-2); margin: 1.5rem 0 0 0; }
 .hero-meta span { display: inline-block; margin-right: 1.1rem; }
 .hero-meta span::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 0.45rem;
                           border: 1px solid var(--ink-2); border-radius: 50%; vertical-align: 0.1em; }
 
-/* 패널(등급 안내·판정 순서) */
+/* 패널 */
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px;
          box-shadow: 0 1px 2px rgba(26,34,51,0.05); }
 .stApp .panel-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em; color: var(--ink-2);
-               margin: 0 0 0.75rem 0; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
-.legend-row { display: flex; align-items: baseline; gap: 0.6rem; padding: 0.32rem 0; font-size: 0.95rem; }
-.legend-row .dot { flex: none; }
-.legend-row small { color: var(--ink-2); margin-left: auto; font-family: var(--mono); font-size: 0.75rem; }
+               margin: 0 0 0.6rem 0; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); }
+.stApp .mini-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--ink-2);
+                     margin: 1.1rem 0 0.5rem 0; }
+.stApp .panel-note { font-size: 0.875rem; color: var(--ink-2); margin: 0.6rem 0 0 0; }
 .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
-.steps li { counter-increment: step; display: flex; gap: 0.75rem; padding: 0.42rem 0; font-size: 0.95rem;
+.steps li { counter-increment: step; display: flex; gap: 0.75rem; padding: 0.5rem 0; font-size: 0.95rem;
             border-bottom: 1px solid var(--line); }
 .steps li:last-child { border-bottom: none; }
 .steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); font-size: 0.8rem;
-                    color: var(--ink-2); padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
+                    color: var(--ink-2); padding-top: 0.15rem; flex: none; }
+.src { display: block; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-2); margin-top: 0.2rem; }
+.stApp .src a { color: var(--ink-2); }
 .dot { display: inline-block; width: 0.62em; height: 0.62em; border-radius: 50%; background: var(--g, var(--ink-2)); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 0.4rem; padding: 2px 10px; border: 1px solid var(--line);
+        border-radius: 999px; font-size: 0.82rem; background: var(--surface); }
+
+/* 스크롤해도 옆에 남는 패널 */
+[data-testid="stLayoutWrapper"]:has(> [class*="st-key-sticky"]) { position: sticky; top: 4.25rem; }
+[data-testid="stColumn"]:has([class*="st-key-sticky"]) {
+  align-self: stretch; }
 
 /* 섹션 제목 */
-.stApp .section-head { margin: 2.6rem 0 0.4rem 0; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.stApp .section-head { margin: 3rem 0 0.6rem 0; padding-top: 1.6rem; border-top: 1px solid var(--line); }
 .section-head .eyebrow { margin-bottom: 0.35rem; }
 .stApp .section-head h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.7rem, 3vw, 2.5rem);
                    letter-spacing: -0.025em; line-height: 1.12; margin: 0; padding: 0; color: var(--ink); }
 .stApp .sub-head { font-family: var(--display); font-weight: 500; font-size: 1.3rem; letter-spacing: -0.015em;
-            margin: 1.6rem 0 0.5rem 0; color: var(--ink); }
+            margin: 2rem 0 0.6rem 0; color: var(--ink); }
 
 /* 판정 등급 */
 .grade-box { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--g);
-             border-radius: 10px; padding: 20px 24px 18px 24px; margin: 10px 0 12px 0;
-             box-shadow: 0 1px 2px rgba(26,34,51,0.05); }
-.stApp .grade-title { font-family: var(--display); font-weight: 500; font-size: clamp(1.7rem, 3vw, 2.4rem);
+             border-radius: 10px; padding: 20px 24px; box-shadow: 0 1px 2px rgba(26,34,51,0.05); }
+.stApp .grade-title { font-family: var(--display); font-weight: 500; font-size: clamp(1.8rem, 3.2vw, 2.6rem);
                letter-spacing: -0.025em; line-height: 1.15; margin: 0; color: var(--g); }
 .grade-title .dot { width: 0.5em; height: 0.5em; margin-right: 0.4em; vertical-align: 0.12em; }
-.stApp .grade-sub { margin: 0.55rem 0 0 0; font-size: 0.875rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.stApp .grade-sub { margin: 0.55rem 0 0 0; font-size: 0.85rem; color: var(--ink-2); }
+.grade-box ul.reasons { margin: 1rem 0 0 0; padding: 0.9rem 0 0 1.1rem; border-top: 1px solid var(--line); }
+.grade-box ul.reasons li { font-size: 0.95rem; margin: 0.2rem 0; }
+.stApp .round-compare { font-size: 0.95rem; margin: 0 0 0.6rem 0; }
+.next-advice { border-left: 3px solid var(--g); padding: 0.1rem 0 0.1rem 0.8rem; margin: 0.2rem 0 0.4rem 0;
+               font-weight: 500; line-height: 1.6; }
+.contact { padding: 0.55rem 0; border-top: 1px solid var(--line); }
+.contact:first-of-type { border-top: none; }
+.contact .c-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.8rem; }
+.contact .c-name { font-weight: 500; }
+.contact .c-num { font-family: var(--mono); font-weight: 500; font-size: 1.05rem; }
+.contact small { display: block; color: var(--ink-2); font-size: 0.85rem; line-height: 1.5; }
 
 /* 근거 문장 */
 .quote-box { padding: 14px 16px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line);
@@ -167,33 +207,57 @@ APP_CSS = """
 [data-testid="stCode"] pre { border: 1px solid var(--line); border-radius: 12px; }
 [data-testid="stCode"] code { font-family: var(--mono) !important; line-height: 1.7; }
 
+/* 업체 확인 요약 줄 */
+.spec-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--surface);
+             border: 1px solid var(--line); border-radius: 10px; margin: 0 0 0.9rem 0; }
+.spec { padding: 12px 16px; border-left: 1px solid var(--line); min-width: 0; }
+.spec:first-child { border-left: none; }
+.stApp .spec-k { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-2); margin: 0 0 0.25rem 0; }
+.stApp .spec-v { margin: 0; font-weight: 500; font-size: 0.95rem; overflow-wrap: anywhere; }
+
+/* 직접 확인 링크 카드 */
+.link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0.4rem 0 1rem 0; }
+.stApp a.link-card { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+                     padding: 12px 16px; text-decoration: none; color: var(--ink);
+                     transition: border-color 200ms var(--ease), transform 200ms var(--ease); }
+.stApp a.link-card:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--ink); }
+.link-card b { display: block; font-weight: 500; font-size: 0.95rem; }
+.link-card b::after { content: " ↗"; color: var(--ink-2); font-weight: 400; }
+.link-card span { display: block; color: var(--ink-2); font-size: 0.85rem; margin-top: 0.15rem; line-height: 1.5; }
+
 /* 카드·표·접기 상자: 흰 표면 + 1px 헤어라인, 그림자는 한 단계만 */
 [data-testid="stVerticalBlock"][class*="st-key-card"], div[data-testid="stExpander"] details {
   background: var(--surface); }
 [data-testid="stExpander"] details { border-radius: 10px; }
-[data-testid="stTable"] table, .stTable table { font-variant-numeric: tabular-nums; background: var(--surface); }
+[data-testid="stTable"] table, .stTable table { background: var(--surface); }
 [data-testid="stTable"] th { font-weight: 500; font-size: 0.8125rem; color: var(--ink-2); }
 [data-testid="stTable"] td { font-size: 0.9rem; }
-.num { font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 0.875rem; }
 
 /* 호버: 보더 색만 인디고로 (그림자는 키우지 않음) */
-[data-testid="stExpander"] details, .panel, .grade-box, [class*="st-key-card"] {
-  transition: border-color 200ms var(--ease); }
-[data-testid="stExpander"] details:hover, .panel:hover, [class*="st-key-card"]:hover { border-color: var(--accent); }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-
-/* 사이드바 */
-[data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 { font-family: var(--display); font-weight: 500;
-                                                            letter-spacing: -0.015em; }
+[data-testid="stExpander"] details, .panel, [class*="st-key-card"] { transition: border-color 200ms var(--ease); }
+[data-testid="stExpander"] details:hover, [class*="st-key-card"]:hover { border-color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+  .stApp a.link-card:hover { transform: none; }
+}
 
 /* 바닥글 */
-.site-footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 0.8125rem;
-               color: var(--ink-2); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.site-footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 0.8125rem;
+               color: var(--ink-2); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.4rem; }
 .site-footer b { display: block; font-family: var(--mono); font-weight: 500; font-size: 0.72rem;
-                 letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.35rem; color: var(--ink); }
+                 letter-spacing: 0.04em; margin-bottom: 0.35rem; color: var(--ink); }
+
+@media (max-width: 1024px) {
+  .site-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spec:nth-child(3) { border-left: none; }
+  .spec:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
 @media (max-width: 768px) {
   [data-testid="stMainBlockContainer"] { padding-top: 2.5rem; }
-  .site-footer { grid-template-columns: 1fr; }
+  .topbar nav { display: none; }
+  .link-grid, .site-footer { grid-template-columns: 1fr; }
+  [data-testid="stLayoutWrapper"]:has(> [class*="st-key-sticky"]) { position: static; }
 }
 </style>
 """
@@ -420,9 +484,21 @@ def _evidence_links(ids) -> str:
     return " · ".join(parts)
 
 
-def _section(step: str, title: str) -> None:
+def _evidence_html(ids) -> str:
+    """근거 ID 를 HTML 링크로 (패널 안처럼 마크다운을 쓸 수 없는 곳)."""
+    parts = []
+    for eid in ids:
+        ev = RB.evidence_link(eid)
+        if ev:
+            parts.append(f'<a href="{html.escape(ev["url"], quote=True)}" title="{html.escape(ev["title"], quote=True)}" '
+                         f'target="_blank" rel="noopener">{html.escape(eid)}</a>')
+    return " · ".join(parts)
+
+
+def _section(step: str, title: str, anchor: str | None = None) -> None:
     """섹션 머리: 등폭 eyebrow 라벨 + 가는(500) 디스플레이 제목."""
-    st.markdown(f'<div class="section-head"><p class="eyebrow">{html.escape(step)}</p>'
+    id_attr = f' id="sec-{anchor}"' if anchor else ""
+    st.markdown(f'<div class="section-head"{id_attr}><p class="eyebrow">{html.escape(step)}</p>'
                 f"<h2>{html.escape(title)}</h2></div>", unsafe_allow_html=True)
 
 
@@ -431,19 +507,49 @@ def _sub(title: str) -> None:
 
 
 def _grade_box(r: RoundResult) -> None:
+    """등급 + 판정 이유를 한 상자에."""
     v = r.verdict
     fg, _bg = GRADE_STYLE[v.grade]
     novel = ' <span class="tag">신종 의심</span>' if v.novel_suspect else ""
+    reasons = "".join(f"<li>{html.escape(x)}</li>" for x in v.reasons)
+    trust = ""
+    if v.trust and v.grade != "green":  # 🟢 는 판정 이유에 신뢰 신호가 이미 적혀 있다
+        trust = "<li>신뢰 신호: " + html.escape(", ".join(t.name for t in v.trust)) + "</li>"
     st.markdown(
         f'<div class="grade-box" style="--g:{fg};">'
         f'<p class="eyebrow">판정 등급 · {r.round_no}회차</p>'
         f'<p class="grade-title"><span class="dot"></span>{html.escape(v.label)}{novel}</p>'
         f'<p class="grade-sub">위험 신호 안내이며 사기 여부를 확정하지 않습니다 · 규칙 v{html.escape(v.rules_version)}</p>'
+        f'<ul class="reasons">{reasons}{trust}</ul>'
         "</div>",
         unsafe_allow_html=True,
     )
-    for reason in v.reasons:
-        st.markdown(f"- {reason}")
+
+
+def _next_panel(r: RoundResult) -> None:
+    """'지금 할 일': 🔴 이면 중단 안내와 신고처를, 아니면 다음 단계를 등급 옆에 바로 보여 준다."""
+    v = r.verdict
+    fg, _bg = GRADE_STYLE[v.grade]
+    advice = stop_advice(v)
+    parts = ['<div class="panel"><p class="panel-label">지금 할 일</p>']
+    if advice:
+        parts.append(f'<p class="next-advice" style="--g:{fg};">{html.escape(advice)}</p>')
+    else:
+        steps = []
+        if select_questions(v):
+            steps += ["아래 확인 질문을 구인자에게 보냅니다", "받은 답변을 STEP 03에 붙여넣어 다시 판정합니다"]
+        steps.append("근로계약서는 꼭 직접 확인합니다")
+        parts.append('<ol class="steps">' + "".join(f"<li>{html.escape(s)}</li>" for s in steps) + "</ol>")
+    if v.report_contacts:
+        parts.append('<p class="mini-label">신고·상담처</p>')
+        for c in v.report_contacts:
+            num = f'<span class="c-num">{html.escape(str(c["number"]))}</span>' if c.get("number") else ""
+            act = f'<small>{html.escape(str(c["action"]))}</small>' if c.get("action") else ""
+            src = _evidence_html(c.get("evidence_ids", []))
+            parts.append(f'<div class="contact"><div class="c-head"><span class="c-name">{html.escape(str(c["name"]))}</span>'
+                         f'{num}</div>{act}<span class="src">근거 {src}</span></div>')
+    parts.append("</div>")
+    st.markdown("".join(parts), unsafe_allow_html=True)
 
 
 def _hit_card(h: Hit, masked_text: str, key: str) -> None:
@@ -467,15 +573,19 @@ def _hit_card(h: Hit, masked_text: str, key: str) -> None:
 def _facts_section(r: RoundResult) -> None:
     _sub("업체 확인 결과")
     ex, f = r.extraction, r.facts
-    c1, c2 = st.columns(2)
-    c1.markdown(f"**공고 속 업체명**: {ex.company.name or '없음'}")
-    c1.markdown(f"**내세운 브랜드**: {ex.company.brand_name or '없음'}")
     if r.business_numbers:
         bn_txt = ", ".join(f"{b.formatted}{'' if b.checksum_ok else ' (형식 오류)'}" for b in r.business_numbers)
     else:
         bn_txt = "없음"
-    c2.markdown(f"**사업자등록번호**: {bn_txt}")
-    c2.markdown(f"**연락 경로**: {', '.join(CHANNEL_LABEL.get(c, c) for c in ex.contact.channels) or '알 수 없음'}")
+    specs = [
+        ("공고 속 업체명", ex.company.name or "없음"),
+        ("내세운 브랜드", ex.company.brand_name or "없음"),
+        ("사업자등록번호", bn_txt),
+        ("연락 경로", ", ".join(CHANNEL_LABEL.get(c, c) for c in ex.contact.channels) or "알 수 없음"),
+    ]
+    cells = "".join(f'<div class="spec"><p class="spec-k">{html.escape(k)}</p><p class="spec-v">{html.escape(str(val))}</p></div>'
+                    for k, val in specs)
+    st.markdown(f'<div class="spec-grid">{cells}</div>', unsafe_allow_html=True)
     status_text = {
         "not_checked": "조회 안 함", "error": "조회 실패", "disabled": "이번 버전 제외",
         "active": "계속사업자", "suspended": "휴업", "closed": "폐업", "not_registered": "국세청 미등록 번호",
@@ -527,7 +637,12 @@ def _value_flow_section(r: RoundResult) -> None:
 
 def _result_section(r: RoundResult) -> None:
     v = r.verdict
-    _grade_box(r)
+    # 첫 줄: 등급(왼쪽) + 지금 할 일(오른쪽)
+    g_l, g_r = st.columns([7, 5], gap="large")
+    with g_l:
+        _grade_box(r)
+    with g_r:
+        _next_panel(r)
 
     if v.labor_flags:
         for f in v.labor_flags:
@@ -536,37 +651,37 @@ def _result_section(r: RoundResult) -> None:
     risk_hits = [h for h in v.hits if h.level != "none" and h.tier != "X"]
     if v.impersonation or risk_hits or v.anomalies:
         _sub("걸린 신호")
-        # 2분할: 왼쪽은 원문(근거 문장 표시), 오른쪽은 신호 카드
+        # 2분할: 왼쪽은 원문(근거 문장 표시, 스크롤해도 남음), 오른쪽은 신호 카드
         left, right = st.columns([6, 6], gap="large")
         with left:
-            st.markdown('<p class="eyebrow">원문 · 마스킹 후</p>', unsafe_allow_html=True)
-            st.markdown(_highlight(r.masked_text, [h.quote for h in risk_hits + v.anomalies]), unsafe_allow_html=True)
-            st.caption("노란색은 AI가 근거로 인용하고 코드로 원문에서 확인한 문장입니다. 개인정보는 [전화번호1]처럼 가려져 있습니다.")
+            with st.container(key=f"sticky_src_{r.round_no}"):
+                st.markdown('<p class="eyebrow">원문 · 마스킹 후</p>', unsafe_allow_html=True)
+                st.markdown(_highlight(r.masked_text, [h.quote for h in risk_hits + v.anomalies]),
+                            unsafe_allow_html=True)
+                st.caption("노란색은 AI가 근거로 인용하고 코드로 원문에서 확인한 문장입니다. "
+                           "개인정보는 [전화번호1]처럼 가려져 있습니다.")
         with right:
             st.markdown('<p class="eyebrow">신호 카드</p>', unsafe_allow_html=True)
             cards = ([v.impersonation] if v.impersonation else []) + risk_hits + list(v.anomalies)
             for i, h in enumerate(cards):
                 _hit_card(h, r.masked_text, key=f"{r.round_no}_{i}")
-    if v.trust:
-        st.markdown("**신뢰 신호**: " + ", ".join(f"{t.name}" for t in v.trust))
 
     _facts_section(r)
 
     _sub("구인자에게 물어볼 확인 질문")
     advice = stop_advice(v)
     questions = select_questions(v)
-    if advice:  # 멈춤 안내가 먼저 보이도록 나누지 않는다
-        st.error(advice)
     if questions:
         msg = compose_message(questions)
         ai_n = sum(1 for q in v.check_questions if q["rule_id"] == "AI" and q["question"] in questions)
         ai_note = (f"질문 {len(questions)}개 중 {ai_n}개는 AI가 이 공고에 맞춰 만든 질문이고, "
                    "나머지는 공식 자료 기반 규칙의 질문입니다.") if ai_n else None
-        if advice:
-            if ai_note:
-                st.caption(ai_note)
+        if advice:  # 🔴: 질문보다 중단이 먼저 (위 '지금 할 일')
+            st.caption("결정적 위험 신호가 있어 질문을 보내기보다 연락을 멈추기를 먼저 권합니다.")
             with st.expander("그래도 확인하고 싶다면: 질문 보기"):
                 st.code(msg, language=None, wrap_lines=True)
+                if ai_note:
+                    st.caption(ai_note)
         else:
             # 2분할(좌우 교차): 왼쪽은 보낼 메시지 패널, 오른쪽은 안내
             left, right = st.columns([7, 5], gap="large")
@@ -577,33 +692,27 @@ def _result_section(r: RoundResult) -> None:
                 st.markdown('<p class="eyebrow">보내는 방법</p>', unsafe_allow_html=True)
                 st.markdown("1. 메시지 패널 오른쪽 위 복사 버튼으로 복사합니다\n"
                             "2. 공고를 보낸 사람에게 그대로 보냅니다\n"
-                            "3. 받은 답변을 아래 '2회차'에 붙여넣습니다")
+                            "3. 받은 답변을 아래 STEP 03에 붙여넣습니다")
                 if ai_note:
                     st.caption(ai_note)
     else:
         st.caption("추가로 물어볼 질문이 없습니다. 근로계약서는 꼭 확인하세요.")
 
-    if v.legal_notes or v.report_contacts:
-        left, right = st.columns(2, gap="large")
-        if v.legal_notes:
-            with left:
-                _sub("법적 결과 안내")
-                for n in v.legal_notes:
-                    st.markdown(f"- **{n['name']}**: {n['text']}")
-        if v.report_contacts:
-            with right if v.legal_notes else left:
-                _sub("신고·상담처")
-                for c in v.report_contacts:
-                    num = f" **{c['number']}**" if c.get("number") else ""
-                    act = f" — {c['action']}" if c.get("action") else ""
-                    st.markdown(f"- {c['name']}{num}{act} <sub>({_evidence_links(c.get('evidence_ids', []))})</sub>",
-                                unsafe_allow_html=True)
+    if v.legal_notes:
+        _sub("법적 결과 안내")
+        for n in v.legal_notes:
+            st.markdown(f"- **{n['name']}**: {n['text']}")
 
     _sub("직접 확인해 볼 곳")
     st.caption("민간 채용 사이트는 자동으로 조회하지 않습니다. 직접 열어서 확인해 주세요.")
-    for link in manual_check_links(r.extraction.company.name, r.extraction.company.brand_name):
-        st.markdown(f"- [{link['name']}]({link['url']}) — {link['hint']}")
+    link_cards = "".join(
+        f'<a class="link-card" href="{html.escape(link["url"], quote=True)}" target="_blank" rel="noopener">'
+        f'<b>{html.escape(link["name"])}</b><span>{html.escape(link["hint"])}</span></a>'
+        for link in manual_check_links(r.extraction.company.name, r.extraction.company.brand_name)
+    )
+    st.markdown(f'<div class="link-grid">{link_cards}</div>', unsafe_allow_html=True)
 
+    _sub("판정 근거 자료")
     with st.expander("AI가 읽어낸 정보 (가치 흐름)"):
         _value_flow_section(r)
         if r.extraction.other_anomalies:
@@ -688,27 +797,6 @@ def _feedback_section(rounds: list[RoundResult]) -> None:
 # ---------------------------------------------------------------------------
 _init_state()
 
-with st.sidebar:
-    st.header(config.display_service_name())
-    st.caption(config.SERVICE_TAGLINE)
-    st.subheader("꼭 기억할 원칙")
-    for p in RB.principles:
-        src = _evidence_links(p["evidence_ids"])
-        if p.get("evidence_note"):
-            src = f"{src} {p['evidence_note']}"
-        st.markdown(f"- {p['text']} <sub>({src})</sub>", unsafe_allow_html=True)
-    if DEV_FIXTURES:
-        st.warning("개발 모드: 샘플은 사람이 적어 둔 고정 추출값을 씁니다(AI 호출 없음).")
-    st.subheader("AI 사용")
-    st.caption(f"모델: {config.model_id()} (OpenAI) · AI는 정보 추출·설명만, 등급은 공개 규칙으로 계산")
-    if HAS_AI_KEY:
-        st.caption(f"남은 AI 호출: 이 화면 {session_remaining(st.session_state, SESSION_LIMIT)}회 · "
-                   f"오늘 전체 {_daily_counter().remaining()}회")
-    else:
-        st.caption("AI 키가 설정되지 않았습니다.")
-    st.divider()
-    st.caption(WAKE_NOTICE)
-
 PIPELINE_STEPS = [
     "전화번호·계좌·이름 등을 자동으로 가립니다",
     "AI가 업체·급여·연락 경로·돈의 흐름과 위험 신호를 근거 문장과 함께 뽑습니다",
@@ -716,48 +804,73 @@ PIPELINE_STEPS = [
     "국세청·국민연금 공공 API로 업체를 확인합니다",
     "공개된 규칙으로 등급을 정합니다",
 ]
+SERVICE = html.escape(config.display_service_name())
+TEAM = html.escape(config.TEAM_NAME)
 
-# 히어로: 상단 밴드 위 좌측 정렬 제목 + 우측 등급 안내 패널 (7:5)
-hero_l, hero_r = st.columns([7, 5], gap="large", vertical_alignment="bottom")
+# 상단 바: 서비스 이름 + 페이지 안 이동 링크
+st.markdown(
+    f'<div class="topbar"><span class="brand"><span class="mark"></span>{SERVICE}<small>{TEAM}</small></span>'
+    '<nav><a href="#sec-input">판독하기</a><a href="#sec-how">판정 방식</a><a href="#sec-principles">꼭 기억할 원칙</a></nav>'
+    "</div>",
+    unsafe_allow_html=True,
+)
+
+# 히어로: 왼쪽 제목·시작 버튼·고지, 오른쪽 '꼭 기억할 원칙' (7:5)
+hero_l, hero_r = st.columns([7, 5], gap="large")
 with hero_l:
     st.markdown(
-        f'<div class="hero"><p class="eyebrow">{html.escape(config.TEAM_NAME)} · 구인 공고 위험 신호 판독</p>'
-        f"<h1>{html.escape(config.display_service_name())}</h1>"
+        '<div class="hero"><p class="eyebrow">구인 공고 · DM 위험 신호 판독</p>'
+        f"<h1>{SERVICE}</h1>"
         f'<p class="hero-tag">{html.escape(config.SERVICE_TAGLINE)}</p>'
+        '<div class="cta-row"><a class="cta" href="#sec-input">공고 판독하기</a>'
+        '<a class="text-link" href="#sec-how">어떻게 판정하나요?</a></div>'
         f'<p class="hero-meta"><span>공개 규칙 v{html.escape(RB.version)}</span><span>근거 문장 원문 대조</span>'
         "<span>국세청·국민연금 공공 API</span></p></div>",
         unsafe_allow_html=True,
     )
-with hero_r:
-    legend = "".join(
-        f'<div class="legend-row" style="--g:{GRADE_STYLE[g][0]};"><span class="dot"></span>'
-        f"{html.escape(RB.grades[g]['label'])}</div>"
-        for g in ("red", "orange", "yellow", "white", "green")
+    st.info(
+        "- **AI가 생성한 판정이며 참고용입니다.** 위험 신호를 안내할 뿐 업체나 사기 여부를 단정하지 않습니다. "
+        "가장 좋은 결과도 '낮은 위험(확인 권장)'이며, 근로계약서는 항상 직접 확인하세요.\n"
+        "- **법률 자문이 아닙니다.**\n"
+        "- **공공데이터를 활용한 개인 프로젝트이며, 어떤 기관의 인증·제휴도 받지 않았습니다.**",
+        icon=":material/info:",
     )
-    st.markdown(f'<div class="panel"><p class="panel-label">판정 등급 5단계</p>{legend}</div>',
-                unsafe_allow_html=True)
+with hero_r:
+    items = []
+    for p in RB.principles:
+        src = _evidence_html(p["evidence_ids"])
+        if p.get("evidence_note"):
+            src = f"{src} {html.escape(p['evidence_note'])}"
+        items.append(f'<li><span>{html.escape(p["text"])}<span class="src">근거 {src}</span></span></li>')
+    st.markdown(f'<div class="panel" id="sec-principles"><p class="panel-label">꼭 기억할 원칙</p>'
+                f'<ol class="steps">{"".join(items)}</ol></div>', unsafe_allow_html=True)
 
-st.info(
-    "- **AI가 생성한 판정이며 참고용입니다.** 위험 신호를 안내할 뿐 업체나 사기 여부를 단정하지 않습니다. "
-    "가장 좋은 결과도 '낮은 위험(확인 권장)'이며, 근로계약서는 항상 직접 확인하세요.\n"
-    "- **법률 자문이 아닙니다.**\n"
-    "- **공공데이터를 활용한 개인 프로젝트이며, 어떤 기관의 인증·제휴도 받지 않았습니다.**",
-    icon=":material/info:",
-)
-
-_section("STEP 01", "받은 공고·메시지 붙여넣기")
+# STEP 01 입력: 왼쪽 입력, 오른쪽 판정 방식(스크롤해도 남음)
+_section("STEP 01", "받은 공고·메시지 붙여넣기", anchor="input")
 in_l, in_r = st.columns([7, 5], gap="large")
 with in_l:
-    col_s, col_b = st.columns([2, 1])
-    col_s.selectbox("데모용 가상 공고", [s.title for s in load_samples()], key="sample_pick",
-                    label_visibility="collapsed")
-    col_b.button("샘플 불러오기", on_click=_load_sample, width="stretch")
+    if DEV_FIXTURES:
+        st.warning("개발 모드: 샘플은 사람이 적어 둔 고정 추출값을 씁니다(AI 호출 없음).")
+    with st.container(border=True, key="card_samples"):
+        st.markdown('<p class="eyebrow">데모용 가상 공고로 바로 해 보기</p>', unsafe_allow_html=True)
+        col_s, col_b = st.columns([2, 1], vertical_alignment="center")
+        col_s.selectbox("데모용 가상 공고", [s.title for s in load_samples()], key="sample_pick",
+                        label_visibility="collapsed")
+        col_b.button("샘플 불러오기", on_click=_load_sample, width="stretch")
 
-    with st.expander("캡처 이미지로 입력하기", icon=":material/image:"):
+    st.text_area(
+        "공고 내용", key="input_text", height=220, max_chars=config.MAX_INPUT_CHARS,
+        placeholder="SNS·메신저·문자로 받은 알바 공고나 DM을 그대로 붙여넣으세요.",
+    )
+    st.caption(
+        "AI로 보내기 전에 전화번호·계좌·카드·주민번호·이메일·메신저 ID를 자동으로 가립니다. "
+        "**이름은 문맥 패턴으로 일부만 가리므로 누락될 수 있습니다** — 가능하면 이름은 지우고 붙여넣어 주세요."
+    )
+    with st.expander("또는 캡처 이미지로 입력하기", icon=":material/image:"):
         st.caption(
             "이미지는 자동으로 가릴 수 없습니다. 이미지 속 전화번호·계좌번호·이름 등을 가린 뒤 올려 주세요. "
             "**아래 '가렸습니다' 확인에 체크해야만 이미지를 AI로 보냅니다.** "
-            "AI가 이미지 속 글자만 읽어 아래 입력 칸에 넣고, 판정 전에 다시 자동 마스킹합니다. "
+            "AI가 이미지 속 글자만 읽어 위 입력 칸에 넣고, 판정 전에 다시 자동 마스킹합니다. "
             "이미지 메타데이터(위치 등)는 지우고 보냅니다."
         )
         st.file_uploader("캡처 이미지", type=["png", "jpg", "jpeg", "webp", "gif"], key="image_upload")
@@ -776,21 +889,23 @@ with in_l:
         if st.session_state["image_error"]:
             st.warning(st.session_state["image_error"])
 
-    st.text_area(
-        "공고 내용", key="input_text", height=200, max_chars=config.MAX_INPUT_CHARS,
-        placeholder="SNS·메신저·문자로 받은 알바 공고나 DM을 그대로 붙여넣으세요.",
-    )
-    st.caption(
-        "AI로 보내기 전에 전화번호·계좌·카드·주민번호·이메일·메신저 ID를 자동으로 가립니다. "
-        "**이름은 문맥 패턴으로 일부만 가리므로 누락될 수 있습니다** — 가능하면 이름은 지우고 붙여넣어 주세요."
-    )
     st.radio("어디서 받았나요?", list(config.SOURCE_CHANNELS), key="source_channel",
              format_func=lambda k: config.SOURCE_CHANNELS[k], horizontal=False)
     st.button("판정하기", type="primary", on_click=_request, args=(1,), width="stretch")
 with in_r:
-    steps = "".join(f"<li>{html.escape(s)}</li>" for s in PIPELINE_STEPS)
-    st.markdown(f'<div class="panel"><p class="panel-label">이렇게 판정합니다</p><ol class="steps">{steps}</ol></div>',
-                unsafe_allow_html=True)
+    with st.container(key="sticky_how"):
+        steps = "".join(f"<li>{html.escape(s)}</li>" for s in PIPELINE_STEPS)
+        legend = "".join(
+            f'<span class="chip" style="--g:{GRADE_STYLE[g][0]};"><span class="dot"></span>'
+            f"{html.escape(RB.grades[g]['label'])}</span>"
+            for g in ("red", "orange", "yellow", "white", "green")
+        )
+        st.markdown(
+            f'<div class="panel" id="sec-how"><p class="panel-label">이렇게 판정합니다</p><ol class="steps">{steps}</ol>'
+            f'<p class="mini-label">판정 등급 5단계</p><div class="chips">{legend}</div>'
+            '<p class="panel-note">AI는 정보 추출·설명만 하고, 등급은 공개된 규칙으로 계산합니다.</p></div>',
+            unsafe_allow_html=True,
+        )
 
 if st.session_state["pending"] in (1, 2):
     action = st.session_state["pending"]
@@ -803,7 +918,7 @@ if not st.session_state["rounds"]:
 
 rounds: list[RoundResult] = st.session_state["rounds"]
 if rounds:
-    _section("STEP 02", "판정 결과")
+    _section("STEP 02", "판정 결과", anchor="result")
     if st.session_state.get("fallback_mode"):
         st.info("실시간 AI 대신 **미리 판독해 둔 샘플 결과**를 보여 주고 있습니다(AI 호출 없음). "
                 f"추출 출처: {rounds[-1].extractor_name}")
@@ -816,25 +931,42 @@ if rounds:
     else:
         _result_section(rounds[0])
 
-    _section("STEP 03", "구인자 답변으로 다시 판정 (2회차)")
-    st.caption("확인 질문을 보내고 받은 답변을 붙여넣으면, 처음 공고와 함께 다시 판정합니다.")
-    re_l, _re_r = st.columns([7, 5], gap="large")
+    _section("STEP 03", "구인자 답변으로 다시 판정 (2회차)", anchor="reply")
+    re_l, re_r = st.columns([7, 5], gap="large")
     with re_l:
+        st.caption("확인 질문을 보내고 받은 답변을 붙여넣으면, 처음 공고와 함께 다시 판정합니다.")
         sample = get_sample(st.session_state.get("sample_id") or "")
         if sample and sample.reply:
             st.button("샘플 답변 넣기", on_click=_load_sample_reply)
-        st.text_area("구인자 답변", key="reply_text", height=120, max_chars=config.MAX_INPUT_CHARS)
+        st.text_area("구인자 답변", key="reply_text", height=140, max_chars=config.MAX_INPUT_CHARS)
         st.button("답변 반영해 다시 판정", type="primary", on_click=_request, args=(2,))
+    with re_r:
+        now = rounds[-1].verdict
+        st.markdown(
+            f'<div class="panel"><p class="panel-label">지금 판정 · {rounds[-1].round_no}회차</p>'
+            f'<p class="grade-title" style="--g:{GRADE_STYLE[now.grade][0]}; font-size:1.5rem;">'
+            f'<span class="dot"></span>{html.escape(now.label)}</p>'
+            '<p class="panel-note">답변도 AI로 보내기 전에 같은 방식으로 개인정보를 가립니다. '
+            "처음 공고와 답변을 합쳐 다시 판정합니다.</p></div>",
+            unsafe_allow_html=True,
+        )
     _error_box()
 
     _feedback_section(rounds)
 
-name, team = html.escape(config.display_service_name()), html.escape(config.TEAM_NAME)
+# 바닥글
+if HAS_AI_KEY:
+    usage = (f"남은 AI 호출: 이 화면 {session_remaining(st.session_state, SESSION_LIMIT)}회 · "
+             f"오늘 전체 {_daily_counter().remaining()}회")
+else:
+    usage = "AI 키가 설정되지 않았습니다."
 st.markdown(
     '<div class="site-footer">'
-    f"<div><b>서비스</b>{name} · {team}<br>2026 대한민국 청년 CAREER FAIR AI 해커톤 출품 프로토타입</div>"
+    f"<div><b>서비스</b>{SERVICE} · {TEAM}<br>2026 대한민국 청년 CAREER FAIR AI 해커톤 출품 프로토타입</div>"
     "<div><b>고지</b>공공데이터를 활용한 개인 프로젝트이며 기관의 인증·제휴가 아닙니다 · 법률 자문이 아닙니다</div>"
     "<div><b>데이터 처리</b>공고 본문은 판정 대상 데이터로만 다루며, 본문 속 지시는 따르지 않습니다</div>"
+    f"<div><b>AI 사용</b>모델 {html.escape(config.model_id())} (OpenAI) · AI는 정보 추출·설명만, "
+    f"등급은 공개 규칙으로 계산<br>{html.escape(usage)}</div>"
     "</div>",
     unsafe_allow_html=True,
 )
