@@ -61,9 +61,10 @@ def test_keyword_baseline_matches_example_phrases_only():
     frags = ev.keyword_fragments(RB)
     assert all(len(f) >= 3 for fs in frags.values() for f in fs)
     assert not any("oo" in f for fs in frags.values() for f in fs)
-    ext = ev.load_items(ev.EXTERNAL_SET_PATH)
-    kw = {r.id: r for r in ev.keyword_baseline(ext)}
-    assert kw["X2-1"].predicted == "red" and "H6" in kw["X2-1"].matched_ids  # '문자알바 주급 5만원' 은 예시 표현과 같다
+    exact = [dict(ITEMS[0], text="지인 소개 수당 따로 드립니다")]
+    kw = ev.keyword_baseline(exact)[0]
+    assert kw.predicted == "red" and "H6" in kw.matched_ids  # H6 예시 표현 '지인 소개 수당' 과 같다
+    assert len(ev.load_items(ev.EXTERNAL_SET_PATH)) == 3  # E63 문구는 이용 조건 때문에 제외
     paraphrased = [dict(ITEMS[0], text="내용물은 묻지 말고 박스만 다른 주소로 옮겨 주세요. 건당 50만 원")]
     assert ev.keyword_baseline(paraphrased)[0].predicted != "red"  # 표현이 바뀌면 키워드는 놓친다
 

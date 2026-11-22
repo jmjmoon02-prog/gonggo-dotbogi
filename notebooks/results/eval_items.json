@@ -1603,35 +1603,6 @@
   "strict_ok": true
  },
  {
-  "id": "X2-1",
-  "group": "X2",
-  "cls": "scam",
-  "source_channel": "sns_messenger",
-  "expected_grade": "red",
-  "acceptable": [
-   "red"
-  ],
-  "predicted": "red",
-  "matched_ids": [
-   "H6",
-   "S3"
-  ],
-  "novel": false,
-  "quotes_total": 2,
-  "quotes_ok": 2,
-  "cost": 0.0135175,
-  "usage": {
-   "input_tokens": 5935,
-   "cached_input_tokens": 3275,
-   "output_tokens": 787,
-   "reasoning_tokens": 0
-  },
-  "seconds": 10.2,
-  "error": null,
-  "flagged": true,
-  "strict_ok": true
- },
- {
   "id": "X3-1",
   "group": "X3",
   "cls": "scam",

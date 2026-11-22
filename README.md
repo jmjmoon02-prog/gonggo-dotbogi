@@ -119,22 +119,23 @@ core/
   limits.py · config.py · links.py · schema.py · samples.py
 rules/rules.yaml        판정 규칙·근거 자료·신고처
 data/samples/           데모 샘플(가상)과 미리 판독해 둔 결과
-data/testset/           테스트셋(가상 53건), 외부 확인셋(정부 자료 예시 문구 4건)
+data/testset/           테스트셋(가상 53건), 외부 확인셋(정부 자료 예시 문구 3건)
 notebooks/              검증(eval)·규칙 검토(rule_review) 노트북(Colab용), 결과는 notebooks/results/
 scripts/                점검(공공 API·OpenAI·Hugging Face·반복 안정성), 노트북 생성·실행, 데모 이미지 생성
 tests/                  자동 테스트
 ```
 
 ## 검증 결과 (합성 테스트셋, 규칙 v2.1.4, 2026-11-23)
-`notebooks/eval.ipynb` 실행 결과입니다(결과 파일 `notebooks/results/eval_summary.json`). 사기 33건·정상 20건은 AI 도구로 만든 가상 공고입니다. 외부 확인셋 4건은 정부 자료의 예시 문구입니다.
+`notebooks/eval.ipynb` 실행 결과입니다(결과 파일 `notebooks/results/eval_summary.json`). 사기 33건·정상 20건은 AI 도구로 만든 가상 공고입니다. 외부 확인셋 3건은 정부 자료의 예시 문구입니다.
 
 | 방식 | 사기 탐지율 | 정상 오탐률 | 외부 확인셋 | 건당 비용 |
 |---|---|---|---|---|
-| 공고돋보기(AI 추출 + 규칙 엔진) | 100% (33/33) | 5% (1/20) | 3/4 | $0.014 |
-| 키워드만(AI 없음) | 36.4% | 10% | 3/4 | $0 |
-| 같은 모델에 위험 여부를 한 번 묻기 | 100% | 5% (1/20) | 3/4 | $0.0011 |
+| 공고돋보기(AI 추출 + 규칙 엔진) | 100% (33/33) | 5% (1/20) | 2/3 | $0.014 |
+| 키워드만(AI 없음) | 36.4% | 10% | 2/3 | $0 |
+| 같은 모델에 위험 여부를 한 번 묻기 | 100% | 5% (1/20) | 2/3 | $0.0011 |
 
 - AI가 근거로 인용한 문장 118개가 모두 원문에 있었습니다(인용 검증 100%).
+- 외부 확인셋 3건 중 '리뷰 체험단 모집합니다'(단계형 사기의 첫 메시지)는 문구만으로는 정보가 부족해 세 방식 모두 위험으로 잡지 않았습니다. 공고돋보기는 ⚪ 확인 필요와 확인 질문을 냈습니다(의도한 동작).
 - 규칙에서 해당 유형을 빼고 판정해도 28/33(84.8%)을 위험으로 잡았습니다(처음 보는 수법 대응). 약한 유형은 사칭 리뷰·직무 위장(각 1/3)입니다.
 - 데모 샘플 ④를 5회 반복 판독해 등급이 매번 같았습니다(1회차 🟡 5/5, 2회차 🔴 5/5).
 - 이 테스트셋에서는 위험 여부를 한 번 묻는 방식도 탐지율·오탐률이 같았고 비용은 더 적었습니다. 공고돋보기의 차이는 정확도보다 근거 문장 인용·검증, 공개된 규칙에 따른 일관된 등급, 업체 확인, 법적 결과·신고처 안내, 확인 질문과 2회차 판정에 있습니다.
@@ -189,7 +190,7 @@ tests/                  자동 테스트
 - [대법원 2021. 2. 25. 선고 2020두51587](https://www.law.go.kr/LSW/precInfoP.do?mode=0&precSeq=214213) — 업체명 미표시 구인광고
 - [고용노동부 보도자료 2022-12-20](https://moel.go.kr/news/enews/report/enewsView.do?news_seq=14403) — 구인광고 게재 시 사업자 서류 확인
 - [고용노동부 보도자료 2025-12-23](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18779) — 불법·거짓 구인 광고 원천 차단 대책
-- 외부 확인셋(`data/testset/external_set.yaml`) 문구 4건은 아래 자료가 사기 공고 예시로 실은 문구를 바꾸지 않고 인용했습니다: [경찰청 카드뉴스 2024-04-23](https://www.korea.kr/multi/visualNewsView.do?newsId=148928265)(공공누리 제4유형), [KTV 2025-11-19](https://www.korea.kr/news/policyNewsView.do?newsId=148954930)(제4유형), [방통위·법무부·경찰청 2021-10-26](https://www.korea.kr/news/cardnewsView.do?newsId=148894762)(공공누리 표시 없음), [고용노동부 설명자료 2023-02-15](https://www.korea.kr/briefing/actuallyView.do?newsId=148911719)(제1유형)
+- 외부 확인셋(`data/testset/external_set.yaml`) 문구 3건은 아래 자료가 사기 공고 예시로 실은 문구를 바꾸지 않고 인용했습니다: [경찰청 카드뉴스 2024-04-23](https://www.korea.kr/multi/visualNewsView.do?newsId=148928265)(공공누리 제4유형), [KTV 2025-11-19](https://www.korea.kr/news/policyNewsView.do?newsId=148954930)(제4유형), [고용노동부 설명자료 2023-02-15](https://www.korea.kr/briefing/actuallyView.do?newsId=148911719)(제1유형). 방통위·법무부·경찰청 카드뉴스(2021-10-26)의 예시 문구는 게시 페이지에 공공누리 표시가 없어 싣지 않았습니다.
 - [경향신문 2022-02-21(경찰청 국가수사본부 자료)](https://www.khan.co.kr/article/202202211441001) · [한경 JOB&JOY 2026-05-13(한국직업정보협회 점검)](https://magazine.hankyung.com/job-joy/article/202605134054d) — 문제 정의 수치
 
 **서비스** — Streamlit Community Cloud(배포), Hugging Face Hub(비공개 Dataset, 동의 사례 저장), OpenAI API. 각 서비스 이용약관을 따릅니다.
