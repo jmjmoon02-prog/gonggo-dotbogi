@@ -5,6 +5,14 @@ CrAI LAB · 2026 대한민국 청년 CAREER FAIR AI 해커톤 출품작
 
 > **고지** · 이 서비스의 판정은 AI가 생성한 결과를 포함하며 참고용입니다 · 법률 자문이 아닙니다 · 공공데이터를 활용한 개인 프로젝트이며 어떤 기관의 인증·제휴도 아닙니다 · 저장소의 시연·테스트 데이터는 가상으로 만들었거나 정부 자료에 실린 사기 공고 예시 문구입니다. 실제 개인정보는 없습니다.
 
+| 바로 가기 | |
+|---|---|
+| ▶ 프로토타입 | **https://gonggo-dotbogi.streamlit.app/** (로그인 없이 실행, '샘플 불러오기'로 가상 공고 5종) |
+| 처음 보는 분 | [무엇을 하나요](#무엇을-하나요) → [판정 등급](#판정-등급) → [검증 결과](#검증-결과-합성-테스트셋-규칙-v214-2026-11-23) |
+| 판정 규칙 | [`rules/rules.yaml`](rules/rules.yaml) · [규칙 요약](#판정-규칙-요약) · [근거가 된 수법 10종](#규칙의-근거가-된-수법-10종) |
+| 코드 | [`app.py`](app.py) 화면 · [`core/pipeline.py`](core/pipeline.py) 판독 흐름 · [`core/rules_engine.py`](core/rules_engine.py) 규칙 엔진 · [`core/verify_apis.py`](core/verify_apis.py) 공공 API · [`core/masking.py`](core/masking.py) 개인정보 가리기 |
+| 검증·학습 고리 | [`notebooks/eval.ipynb`](notebooks/eval.ipynb) 검증 · [`notebooks/rule_review.ipynb`](notebooks/rule_review.ipynb) 규칙 검토(Colab용) · [`notebooks/results/`](notebooks/results/) 결과 |
+| 실행·구조 | [직접 실행하기](#직접-실행하기) · [폴더 구조](#폴더-구조) · [한계](#한계) · [AI 활용](#ai-활용) |
 ## 무엇을 하나요
 SNS·메신저로 받은 구인 공고나 DM을 붙여넣으면 다음 순서로 확인합니다.
 
